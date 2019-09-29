@@ -4,31 +4,33 @@ import { Link } from '../routes';
 export default function TagDisplayer() {
 	return (
 		<div className='tag-displayer'>
-			<Link route={'producto'} params={{ tag: 'zapatillas' }}>
+			<Link route={'producto'} params={{ tag: 'polo' }}>
 				<div className='tag-displayer__item' id='item1'>
 					<a>
-						<h1>Zapatillas</h1>
-					</a>
-				</div>
-			</Link>
-			<Link route={'producto'} params={{ tag: 'polo' }}>
-				<div className='tag-displayer__item' id='item2'>
-					<a>
-						<h1>Polos</h1>
+						<h1>Camisetas</h1>
 					</a>
 				</div>
 			</Link>
 			<Link route={'producto'} params={{ tag: 'casaca' }}>
-				<div className='tag-displayer__item' id='item3'>
+				<div className='tag-displayer__item' id='item2'>
 					<a>
 						<h1>Casacas</h1>
 					</a>
 				</div>
 			</Link>
+
+			<Link route={'producto'} params={{ tag: 'zapatillas' }}>
+				<div className='tag-displayer__item' id='item3'>
+					<a>
+						<h1>Zapatillas</h1>
+					</a>
+				</div>
+			</Link>
+
 			<Link route={'producto'} params={{ tag: 'pantalon' }}>
 				<div className='tag-displayer__item' id='item4'>
 					<a>
-						<h1>Accesorios</h1>
+						<h1>Jeans</h1>
 					</a>
 				</div>
 			</Link>
@@ -54,25 +56,25 @@ export default function TagDisplayer() {
 						font-size: 2.5rem;
 						text-transform: uppercase;
 					}
-					#item1 {
-						background: url('/static/blueTexture.jpg');
+					#item3 {
+						background: url('/static/blueTexture.webp');
 						background-size: cover;
 						background-position: center center;
 					}
 					#item2 {
-						background: url('/static/redTexture.png');
+						background-position: center center;
+						background: url('/static/orangeTexture.webp');
 						background-position: center center;
 						background-size: cover;
 					}
-					#item3 {
-						background-position: center center;
-						background: url('/static/orangeTexture.jpg');
+					#item1 {
+						background: url('/static/polo.webp');
 						background-position: center center;
 						background-size: cover;
 					}
 					#item4 {
 						background-position: center center;
-						background: url('/static/purpleTexture.jpg');
+						background: url('/static/purpleTexture.webp');
 
 						background-size: cover;
 					}

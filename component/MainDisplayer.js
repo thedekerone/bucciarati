@@ -72,7 +72,7 @@ export default function MainDisplayer() {
 						background: white;
 					}
 					#item1 {
-						background: url('/static/main2.jpg');
+						background: url('/static/main2.webp');
 						background-size: cover;
 						background-position: 600px top;
 						background-repeat: none;

@@ -11,7 +11,7 @@ export default function MainDisplayer() {
 						<span>The Future of Flight.</span>
 					</div>
 					<div className='main-hero__button'>
-						<Link route='producto' params={{ tags: 'zapatillas' }}>
+						<Link route='producto' params={{ tag: 'zapatillas' }}>
 							<a>BUY NOW</a>
 						</Link>
 					</div>

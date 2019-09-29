@@ -5,6 +5,7 @@ import { Query, graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 import Layout from '../component/Layout';
 import Spinner from '../component/views/Spinner';
+import Error from '../component/views/Error';
 
 const GETTER = gql`
 	query Product($PR: ID!) {
@@ -22,27 +23,16 @@ class single extends React.Component {
 	static async getInitialProps({ query }) {
 		return { id: query.slug };
 	}
-	// componentDidMount() {
-	// 	console.log(this.props.id);
-	// }
+
 	render() {
-		if (!this.props.id) return <h1>aea</h1>;
 		return (
 			<Layout>
 				<Query query={GETTER} variables={{ PR: this.props.id }}>
 					{({ loading, error, data }) => {
-						if (loading)
-							return (
-								<h1 className='loading'>
-									<Spinner />
-								</h1>
-							);
-						if (error)
-							return (
-								<div className='container'>
-									<h1>ERROR</h1>
-								</div>
-							);
+						if (loading) return <Spinner />;
+						if (error) return <Error />;
+						if (!data.getProduct) return <Error />;
+
 						return (
 							<div>
 								<div className='container'>
@@ -63,8 +53,8 @@ class single extends React.Component {
 												}
 											`}>
 											{({ loading, error, data }) => {
-												if (loading) return <h1>loading</h1>;
-												if (error) return <h1>{error}</h1>;
+												if (loading) return <Spinner />;
+												if (error) return <Error />;
 												return <ProductosMini data={data.getProducts} />;
 											}}
 										</Query>

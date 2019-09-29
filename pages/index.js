@@ -9,6 +9,7 @@ import 'isomorphic-fetch';
 import { Query, graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 import TagDisplayer from '../component/TagDisplayer';
+import Error from '../component/views/Error';
 
 class index extends Component {
 	constructor(props) {
@@ -37,13 +38,8 @@ class index extends Component {
 						}
 					`}>
 					{({ loading, error, data }) => {
-						if (loading)
-							return (
-								<h1 className='loading'>
-									<Spinner />
-								</h1>
-							);
-						if (error) return <h1>error...</h1>;
+						if (loading) return <Spinner />;
+						if (error) return <Error code='502' />;
 						return (
 							<React.Fragment>
 								<Head>
@@ -91,15 +87,7 @@ class index extends Component {
 						overflow: hidden;
 						margin: 0 auto 4rem;
 					}
-					.loading {
-						display: flex;
-						padding: 0;
-						width: 100vw;
-						height: 90vh;
-						margin-top: -90px;
-						justify-content: center;
-						align-items: center;
-					}
+
 					.tiendas {
 						padding-left: 10px;
 					}

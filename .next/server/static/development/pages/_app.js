@@ -116,7 +116,9 @@ __webpack_require__.r(__webpack_exports__);
 }) => new apollo_boost__WEBPACK_IMPORTED_MODULE_1___default.a({
   uri: 'https://chupetinps.herokuapp.com/',
   cache: new apollo_boost__WEBPACK_IMPORTED_MODULE_1__["InMemoryCache"]().restore(initialState || {})
-})));
+}), {
+  getDataFromTree: 'never'
+}));
 
 /***/ }),
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Router } from '../routes';
 
-export default function Navbar() {
+export default function Navbar({ handleClick }) {
 	let textInput;
 	const [
 		display,
@@ -39,12 +39,12 @@ export default function Navbar() {
 								</Link>
 							</li>
 							<li>
-								<Link route='producto' params={{}}>
+								<Link route='producto' params={{ tag: '' }}>
 									<a>Accesorios</a>
 								</Link>
 							</li>
 							<li>
-								<Link route='producto' params={{}}>
+								<Link route='producto' params={{ tag: '' }}>
 									<a>Regalos</a>
 								</Link>
 							</li>
@@ -76,7 +76,15 @@ export default function Navbar() {
 							/>
 						</form>
 					</span>
-					<img className='icon-menu' width='30px' src='/static/icons/menu.svg' alt='menu' />
+					<img
+						onClick={() => {
+							handleClick();
+						}}
+						className='icon-menu'
+						width='30px'
+						src='/static/icons/menu.svg'
+						alt='menu'
+					/>
 				</div>
 			</div>
 
@@ -181,7 +189,7 @@ export default function Navbar() {
 							display: block;
 						}
 						#search {
-							width: 120px;
+							width: 170px;
 						}
 						.main-navbar__items ul {
 							display: flex;

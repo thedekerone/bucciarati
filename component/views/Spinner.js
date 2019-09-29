@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Spinner() {
 	return (
-		<div>
+		<div className='loading'>
 			<div className='lds-default'>
 				<div />
 				<div />
@@ -31,6 +31,15 @@ export default function Spinner() {
 					background: #000;
 					border-radius: 50%;
 					animation: lds-default 1.2s linear infinite;
+				}
+				.loading {
+					display: flex;
+					padding: 0;
+					width: 100vw;
+					height: 90vh;
+					margin-top: -90px;
+					justify-content: center;
+					align-items: center;
 				}
 				.lds-default div:nth-child(1) {
 					animation-delay: 0s;

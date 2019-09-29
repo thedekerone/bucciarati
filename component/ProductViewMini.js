@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from '../routes';
 
 export default function ProductViewMini(props) {
 	var number = parseInt(Math.random() * 50) + 12;

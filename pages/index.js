@@ -12,13 +12,33 @@ import TagDisplayer from '../component/TagDisplayer';
 import Error from '../component/views/Error';
 
 class index extends Component {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		return (
 			<Layout>
+				<Head>
+					<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+					<title>Bucciarati Store</title>
+					<link rel='apple-touch-icon' sizes='57x57' href='/static/favicon/apple-icon-57x57.png' />
+					<link rel='apple-touch-icon' sizes='60x60' href='/static/favicon/apple-icon-60x60.png' />
+					<link rel='apple-touch-icon' sizes='72x72' href='/static/favicon/apple-icon-72x72.png' />
+					<link rel='apple-touch-icon' sizes='76x76' href='/static/favicon/apple-icon-76x76.png' />
+					<link rel='apple-touch-icon' sizes='114x114' href='/static/favicon/apple-icon-114x114.png' />
+					<link rel='apple-touch-icon' sizes='120x120' href='/static/favicon/apple-icon-120x120.png' />
+					<link rel='apple-touch-icon' sizes='144x144' href='/static/favicon/apple-icon-144x144.png' />
+					<link rel='apple-touch-icon' sizes='152x152' href='/static/favicon/apple-icon-152x152.png' />
+					<link rel='apple-touch-icon' sizes='180x180' href='/static/favicon/apple-icon-180x180.png' />
+					<link rel='icon' type='image/png' sizes='192x192' href='/static/favicon/android-icon-192x192.png' />
+					<link rel='icon' type='image/png' sizes='32x32' href='/static/favicon/favicon-32x32.png' />
+					<link rel='icon' type='image/png' sizes='96x96' href='/static/favicon/favicon-96x96.png' />
+					<link rel='icon' type='image/png' sizes='16x16' href='/static/favicon/favicon-16x16.png' />
+					<link rel='manifest' href='/static/favicon/manifest.json' />
+					<meta name='msapplication-TileColor' content='#ffffff' />
+					<meta name='msapplication-TileImage' content='/static/favicon/ms-icon-144x144.png' />
+					<meta name='theme-color' content='#ffffff' />
+				</Head>
+
+				<MainDisplayer />
+				<TagDisplayer />
 				<Query
 					query={gql`
 						{
@@ -42,11 +62,6 @@ class index extends Component {
 						if (error) return <Error code='502' />;
 						return (
 							<React.Fragment>
-								<Head>
-									<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-								</Head>
-								<MainDisplayer />
-								<TagDisplayer />
 								<div className='container'>
 									<div className='tiendas'>
 										<h2>TIENDAS DISPONIBLES</h2>
@@ -110,38 +125,9 @@ class index extends Component {
 						margin-top: 2.5rem;
 					}
 
-					:global(body) {
-						background: #f3f3f3;
-						margin: 0;
-						position: relative;
-						font-family: 'Montserrat', sans-serif;
-					}
-					:global(*) {
-						color: #646464;
-					}
-					:global(a) {
-						text-decoration: none;
-					}
-					:global(*) {
-						-webkit-user-drag: none;
-						-khtml-user-drag: none;
-						-moz-user-drag: none;
-						-o-user-drag: none;
-						user-drag: none;
-					}
 					@media (min-width: 660px) {
-						:global(#flex) {
-							display: flex;
-							justify-content: center;
-						}
-						:global(body) {
-							background: white;
-						}
 						.container {
 							padding-top: 30px;
-						}
-						:global(.carousel__item) {
-							border: 1px solid #e8e8e8;
 						}
 					}
 				`}</style>

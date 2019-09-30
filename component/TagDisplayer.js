@@ -5,13 +5,27 @@ export default function TagDisplayer() {
 	return (
 		<div className='tag-displayer'>
 			<Link route={'producto'} params={{ tag: 'polo' }}>
-				<div className='tag-displayer__item' id='item1'>
-					<a>
-						<h1>Camisetas</h1>
-					</a>
-				</div>
+				<a className='tag-displayer__item' id='item1'>
+					<h1>camisetas</h1>
+				</a>
 			</Link>
 			<Link route={'producto'} params={{ tag: 'casaca' }}>
+				<a className='tag-displayer__item' id='item2'>
+					<h1>casaca</h1>
+				</a>
+			</Link>
+			<Link route={'producto'} params={{ tag: 'zapatillas' }}>
+				<a className='tag-displayer__item' id='item3'>
+					<h1>zapatillas</h1>
+				</a>
+			</Link>
+			<Link route={'producto'} params={{ tag: 'pantalon' }}>
+				<a className='tag-displayer__item' id='item4'>
+					<h1>jean</h1>
+				</a>
+			</Link>
+
+			{/* <Link route={'producto'} params={{ tag: 'casaca' }}>
 				<div className='tag-displayer__item' id='item2'>
 					<a>
 						<h1>Casacas</h1>
@@ -33,7 +47,7 @@ export default function TagDisplayer() {
 						<h1>Jeans</h1>
 					</a>
 				</div>
-			</Link>
+			</Link> */}
 
 			<style jsx>
 				{`
@@ -57,24 +71,24 @@ export default function TagDisplayer() {
 						text-transform: uppercase;
 					}
 					#item3 {
-						background: url('/static/blueTexture.webp');
+						background: url('/static/mainView/blueTexture.webp');
 						background-size: cover;
 						background-position: center center;
 					}
 					#item2 {
 						background-position: center center;
-						background: url('/static/orangeTexture.webp');
+						background: url('/static/mainView/orangeTexture.webp');
 						background-position: center center;
 						background-size: cover;
 					}
 					#item1 {
-						background: url('/static/polo.webp');
+						background: url('/static/mainView/polo.webp');
 						background-position: center center;
 						background-size: cover;
 					}
 					#item4 {
 						background-position: center center;
-						background: url('/static/purpleTexture.webp');
+						background: url('/static/mainView/purpleTexture.webp');
 
 						background-size: cover;
 					}

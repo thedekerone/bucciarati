@@ -8,6 +8,7 @@ import Spinner from '../component/views/Spinner';
 import gql from 'graphql-tag';
 import Layout from '../component/Layout';
 import Error from '../component/views/Error';
+import Head from 'next/head';
 
 export default class producto extends React.Component {
 	static async getInitialProps({ query }) {
@@ -16,6 +17,27 @@ export default class producto extends React.Component {
 	render() {
 		return (
 			<Layout>
+				<Head>
+					<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+					<title>Bucciarati Store</title>
+					<link rel='apple-touch-icon' sizes='57x57' href='/static/favicon/apple-icon-57x57.png' />
+					<link rel='apple-touch-icon' sizes='60x60' href='/static/favicon/apple-icon-60x60.png' />
+					<link rel='apple-touch-icon' sizes='72x72' href='/static/favicon/apple-icon-72x72.png' />
+					<link rel='apple-touch-icon' sizes='76x76' href='/static/favicon/apple-icon-76x76.png' />
+					<link rel='apple-touch-icon' sizes='114x114' href='/static/favicon/apple-icon-114x114.png' />
+					<link rel='apple-touch-icon' sizes='120x120' href='/static/favicon/apple-icon-120x120.png' />
+					<link rel='apple-touch-icon' sizes='144x144' href='/static/favicon/apple-icon-144x144.png' />
+					<link rel='apple-touch-icon' sizes='152x152' href='/static/favicon/apple-icon-152x152.png' />
+					<link rel='apple-touch-icon' sizes='180x180' href='/static/favicon/apple-icon-180x180.png' />
+					<link rel='icon' type='image/png' sizes='192x192' href='/static/favicon/android-icon-192x192.png' />
+					<link rel='icon' type='image/png' sizes='32x32' href='/static/favicon/favicon-32x32.png' />
+					<link rel='icon' type='image/png' sizes='96x96' href='/static/favicon/favicon-96x96.png' />
+					<link rel='icon' type='image/png' sizes='16x16' href='/static/favicon/favicon-16x16.png' />
+					<link rel='manifest' href='/static/favicon/manifest.json' />
+					<meta name='msapplication-TileColor' content='#ffffff' />
+					<meta name='msapplication-TileImage' content='/static/favicon/ms-icon-144x144.png' />
+					<meta name='theme-color' content='#ffffff' />
+				</Head>
 				<Query
 					query={gql`
 						query search($filter: String) {
@@ -74,62 +96,18 @@ export default class producto extends React.Component {
 							margin: 0 auto 4rem;
 						}
 
-						.tiendas {
-							padding-left: 10px;
-						}
-
 						h2 {
 							font-size: 1rem;
 							font-weight: 400;
 							margin-bottom: 1.5em;
 							text-transform: uppercase;
 						}
-						.tiendas h2 {
-							font-size: .9em;
-						}
 
-						.ofertas {
-							padding-left: 10px;
-						}
-						.tiendas,
-						.ofertas {
-							margin-top: 2.5rem;
-						}
 						.search {
 							margin: 2em 0;
 						}
 
-						:global(body) {
-							background: #f3f3f3;
-							margin: 0;
-							position: relative;
-							font-family: 'Montserrat', sans-serif;
-						}
-						:global(*) {
-							color: #646464;
-						}
-						:global(a) {
-							text-decoration: none;
-						}
-						:global(img) {
-							-webkit-user-drag: none;
-							-khtml-user-drag: none;
-							-moz-user-drag: none;
-							-o-user-drag: none;
-							user-drag: none;
-						}
 						@media (min-width: 660px) {
-							:global(#flex) {
-								display: flex;
-								justify-content: center;
-							}
-							:global(body) {
-								background: white;
-							}
-
-							:global(.carousel__item) {
-								border: 1px solid #e8e8e8;
-							}
 						}
 					`}
 				</style>

@@ -16,11 +16,14 @@ export default function Navbar({ handleClick }) {
 		<div className='navbar-container'>
 			<div className='navbar'>
 				<div className='main-navbar'>
-					<Link route='/'>
-						<a className='logo'>
-							<h1 className='main-navbar__title'>BUCCIARATI</h1>
-						</a>
-					</Link>
+					<div className='logo'>
+						<Link route='/'>
+							<a>
+								{' '}
+								<img className='main-navbar__title' src='/static/logo2.webp' width='100%' alt='' />
+							</a>
+						</Link>
+					</div>
 					<nav className='main-navbar__items'>
 						<ul>
 							<li>
@@ -93,7 +96,7 @@ export default function Navbar({ handleClick }) {
 					.navbar-container {
 						position: relative;
 						width: 100%;
-						height: 55px;
+						height: 60px;
 						box-sizing: border-box;
 						overflow: hidden;
 					}
@@ -126,21 +129,29 @@ export default function Navbar({ handleClick }) {
 						margin: 0 .8em;
 					}
 					.logo {
-						display: ${display ? 'block' : 'none'};
+						display: ${display ? 'flex' : 'none'};
+						align-items: flex-end;
+						height: auto;
 					}
 					#search {
 						padding: .6rem;
 						border: 0;
 						width: 100%;
-						border-radius: 20px;
-						background: #e6edf7;
+						border-radius: 15px;
+						background: #dee8ef;
 						transition: .5s;
+					}
+					#search::placeholder {
+						color: grey;
 					}
 					#search:focus {
 					}
 
 					.main-navbar__items {
 						display: none;
+					}
+					.main-navbar__items li:hover a {
+						color: #fd486b;
 					}
 
 					.main-navbar__icon {
@@ -152,6 +163,7 @@ export default function Navbar({ handleClick }) {
 					.main-navbar__title {
 						color: #e84855;
 						font-size: 1.2rem;
+						width: 50px;
 					}
 					.categorias {
 						display: flex;
@@ -169,11 +181,9 @@ export default function Navbar({ handleClick }) {
 					}
 
 					@media (min-width: 660px) {
-						:global(body) {
-							background: white;
-						}
 						.logo {
-							display: block;
+							display: flex;
+							width: 225px;
 						}
 
 						.icon-menu {
@@ -207,10 +217,11 @@ export default function Navbar({ handleClick }) {
 						}
 						.main-navbar__items ul li {
 							list-style: none;
-							font-size: .8rem;
+							font-size: .7rem;
 						}
 						.main-navbar__title {
 							font-size: 1.7rem;
+							width: 65px;
 						}
 					}
 				`}

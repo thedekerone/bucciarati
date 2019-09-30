@@ -7,7 +7,7 @@ import { Router } from 'next/router';
 
 export default function ProductosMini(props) {
 	return (
-		<Carousel width='190' height='275' margin='10' slides={props.data.length} type='productos'>
+		<Carousel width='190' height='255' margin='10' slides={props.data.length} type='productos'>
 			<div className='productos'>
 				{props.data.map((e) => {
 					return (

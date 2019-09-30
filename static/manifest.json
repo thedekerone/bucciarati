@@ -1,0 +1,17 @@
+{
+	"short_name": "Bucciarati",
+	"name": "Bucciarati store",
+	"icons": [
+		{
+			"src": "/static/logo3.png",
+			"sizes": "512x512 192x192",
+			"type": "image/png"
+		}
+	],
+	"start-url": "/",
+	"scope": "/",
+	"display": "standalone",
+	"theme_color": "#000",
+	"background_color": "#fff",
+	"prefer_related_applications": false
+}

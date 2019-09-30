@@ -47,7 +47,9 @@ export default function Product(props) {
 						<img src='/static/icons/icons8-star-filled-48.png' width='20px' alt='' />
 						<img src='/static/icons/icons8-star-filled-48.png' width='20px' alt='' />
 
-						<span className='product-information__reviews--number'>128 reviews</span>
+						<span className='product-information__reviews--number'>
+							{Math.round(Math.random() * 100)} reviews
+						</span>
 					</div>
 					<Link route='single' params={{ slug: props.data._id }} key={props.data._id}>
 						<div className='btn'>BUY NOW</div>
@@ -60,14 +62,14 @@ export default function Product(props) {
 					.product {
 						display: grid;
 						background: white;
-						max-width: ${props.wrap ? '1000px' : '400px'};
+						max-width: ${props.wrap ? '1000px' : '600px'};
 						width: 100%;
 						margin: 0 auto;
 						font-size: 11px;
 						height: 100%;
 						box-sizing: border-box;
 						padding: 1em;
-						grid-template: auto / 1fr 1fr;
+						grid-template: ${props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr'};
 					}
 					.product__img {
 						grid-row: 1/2;
@@ -84,9 +86,9 @@ export default function Product(props) {
 						width: 100%;
 					}
 					.product__description {
-						padding-left: ${props.wrap ? '2em' : '1.2em'};
-						grid-column: 2/4;
-						grid-row: 1/3;
+						padding-left: ${props.wrap ? '.5em' : '1.2em'};
+						grid-column: ${props.wrap ? '1/2' : '2/4'};
+						grid-row: ${props.wrap ? '2/3' : '1/2'};
 						display: flex;
 						flex-direction: column;
 						justify-content: space-between;
@@ -127,6 +129,8 @@ export default function Product(props) {
 					.product-information__reviews--number {
 						color: #ffca28;
 						height: 20px;
+						display: flex;
+						align-items: center;
 					}
 					.btn {
 						margin-top: 1rem;
@@ -146,23 +150,16 @@ export default function Product(props) {
 					@media (min-width: 660px) {
 						.product {
 							border: ${props.wrap ? ' 0px' : '1px solid #d5d5d5'};
-							grid-template: auto /1fr 1fr 1fr;
+							grid-template: ${props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr'};
 							font-size: 15px;
+							max-width: 900px;
+						}
+						.product__description {
+							grid-column: 2/4;
+							grid-row: 1/2;
+							padding-left: ${props.wrap ? '3em' : '1.2em'};
 						}
 					}
-					// .product {
-					// 	max-width: 900px;
-					// 	margin: 0 auto;
-					// }
-					// .product__img {
-					// 	padding: 1rem;
-					// }
-					// .product__description {
-					// 	padding-left: 7rem;
-					// }
-					// .product-information__text {
-					// 	display: block;
-					// }
 				`}
 			</style>
 			{`

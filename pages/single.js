@@ -1,11 +1,12 @@
 import React from 'react';
 import ProductView from '../component/ProductView';
-import ProductosMini from '../component/ProductosMini';
+import Productos from '../component/Productos';
 import { Query, graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 import Layout from '../component/Layout';
 import Spinner from '../component/views/Spinner';
 import Error from '../component/views/Error';
+import Head from 'next/head';
 
 const GETTER = gql`
 	query Product($PR: ID!) {
@@ -15,6 +16,7 @@ const GETTER = gql`
 			image
 			price
 			discount
+			tags
 		}
 	}
 `;
@@ -27,38 +29,61 @@ class single extends React.Component {
 	render() {
 		return (
 			<Layout>
+				<Head>
+					<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+					<title>Bucciarati Store</title>
+					<link rel='apple-touch-icon' sizes='57x57' href='/static/favicon/apple-icon-57x57.png' />
+					<link rel='apple-touch-icon' sizes='60x60' href='/static/favicon/apple-icon-60x60.png' />
+					<link rel='apple-touch-icon' sizes='72x72' href='/static/favicon/apple-icon-72x72.png' />
+					<link rel='apple-touch-icon' sizes='76x76' href='/static/favicon/apple-icon-76x76.png' />
+					<link rel='apple-touch-icon' sizes='114x114' href='/static/favicon/apple-icon-114x114.png' />
+					<link rel='apple-touch-icon' sizes='120x120' href='/static/favicon/apple-icon-120x120.png' />
+					<link rel='apple-touch-icon' sizes='144x144' href='/static/favicon/apple-icon-144x144.png' />
+					<link rel='apple-touch-icon' sizes='152x152' href='/static/favicon/apple-icon-152x152.png' />
+					<link rel='apple-touch-icon' sizes='180x180' href='/static/favicon/apple-icon-180x180.png' />
+					<link rel='icon' type='image/png' sizes='192x192' href='/static/favicon/android-icon-192x192.png' />
+					<link rel='icon' type='image/png' sizes='32x32' href='/static/favicon/favicon-32x32.png' />
+					<link rel='icon' type='image/png' sizes='96x96' href='/static/favicon/favicon-96x96.png' />
+					<link rel='icon' type='image/png' sizes='16x16' href='/static/favicon/favicon-16x16.png' />
+					<link rel='manifest' href='/static/favicon/manifest.json' />
+					<meta name='msapplication-TileColor' content='#ffffff' />
+					<meta name='msapplication-TileImage' content='/static/favicon/ms-icon-144x144.png' />
+					<meta name='theme-color' content='#ffffff' />
+				</Head>
 				<Query query={GETTER} variables={{ PR: this.props.id }}>
 					{({ loading, error, data }) => {
 						if (loading) return <Spinner />;
+
 						if (error) return <Error />;
 						if (!data.getProduct) return <Error />;
 
 						return (
-							<div>
-								<div className='container'>
-									<ProductView data={data.getProduct} wrap={true} />
-									<div className='tiendas'>
-										<h2>También podría gustarte: </h2>
+							<div className='container'>
+								<ProductView data={data.getProduct} wrap={true} />
+								<div className='tiendas'>
+									<h2>También podría gustarte: </h2>
 
-										<Query
-											query={gql`
-												{
-													getProducts {
-														_id
-														title
-														image
-														price
-														discount
-													}
+									<Query
+										query={gql`
+											query search($filter: String) {
+												searchProducts(filter: $filter) {
+													title
+													_id
+													image
+													price
+													tags
+													discount
 												}
-											`}>
-											{({ loading, error, data }) => {
-												if (loading) return <Spinner />;
-												if (error) return <Error />;
-												return <ProductosMini data={data.getProducts} />;
-											}}
-										</Query>
-									</div>
+											}
+										`}
+										variables={{ filter: data.getProduct.tags[0] }}>
+										{({ loading, error, data }) => {
+											if (loading) return <Spinner />;
+											if (error) return <Error />;
+
+											return <Productos data={data.searchProducts} />;
+										}}
+									</Query>
 								</div>
 							</div>
 						);
@@ -85,9 +110,6 @@ class single extends React.Component {
 						justify-content: center;
 						align-items: center;
 					}
-					.tiendas {
-						padding-left: 10px;
-					}
 
 					h2 {
 						font-size: 1rem;
@@ -95,56 +117,10 @@ class single extends React.Component {
 						margin-bottom: 1.5em;
 						text-transform: uppercase;
 					}
-					.tiendas h2 {
-						font-size: .9em;
-					}
-					:global(*) {
-						-webkit-user-drag: none;
-						-khtml-user-drag: none;
-						-moz-user-drag: none;
-						-o-user-drag: none;
-						user-drag: none;
-					}
-					.ofertas {
-						padding-left: 10px;
-					}
-					.tiendas,
-					.ofertas {
-						margin-top: 2.5rem;
-					}
 
-					:global(body) {
-						background: #f3f3f3;
-						margin: 0;
-						position: relative;
-						font-family: 'Montserrat', sans-serif;
-					}
-					:global(*) {
-						color: #646464;
-					}
-					:global(a) {
-						text-decoration: none;
-					}
-					:global(img) {
-						-webkit-user-drag: none;
-						-khtml-user-drag: none;
-						-moz-user-drag: none;
-						-o-user-drag: none;
-						user-drag: none;
-					}
 					@media (min-width: 660px) {
-						:global(#flex) {
-							display: flex;
-							justify-content: center;
-						}
-						:global(body) {
-							background: white;
-						}
 						.container {
 							padding-top: 30px;
-						}
-						:global(.carousel__item) {
-							border: 1px solid #e8e8e8;
 						}
 					}
 				`}</style>

@@ -48,31 +48,25 @@ export default function MainDisplayer() {
 						position: relative;
 						z-index: 22;
 						margin-top: 1.5em;
+						transition: .2s;
 					}
+					.main-hero__button:hover {
+						background: #fd486b;
+					}
+
 					.main-hero__button a {
 						display: block;
 						height: 100%;
 						padding: .5em 1.4em;
-						background: black;
-						border: 1px solid white;
+						font-weight: bold;
+						border: 1px solid #fd486b;
+						font-size: 1.2rem;
 
 						color: white;
 					}
-					.main-hero__button:active a {
-						transform: translateX(3px) translateY(3px);
-					}
-					.main-hero__button::before {
-						content: "";
-						position: absolute;
-						width: 100%;
-						height: 100%;
-						z-index: -1;
-						top: 3px;
-						left: 3px;
-						background: white;
-					}
+
 					#item1 {
-						background: url('/static/main2.webp');
+						background: url('/static/mainView/main2.webp');
 						background-size: cover;
 						background-position: 600px top;
 						background-repeat: none;

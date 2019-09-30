@@ -13,7 +13,6 @@ export default function BrandDisplayer(props) {
 					</div>
 				);
 			})}
-
 			<style jsx>
 				{`
 					.brands {

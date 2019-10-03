@@ -114,7 +114,17 @@ __webpack_require__.r(__webpack_exports__);
   headers,
   initialState
 }) => new apollo_boost__WEBPACK_IMPORTED_MODULE_1___default.a({
-  uri: 'https://chupetinps.herokuapp.com/',
+  request: operation => {
+    const user = localStorage.usuario;
+    const pass = localStorage.password;
+    operation.setContext({
+      headers: {
+        usuario: user ? user : null,
+        password: pass ? pass : null
+      }
+    });
+  },
+  uri: 'https://chupetinps.herokuapp.com',
   cache: new apollo_boost__WEBPACK_IMPORTED_MODULE_1__["InMemoryCache"]().restore(initialState || {})
 }), {
   getDataFromTree: 'never'

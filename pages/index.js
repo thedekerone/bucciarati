@@ -12,11 +12,25 @@ import TagDisplayer from '../component/TagDisplayer';
 import Error from '../component/views/Error';
 
 class index extends Component {
+	handleClick = (client) => {
+		console.log('aea');
+
+		localStorage.setItem('usuario', 'dekker3');
+		localStorage.setItem('password', 'internetes');
+		client.resetStore();
+		console.log(localStorage);
+	};
+	handleLogout = (client) => {
+		localStorage.removeItem('usuario');
+		localStorage.removeItem('password');
+		client.resetStore();
+		// aea
+		console.log(localStorage);
+	};
 	render() {
 		return (
 			<Layout>
 				<Head>
-					<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 					<title>Bucciarati Store</title>
 					<link rel='apple-touch-icon' sizes='57x57' href='/static/favicon/apple-icon-57x57.png' />
 					<link rel='apple-touch-icon' sizes='60x60' href='/static/favicon/apple-icon-60x60.png' />
@@ -57,17 +71,24 @@ class index extends Component {
 							}
 						}
 					`}>
-					{({ loading, error, data }) => {
+					{({ client, loading, error, data }) => {
 						if (loading) return <Spinner />;
 						if (error) return <Error code='502' />;
+						console.log(data);
+
 						return (
 							<React.Fragment>
 								<div className='container'>
 									<div className='tiendas'>
-										<h2>TIENDAS DISPONIBLES</h2>
+										<h2
+											onClick={() => {
+												this.handleLogout(client);
+											}}>
+											TIENDAS DISPONIBLES
+										</h2>
 										<BrandCarousel data={data.getBrands} />
 									</div>
-									<div className='ofertas'>
+									<div className='ofertas' onClick={() => this.handleClick(client)}>
 										<h2>HASTA 50% DE DESCUENTO</h2>
 										<ProductosMini data={data.getProducts.filter((e) => e.discount > 50)} />
 									</div>

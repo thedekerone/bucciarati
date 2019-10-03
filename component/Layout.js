@@ -17,7 +17,7 @@ export default function Layout(props) {
 		<div>
 			<Navbar handleClick={handleClick} />
 			<Head>
-				<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='manifest' href='/static/manifest.json' />
 				<link rel='shortcut icon' href='/static/favi2.png' />
 				<meta name='theme-color' content='#ff6600' />

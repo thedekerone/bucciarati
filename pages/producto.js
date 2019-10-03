@@ -9,7 +9,6 @@ import gql from 'graphql-tag';
 import Layout from '../component/Layout';
 import Error from '../component/views/Error';
 import Head from 'next/head';
-
 export default class producto extends React.Component {
 	static async getInitialProps({ query }) {
 		return { id: query.tag };
@@ -72,7 +71,6 @@ export default class producto extends React.Component {
 							<div className='producto-tipo'>
 								<BrandDisplayer data={data.getBrands} />
 								<Selector tag={this.props.id} />
-
 								<Filtros />
 								<div className='container'>
 									<Productos
@@ -86,7 +84,6 @@ export default class producto extends React.Component {
 				<style jsx>
 					{`
 						@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
-
 						.container {
 							max-width: 1150px;
 							width: 100%;
@@ -95,18 +92,15 @@ export default class producto extends React.Component {
 							overflow: hidden;
 							margin: 0 auto 4rem;
 						}
-
 						h2 {
 							font-size: 1rem;
 							font-weight: 400;
 							margin-bottom: 1.5em;
 							text-transform: uppercase;
 						}
-
 						.search {
 							margin: 2em 0;
 						}
-
 						@media (min-width: 660px) {
 						}
 					`}

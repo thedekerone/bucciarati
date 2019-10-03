@@ -10,11 +10,9 @@ import { Query, graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 import TagDisplayer from '../component/TagDisplayer';
 import Error from '../component/views/Error';
-
 class index extends Component {
 	handleClick = (client) => {
 		console.log('aea');
-
 		localStorage.setItem('usuario', 'dekker3');
 		localStorage.setItem('password', 'internetes');
 		client.resetStore();
@@ -50,7 +48,6 @@ class index extends Component {
 					<meta name='msapplication-TileImage' content='/static/favicon/ms-icon-144x144.png' />
 					<meta name='theme-color' content='#ffffff' />
 				</Head>
-
 				<MainDisplayer />
 				<TagDisplayer />
 				<Query
@@ -75,7 +72,6 @@ class index extends Component {
 						if (loading) return <Spinner />;
 						if (error) return <Error code='502' />;
 						console.log(data);
-
 						return (
 							<React.Fragment>
 								<div className='container'>
@@ -115,7 +111,6 @@ class index extends Component {
 				</Query>
 				<style jsx>{`
 					@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
-
 					.container {
 						max-width: 1150px;
 						width: 100%;
@@ -123,11 +118,9 @@ class index extends Component {
 						overflow: hidden;
 						margin: 0 auto 4rem;
 					}
-
 					.tiendas {
 						padding-left: 10px;
 					}
-
 					h2 {
 						font-size: 1rem;
 						font-weight: 400;
@@ -137,7 +130,6 @@ class index extends Component {
 					.tiendas h2 {
 						font-size: .9em;
 					}
-
 					.ofertas {
 						padding-left: 10px;
 					}
@@ -145,7 +137,6 @@ class index extends Component {
 					.ofertas {
 						margin-top: 2.5rem;
 					}
-
 					@media (min-width: 660px) {
 						.container {
 							padding-top: 30px;
@@ -156,5 +147,4 @@ class index extends Component {
 		);
 	}
 }
-
 export default index;

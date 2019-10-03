@@ -1786,13 +1786,13 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
       client: apollo,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 8
       },
       __self: this
     }, __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 9
       },
       __self: this
     })));

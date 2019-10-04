@@ -15,7 +15,7 @@ export default function Layout(props) {
 
 	return (
 		<div>
-			<Navbar handleClick={handleClick} />
+			<Navbar handleClick={handleClick} />;
 			<Head>
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='manifest' href='/static/manifest.json' />

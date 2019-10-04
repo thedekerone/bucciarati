@@ -1,8 +1,21 @@
 import React, { useState } from 'react';
+import gql from 'graphql-tag';
+import { Query, graphql } from 'react-apollo';
 import { Link, Router } from '../routes';
+import Spinner from './views/Spinner';
+import Error from './views/Error';
 
-export default function Navbar({ handleClick }) {
+const Navbar = ({ handleClick }) => {
 	let textInput;
+	const GET_USER = gql`
+		{
+			getUsers {
+				_id
+				username
+				password
+			}
+		}
+	`;
 	const [
 		display,
 		setDisplay
@@ -11,88 +24,141 @@ export default function Navbar({ handleClick }) {
 		e.preventDefault();
 		Router.pushRoute('producto', { tag: textInput.value });
 	};
+	const handleLogin = (client) => {
+		console.log('aea');
+		localStorage.setItem('usuario', 'dekker');
+		localStorage.setItem('password', 'internetes');
+		client.resetStore();
+
+		console.log(localStorage);
+	};
+	const handleLogout = (client) => {
+		localStorage.removeItem('usuario');
+		localStorage.removeItem('password');
+		client.resetStore();
+		console.log(localStorage);
+	};
 
 	return (
-		<div className='navbar-container'>
-			<div className='navbar'>
-				<div className='main-navbar'>
-					<div className='logo'>
-						<Link route='/'>
-							<a>
-								{' '}
-								<img className='main-navbar__title' src='/static/logo2.webp' width='100%' alt='' />
-							</a>
-						</Link>
-					</div>
-					<nav className='main-navbar__items'>
-						<ul>
-							<li>
-								<Link route='producto' params={{ tag: 'hombre' }}>
-									<a>Hombres</a>
-								</Link>
-							</li>
-							<li>
-								<Link route='producto' params={{ tag: 'mujer' }}>
-									<a>Mujeres</a>
-								</Link>
-							</li>
-							<li>
-								<Link route='producto' params={{ tag: 'niño' }}>
-									<a>Niños</a>
-								</Link>
-							</li>
-							<li>
-								<Link route='producto' params={{ tag: '' }}>
-									<a>Accesorios</a>
-								</Link>
-							</li>
-							<li>
-								<Link route='producto' params={{ tag: '' }}>
-									<a>Regalos</a>
-								</Link>
-							</li>
-						</ul>
-					</nav>
-					<span className='main-navbar__icon'>
-						<form
-							onSubmit={(e) => {
-								handleSubmit(e);
-							}}>
-							<input
-								type='search'
-								onFocus={() => {
-									setDisplay(false);
-								}}
-								ref={(input) => (textInput = input)}
-								onBlur={() => {
-									setDisplay(true);
-								}}
-								name='search'
-								id='search'
-								placeholder='Search'
-							/>
-							<img
-								className='search-icon'
-								src='/static/icons/icons8-search.svg'
-								width='30px'
-								alt='search'
-							/>
-						</form>
-					</span>
-					<img
-						onClick={() => {
-							handleClick();
-						}}
-						className='icon-menu'
-						width='30px'
-						src='/static/icons/menu.svg'
-						alt='menu'
-					/>
-				</div>
-			</div>
-
+		<React.Fragment>
+			<Query query={GET_USER}>
+				{({ client, loading, error, data }) => {
+					if (loading) return <Spinner />;
+					if (error) return <Error code='502' />;
+					console.log(data);
+					return (
+						<div className='navbar-container'>
+							<div className='navbar'>
+								<div className='main-navbar'>
+									<div className='logo'>
+										<Link route='/'>
+											<a>
+												{' '}
+												<img
+													className='main-navbar__title'
+													src='/static/logo2.webp'
+													width='100%'
+													alt=''
+												/>
+											</a>
+										</Link>
+									</div>
+									<nav className='main-navbar__items'>
+										<ul>
+											<li>
+												<Link route='producto' params={{ tag: 'hombre' }}>
+													<a>Hombres</a>
+												</Link>
+											</li>
+											<li>
+												<Link route='producto' params={{ tag: 'mujer' }}>
+													<a>Mujeres</a>
+												</Link>
+											</li>
+											<li>
+												<Link route='producto' params={{ tag: 'niño' }}>
+													<a>Niños</a>
+												</Link>
+											</li>
+											<li>
+												<Link route='producto' params={{ tag: '' }}>
+													<a>Accesorios</a>
+												</Link>
+											</li>
+											<li>
+												<Link route='producto' params={{ tag: '' }}>
+													<a>Regalos</a>
+												</Link>
+											</li>
+										</ul>
+									</nav>
+									<span className='main-navbar__icon'>
+										<form
+											onSubmit={(e) => {
+												handleSubmit(e);
+											}}>
+											<input
+												type='search'
+												onFocus={() => {
+													setDisplay(false);
+												}}
+												ref={(input) => (textInput = input)}
+												onBlur={() => {
+													setDisplay(true);
+												}}
+												name='search'
+												id='search'
+												placeholder='Search'
+											/>
+											<img
+												className='search-icon'
+												src='/static/icons/icons8-search.svg'
+												width='30px'
+												alt='search'
+											/>
+										</form>
+										<div className='login'>
+											{!data.getUsers ? (
+												<h3
+													onClick={() => {
+														handleLogin(client);
+													}}>
+													login
+												</h3>
+											) : (
+												<div className='logged'>
+													<h3>Hello! {data.getUsers.username}</h3>
+													<p
+														onClick={() => {
+															handleLogout(client);
+														}}>
+														logout
+													</p>
+												</div>
+											)}
+										</div>
+									</span>
+									<img
+										onClick={() => {
+											handleClick();
+										}}
+										className='icon-menu'
+										width='30px'
+										src='/static/icons/menu.svg'
+										alt='menu'
+									/>
+								</div>
+							</div>
+						</div>
+					);
+				}}
+			</Query>
 			<style jsx>
 				{`
+					p {
+						font-size: .7rem;
+						text-decoration: underline;
+					}
 					.navbar-container {
 						position: relative;
 						width: 100%;
@@ -123,8 +189,8 @@ export default function Navbar({ handleClick }) {
 					}
 					form {
 						display: flex;
-						width: 100%;
 						align-items: center;
+						display: none;
 						justify-content: flex-end;
 						margin: 0 .8em;
 					}
@@ -136,6 +202,7 @@ export default function Navbar({ handleClick }) {
 					#search {
 						padding: .6rem;
 						border: 0;
+						display: none;
 						width: 100%;
 						border-radius: 15px;
 						background: #dee8ef;
@@ -178,6 +245,12 @@ export default function Navbar({ handleClick }) {
 					}
 					.search-icon {
 						display: none;
+					}
+					.logged {
+						display: flex;
+						align-items: flex-end;
+						flex-shrink: 1;
+						width: 100%;
 					}
 
 					@media (min-width: 660px) {
@@ -226,6 +299,7 @@ export default function Navbar({ handleClick }) {
 					}
 				`}
 			</style>
-		</div>
+		</React.Fragment>
 	);
-}
+};
+export default Navbar;

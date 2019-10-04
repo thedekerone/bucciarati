@@ -12,18 +12,16 @@ import TagDisplayer from '../component/TagDisplayer';
 import Error from '../component/views/Error';
 class index extends Component {
 	handleClick = (client) => {
-		console.log('aea');
-		localStorage.setItem('usuario', 'dekker3');
+		localStorage.setItem('usuario', 'dekker');
 		localStorage.setItem('password', 'internetes');
 		client.resetStore();
-		console.log(localStorage);
 	};
 	handleLogout = (client) => {
 		localStorage.removeItem('usuario');
 		localStorage.removeItem('password');
 		client.resetStore();
+
 		// aea
-		console.log(localStorage);
 	};
 	render() {
 		return (
@@ -71,7 +69,6 @@ class index extends Component {
 					{({ client, loading, error, data }) => {
 						if (loading) return <Spinner />;
 						if (error) return <Error code='502' />;
-						console.log(data);
 						return (
 							<React.Fragment>
 								<div className='container'>

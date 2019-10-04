@@ -3,7 +3,7 @@ import ProductView from './ProductView';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import { Link } from '../routes';
-
+// aeaeaeaea
 export default function Productos(props) {
 	return (
 		<div className='productos'>

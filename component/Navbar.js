@@ -18,11 +18,6 @@ const Navbar = ({ handleClick }) => {
       }
     }
   `;
-  const handleLogin = async (client, username, password, users) => {
-    await localStorage.setItem("usuario", username.value);
-    await localStorage.setItem("password", password.value);
-    await client.resetStore();
-  };
 
   const [display, setDisplay] = useState(true);
   const [show, setShow] = useState(false);
@@ -31,11 +26,10 @@ const Navbar = ({ handleClick }) => {
     Router.pushRoute("producto", { tag: textInput.value });
   };
 
-  const handleLogout = client => {
-    localStorage.removeItem("usuario");
-    localStorage.removeItem("password");
-    client.resetStore();
-    Router.pushRoute("/");
+  const handleLogout = async client => {
+    await localStorage.removeItem("usuario");
+    await localStorage.removeItem("password");
+    await Router.pushRoute("/");
   };
 
   return (
@@ -47,7 +41,7 @@ const Navbar = ({ handleClick }) => {
               <div className="menu">
                 <img
                   onClick={e => {
-                    handleClick();
+                    handleClick().then(() => {});
                   }}
                   className="icon-menu"
                   width="30px"
@@ -143,7 +137,6 @@ const Navbar = ({ handleClick }) => {
                           setShow={setShow}
                           show={show}
                           users={() => data.getUsers}
-                          handleLogin={handleLogin}
                         ></LoginPortal>
 
                         {!data.getUsers ? (
@@ -158,10 +151,22 @@ const Navbar = ({ handleClick }) => {
                           <div
                             className="logged"
                             onClick={() => {
-                              handleLogout(client);
+                              handleLogout(client).then(() => {
+                                client.resetStore();
+                              });
                             }}
                           >
                             <Login username={data.getUsers.username}></Login>
+                            <div className="shopping-bag">
+                              <img
+                                width="50px"
+                                src="/static/icons/icons8-shopping-bag.svg"
+                                alt=""
+                              />
+                              <div className="shopping-bag__number">
+                                <p>2</p>
+                              </div>
+                            </div>
                           </div>
                         )}
                       </div>
@@ -178,7 +183,6 @@ const Navbar = ({ handleClick }) => {
         {`
           p {
             font-size: 0.7rem;
-            text-decoration: underline;
           }
           .navbar-container {
             position: relative;
@@ -289,15 +293,36 @@ const Navbar = ({ handleClick }) => {
           }
           .logged {
             display: flex;
-            align-items: flex-end;
+            align-items: center;
             flex-shrink: 1;
             width: 100%;
+          }
+          .shopping-bag {
+            position: relative;
+          }
+          .shopping-bag__number {
+            width: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 14px;
+            background: red;
+            position: absolute;
+            border-radius: 100%;
+            right: 1px;
+            bottom: 1px;
+          }
+          .shopping-bag__number p {
+            margin: 0;
+            font-size: 11px;
+            font-weight: bold;
+            color: white;
           }
 
           @media (min-width: 860px) {
             .logo {
               display: flex;
-              width: 250px;
+              width: 100%;
             }
             .right-items {
               flex-shrink: initial;
@@ -311,14 +336,14 @@ const Navbar = ({ handleClick }) => {
               display: block;
             }
             #search {
-              width: 170px;
+              width: 120px;
             }
             .search-icon {
               display: none;
             }
             .main-navbar__items ul {
               display: flex;
-              width: 460px;
+              width: 380px;
               padding: 0;
               margin: 0;
               justify-content: space-between;

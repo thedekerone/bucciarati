@@ -46,9 +46,7 @@ export default function SideBar({ show }) {
             padding: 1em 0.4em;
             text-align: center;
           }
-          .sidebar-list__item:hover {
-            background: grey;
-          }
+
         `}
       </style>
     </div>

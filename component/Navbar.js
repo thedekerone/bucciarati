@@ -25,7 +25,7 @@ const Navbar = ({ handleClick }) => {
   };
 
   const [display, setDisplay] = useState(true);
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const handleSubmit = e => {
     e.preventDefault();
     Router.pushRoute("producto", { tag: textInput.value });
@@ -35,6 +35,7 @@ const Navbar = ({ handleClick }) => {
     localStorage.removeItem("usuario");
     localStorage.removeItem("password");
     client.resetStore();
+    Router.pushRoute("/");
   };
 
   return (
@@ -301,9 +302,6 @@ const Navbar = ({ handleClick }) => {
             .right-items {
               flex-shrink: initial;
               width: 250px;
-            }
-            .menu {
-              display: none;
             }
 
             .main-navbar__icon {

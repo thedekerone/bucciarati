@@ -11,18 +11,6 @@ import gql from "graphql-tag";
 import TagDisplayer from "../component/TagDisplayer";
 import Error from "../component/views/Error";
 class index extends Component {
-  handleClick = client => {
-    localStorage.setItem("usuario", "dekker");
-    localStorage.setItem("password", "internetes");
-    client.resetStore();
-  };
-  handleLogout = client => {
-    localStorage.removeItem("usuario");
-    localStorage.removeItem("password");
-    client.resetStore();
-
-    // aea
-  };
   render() {
     return (
       <Layout>

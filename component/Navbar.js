@@ -20,6 +20,7 @@ const Navbar = ({ handleClick }) => {
 		display,
 		setDisplay
 	] = useState(true);
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		Router.pushRoute('producto', { tag: textInput.value });
@@ -45,6 +46,7 @@ const Navbar = ({ handleClick }) => {
 				{({ client, loading, error, data }) => {
 					if (loading) return <Spinner />;
 					if (error) return <Error code='502' />;
+
 					console.log(data);
 					return (
 						<div className='navbar-container'>

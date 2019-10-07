@@ -30,7 +30,8 @@ __webpack_require__.r(__webpack_exports__);
         }
       });
     },
-    uri: 'https://chupetinps.herokuapp.com',
+    uri: 'http://localhost:4000',
+    // https://chupetinps.herokuapp.com
     cache: new apollo_boost__WEBPACK_IMPORTED_MODULE_1__["InMemoryCache"]().restore(initialState || {})
   });
 }, {
@@ -40,4 +41,4 @@ __webpack_require__.r(__webpack_exports__);
 /***/ })
 
 })
-//# sourceMappingURL=_app.js.e890f1fcdb79fc384f20.hot-update.js.map
+//# sourceMappingURL=_app.js.8d2b1e56bf10277ed19b.hot-update.js.map

@@ -6,7 +6,6 @@ import Spinner from "./views/Spinner";
 import Error from "./views/Error";
 import Login from "./views/Login";
 import LoginPortal from "./views/LoginPortal";
-
 const Navbar = ({ handleClick }) => {
   let textInput;
   const GET_USER = gql`
@@ -15,6 +14,9 @@ const Navbar = ({ handleClick }) => {
         _id
         username
         password
+        bag{
+          title
+        }
       }
     }
   `;
@@ -164,7 +166,7 @@ const Navbar = ({ handleClick }) => {
                                 alt=""
                               />
                               <div className="shopping-bag__number">
-                                <p>2</p>
+                                <p>{data.getUsers.bag.length}</p>
                               </div>
                             </div>
                           </div>

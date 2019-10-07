@@ -1,62 +1,119 @@
 import React from 'react';
 import { Link } from '../routes';
+import gql from 'graphql-tag';
+import { useMutation } from '@apollo/react-hooks';
+import { Query, graphql } from 'react-apollo';
+import Spinner from './views/Spinner';
+import Error from './views/Error';
 
 export default function Product(props) {
+	const ADD_PRODUCT = gql`
+		mutation addProduct($product: ID!, $user: ID!) {
+			addProductToBag(productID: $product, userID: $user) {
+				username
+			}
+		}
+	`;
+	const [
+		addProduct,
+		{ data }
+	] = useMutation(ADD_PRODUCT);
+	const addToCart = (user, client) => {
+		user._id
+			? addProduct({
+					variables : {
+						product : props.data._id,
+						user    : user._id
+					}
+				})
+			: console.log(user);
+		client.resetStore();
+	};
+
 	return (
-		<div className='product'>
-			<div className='product__img'>
-				<img src={props.data.image} width='100%' alt='' />
-			</div>
-			<div className='product__description'>
-				<div className='product-main'>
-					<div className='product-banner'>
-						<span>OFERTA EXCLUSIVA</span>
-					</div>
-					<div className='product-title'>
-						<h3>{props.data.title}</h3>
-					</div>
-					<div className='product-discount'>
-						<span className='product-discount__price'>{props.data.price}</span>
-						<span className='product-discount__percentage'>-{props.data.discount}%</span>
-					</div>
-					<div className='product-price'>
-						<span>{Math.round((100 - props.data.discount) * props.data.price / 100)}.00$</span>
-					</div>
-				</div>
+		<div>
+			<Query
+				query={gql`
+					query {
+						getUsers {
+							_id
+							username
+							password
+							bag {
+								title
+							}
+						}
+					}
+				`}>
+				{({ client, loading, error, data }) => {
+					if (loading) return <Spinner />;
+					if (error) return <Error />;
+					return (
+						<div className='product'>
+							<div className='product__img'>
+								<img src={props.data.image} width='100%' alt='' />
+							</div>
+							<div className='product__description'>
+								<div className='product-main'>
+									<div className='product-banner'>
+										<span>OFERTA EXCLUSIVA</span>
+									</div>
+									<div className='product-title'>
+										<h3>{props.data.title}</h3>
+									</div>
+									<div className='product-discount'>
+										<span className='product-discount__price'>{props.data.price}</span>
+										<span className='product-discount__percentage'>-{props.data.discount}%</span>
+									</div>
+									<div className='product-price'>
+										<span>
+											{Math.round((100 - props.data.discount) * props.data.price / 100)}.00$
+										</span>
+									</div>
+								</div>
 
-				{/* info */}
-				<div className='product-information'>
-					{props.wrap ? (
-						<div className='product-information__text'>
-							<p>
-								<b>Descripción:</b> ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-								eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-								vero
-							</p>
+								{/* info */}
+								<div className='product-information'>
+									{props.wrap ? (
+										<div className='product-information__text'>
+											<p>
+												<b>Descripción:</b> ipsum dolor sit amet, consetetur sadipscing elitr,
+												sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+												aliquyam erat, sed diam voluptua. At vero
+											</p>
+										</div>
+									) : null}
+
+									<div className='product-information__delivery'>
+										<img src='/static/icons/icons8-truck-50.png' width='20px' alt='' />
+										<span>Envío internacional</span>
+									</div>
+									<div className='product-information__reviews'>
+										<img src='/static/icons/icons8-star-filled-48.png' width='20px' alt='' />
+										<img src='/static/icons/icons8-star-filled-48.png' width='20px' alt='' />
+										<img src='/static/icons/icons8-star-filled-48.png' width='20px' alt='' />
+										<img src='/static/icons/icons8-star-filled-48.png' width='20px' alt='' />
+										<img src='/static/icons/icons8-star-filled-48.png' width='20px' alt='' />
+
+										<span className='product-information__reviews--number'>
+											{Math.round(Math.random() * 100)} reviews
+										</span>
+									</div>
+									<div className='buttons'>
+										<div onClick={() => addToCart(data.getUsers, client)} className='btn cart'>
+											ADD TO CART
+										</div>
+
+										<Link route='single' params={{ slug: props.data._id }} key={props.data._id}>
+											<div className='btn buy'>BUY NOW</div>
+										</Link>
+									</div>
+								</div>
+							</div>
 						</div>
-					) : null}
-
-					<div className='product-information__delivery'>
-						<img src='/static/icons/icons8-truck-50.png' width='20px' alt='' />
-						<span>Envío internacional</span>
-					</div>
-					<div className='product-information__reviews'>
-						<img src='/static/icons/icons8-star-filled-48.png' width='20px' alt='' />
-						<img src='/static/icons/icons8-star-filled-48.png' width='20px' alt='' />
-						<img src='/static/icons/icons8-star-filled-48.png' width='20px' alt='' />
-						<img src='/static/icons/icons8-star-filled-48.png' width='20px' alt='' />
-						<img src='/static/icons/icons8-star-filled-48.png' width='20px' alt='' />
-
-						<span className='product-information__reviews--number'>
-							{Math.round(Math.random() * 100)} reviews
-						</span>
-					</div>
-					<Link route='single' params={{ slug: props.data._id }} key={props.data._id}>
-						<div className='btn'>BUY NOW</div>
-					</Link>
-				</div>
-			</div>
-
+					);
+				}}
+			</Query>
 			<style jsx>
 				{`
 					.product {
@@ -132,9 +189,13 @@ export default function Product(props) {
 						display: flex;
 						align-items: center;
 					}
+					.buttons {
+						display: flex;
+						width: 100%;
+					}
 					.btn {
-						margin-top: 1rem;
-
+						width: 100%;
+						margin: 1rem;
 						padding: .6rem;
 						text-align: center;
 						color: white;
@@ -142,9 +203,12 @@ export default function Product(props) {
 						position: relative;
 						z-index: 19;
 					}
-					.btn:hover {
-						filter: brightness(0.8);
-						cursor: pointer;
+					// .btn:hover {
+					// 	filter: brightness(0.8);
+					// 	cursor: pointer;
+					// }
+					.cart {
+						background: #fcba04;
 					}
 
 					@media (min-width: 660px) {
@@ -162,9 +226,6 @@ export default function Product(props) {
 					}
 				`}
 			</style>
-			{`
-						
-					`}
 		</div>
 	);
 }

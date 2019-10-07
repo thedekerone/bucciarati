@@ -30,7 +30,7 @@ __webpack_require__.r(__webpack_exports__);
         }
       });
     },
-    uri: 'http://localhost:4000',
+    uri: 'https://chupetinps.herokuapp.com',
     // https://chupetinps.herokuapp.com
     cache: new apollo_boost__WEBPACK_IMPORTED_MODULE_1__["InMemoryCache"]().restore(initialState || {})
   });
@@ -27357,7 +27357,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\Mauricio\\Documents\\proyectos\\bucciarati-master\\bucciarati-master\\pages\\_app.js";
+var _jsxFileName = "C:\\Users\\Estacion\\Desktop\\Proyectos\\bucciarati-store\\pages\\_app.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 

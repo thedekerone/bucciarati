@@ -61,10 +61,18 @@ export default class producto extends React.Component {
 								tags
 								discount
 							}
+							getUsers {
+								_id
+								username
+								password
+								bag {
+									title
+								}
+							}
 						}
 					`}
 					variables={{ filter: this.props.id }}>
-					{({ loading, error, data }) => {
+					{({ client, loading, error, data }) => {
 						if (loading) return <Spinner />;
 						if (error) return <Error code='502' />;
 						return (
@@ -75,6 +83,8 @@ export default class producto extends React.Component {
 								<div className='container'>
 									<Productos
 										data={this.props.id.length < 1 ? data.getProducts : data.searchProducts}
+										client={client}
+										user={data.getUsers}
 									/>
 								</div>
 							</div>

@@ -4818,7 +4818,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "C:\\Users\\Mauricio\\Documents\\proyectos\\bucciarati-master\\bucciarati-master\\.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "C:\\Users\\Estacion\\Desktop\\Proyectos\\bucciarati-store\\.next");
       return error;
     }
   };

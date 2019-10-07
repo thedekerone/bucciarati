@@ -218,6 +218,14 @@ export default function Product(props) {
 							font-size: 15px;
 							max-width: 900px;
 						}
+						.buttons {
+							flex-direction: ${props.wrap ? ' row' : 'column'};
+							box-sizing: border-box;
+						}
+						.btn {
+							margin: ${props.wrap ? 'none' : '.8rem 0 .2rem'};
+							box-sizing: border-box;
+						}
 						.product__description {
 							grid-column: 2/4;
 							grid-row: 1/2;

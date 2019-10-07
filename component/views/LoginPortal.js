@@ -22,7 +22,7 @@ const LoginPortal = ({ show, client, setShow }) => {
 	let username, password;
 
 	const handleLogin = async () => {
-		localStorage.setItem('usuario', username.value);
+		localStorage.setItem('usuario', username.value.toLowerCase());
 		localStorage.setItem('password', password.value);
 		await client.resetStore();
 	};
@@ -49,7 +49,15 @@ const LoginPortal = ({ show, client, setShow }) => {
 		<div>
 			<div className='portal'>
 				<div className='login-container'>
-					<h1>Logueate</h1>
+					<div
+						onClick={() => {
+							setShow(false);
+						}}
+						className='exit'>
+						X
+					</div>
+
+					<h1>Login</h1>
 					<form
 						onSubmit={(e) => {
 							handleSubmit(e);
@@ -70,7 +78,7 @@ const LoginPortal = ({ show, client, setShow }) => {
 							}}
 							placeholder='password'
 						/>
-						<input type='submit' />
+						<input className='btn' type='submit' />
 					</form>
 
 					<p className='message'>{message}</p>
@@ -79,6 +87,32 @@ const LoginPortal = ({ show, client, setShow }) => {
 
 			<style jsx>
 				{`
+					h1 {
+						color: #db415d;
+						text-transform: uppercase;
+					}
+					.exit {
+						position: absolute;
+						right: 5px;
+						top: 5px;
+						font-size: 1.5rem;
+					}
+					input {
+						padding: .5em;
+						border-radius: 20px;
+						border: 0;
+						margin: .8em .4em;
+					}
+					.btn {
+						border-radius: 5px;
+						margin: 0 auto;
+						margin-top: 3em;
+						background: #db415d;
+						color: white;
+						text-transform: uppercase;
+						font-weight: bold;
+						width: 100%;
+					}
 					.message {
 						color: red;
 						font-size: 0.6rem;
@@ -97,10 +131,11 @@ const LoginPortal = ({ show, client, setShow }) => {
 					}
 					.login-container {
 						background: white;
+						border-radius: 20px;
 						width: 300px;
 						margin: 10% auto;
 						padding: 30px;
-
+						position: relative;
 						height: 300px;
 					}
 				`}

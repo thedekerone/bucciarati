@@ -16,18 +16,6 @@ const nextConfig = {
 
 		runtimeCaching   : [
 			{
-				urlPattern : /^https?\/\/chupetinps.herokuapp.com\/.*/,
-				handler    : 'StaleWhileRevalidate',
-				options    : {
-					cacheableResponse : {
-						statuses : [
-							0,
-							200
-						]
-					}
-				}
-			},
-			{
 				urlPattern : /^https?.*/,
 				handler    : 'NetworkFirst',
 				options    : {

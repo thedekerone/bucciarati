@@ -1,6 +1,6 @@
 import React from 'react';
-import ProductView from '../component/ProductView';
-import Productos from '../component/Productos';
+import ProductView from '../component/productViews/ProductView';
+import Productos from '../component/productViews/Productos';
 import { Query, graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 import Layout from '../component/Layout';

@@ -1,0 +1,106 @@
+webpackHotUpdate("static\\development\\pages\\cart.js",{
+
+/***/ "./pages/cart.js":
+/*!***********************!*\
+  !*** ./pages/cart.js ***!
+  \***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! isomorphic-fetch */ "./node_modules/isomorphic-fetch/fetch-npm-browserify.js");
+/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! graphql-tag */ "./node_modules/graphql-tag/src/index.js");
+/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-apollo */ "./node_modules/react-apollo/lib/react-apollo.esm.js");
+/* harmony import */ var _component_productViews_ProductosInCart__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../component/productViews/ProductosInCart */ "./component/productViews/ProductosInCart.js");
+/* harmony import */ var _component_Layout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../component/Layout */ "./component/Layout.js");
+/* harmony import */ var _component_views_Error__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../component/views/Error */ "./component/views/Error.js");
+/* harmony import */ var _component_views_Spinner__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../component/views/Spinner */ "./component/views/Spinner.js");
+
+var _jsxFileName = "C:\\Users\\Estacion\\Desktop\\Proyectos\\bucciarati-store\\pages\\cart.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n\t\t{\n\t\t\tgetUsers {\n\t\t\t\tusername\n\t\t\t\tbag {\n\t\t\t\t\t_id\n\t\t\t\t\ttitle\n\t\t\t\t\timage\n\t\t\t\t\tprice\n\t\t\t\t\ttags\n\t\t\t\t\tdiscount\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+
+
+
+
+
+var Cart = function Cart() {
+  var GET_USER = graphql_tag__WEBPACK_IMPORTED_MODULE_3___default()(_templateObject());
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }, __jsx(react_apollo__WEBPACK_IMPORTED_MODULE_4__["Query"], {
+    query: GET_USER,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, function (_ref) {
+    var client = _ref.client,
+        loading = _ref.loading,
+        error = _ref.error,
+        data = _ref.data;
+    if (loading) return __jsx(_component_views_Spinner__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32
+      },
+      __self: this
+    });
+    if (error) return console.log(error);
+    return __jsx("div", {
+      className: "container",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    }, __jsx(_component_productViews_ProductosInCart__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      data: data.getUsers.bag,
+      client: client,
+      user: data.getUsers,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36
+      },
+      __self: this
+    }));
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Cart);
+
+/***/ })
+
+})
+//# sourceMappingURL=cart.js.20e8706e4dda9a14c018.hot-update.js.map

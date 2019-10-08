@@ -1,0 +1,41 @@
+{
+  "modules": {
+    "byIdentifier": {
+      "multi node_modules/next-offline/register-sw-compiled.js .\\node_modules\\next\\dist\\client\\next.js": 0
+    },
+    "usedIds": {
+      "0": 0
+    }
+  },
+  "chunks": {
+    "byName": {
+      "commons": 0,
+      "static/runtime/webpack.js": 1,
+      "static/runtime/main.js": 2,
+      "static\\SoyHbeQ3e8gWhAEvH6Xhw\\pages\\_app.js": 3,
+      "static\\SoyHbeQ3e8gWhAEvH6Xhw\\pages\\_error.js": 4,
+      "static\\SoyHbeQ3e8gWhAEvH6Xhw\\pages\\cart.js": 5,
+      "static\\SoyHbeQ3e8gWhAEvH6Xhw\\pages\\index.js": 6,
+      "static\\SoyHbeQ3e8gWhAEvH6Xhw\\pages\\producto.js": 7,
+      "static\\SoyHbeQ3e8gWhAEvH6Xhw\\pages\\single.js": 8,
+      "static\\lGcEve-EtyBE0PAsye83l\\pages\\_app.js": 9,
+      "static\\lGcEve-EtyBE0PAsye83l\\pages\\_error.js": 10,
+      "static\\lGcEve-EtyBE0PAsye83l\\pages\\cart.js": 11,
+      "static\\lGcEve-EtyBE0PAsye83l\\pages\\index.js": 12,
+      "static\\lGcEve-EtyBE0PAsye83l\\pages\\producto.js": 13,
+      "static\\lGcEve-EtyBE0PAsye83l\\pages\\single.js": 14
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      10,
+      11,
+      12,
+      13,
+      14,
+      2,
+      9
+    ]
+  }
+}

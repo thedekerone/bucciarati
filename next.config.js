@@ -27,6 +27,10 @@ const nextConfig = {
 		swDest         : 'static/service-worker.js',
 		runtimeCaching : [
 			{
+				urlPattern : /^https?\/\/chupetinps.herokuapp.com\/.*/,
+				handler    : 'StaleWhileRevalidate'
+			},
+			{
 				urlPattern : /^https?.*/,
 				handler    : 'NetworkFirst',
 				options    : {

@@ -34,8 +34,8 @@ const GET_BRANDS = gql`
 	}
 `;
 
-export default (Querys = {
+module.exports = {
 	GET_BRANDS   : GET_BRANDS,
 	GET_USER     : GET_USER,
 	GET_PRODUCTS : GET_PRODUCTS
-});
+};

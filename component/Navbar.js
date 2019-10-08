@@ -15,7 +15,12 @@ const Navbar = ({ handleClick }) => {
         username
         password
         bag{
-          title
+          _id
+								title
+								image
+								price
+								tags
+								discount
         }
       }
     }
@@ -43,7 +48,7 @@ const Navbar = ({ handleClick }) => {
               <div className="menu">
                 <img
                   onClick={e => {
-                    handleClick().then(() => {});
+                    handleClick()
                   }}
                   className="icon-menu"
                   width="30px"
@@ -153,9 +158,10 @@ const Navbar = ({ handleClick }) => {
                           <div
                             className="logged"
                             onClick={() => {
-                              handleLogout(client).then(() => {
-                                client.resetStore();
-                              });
+                              Router.pushRoute('/cart')
+                              // handleLogout(client).then(() => {
+                              //   client.resetStore();
+                              // });
                             }}
                           >
                             <Login username={data.getUsers.username}></Login>

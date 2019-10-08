@@ -25,30 +25,6 @@ export default function TagDisplayer() {
 				</a>
 			</Link>
 
-			{/* <Link route={'producto'} params={{ tag: 'casaca' }}>
-				<div className='tag-displayer__item' id='item2'>
-					<a>
-						<h1>Casacas</h1>
-					</a>
-				</div>
-			</Link>
-
-			<Link route={'producto'} params={{ tag: 'zapatillas' }}>
-				<div className='tag-displayer__item' id='item3'>
-					<a>
-						<h1>Zapatillas</h1>
-					</a>
-				</div>
-			</Link>
-
-			<Link route={'producto'} params={{ tag: 'pantalon' }}>
-				<div className='tag-displayer__item' id='item4'>
-					<a>
-						<h1>Jeans</h1>
-					</a>
-				</div>
-			</Link> */}
-
 			<style jsx>
 				{`
 					.tag-displayer {

@@ -4,4 +4,5 @@ const routes = require('next-routes');
 module.exports = routes() // ----   ----      -----
 	.add('producto')
 	.add('/', 'index')
-	.add('single');
+	.add('single')
+	.add('cart');

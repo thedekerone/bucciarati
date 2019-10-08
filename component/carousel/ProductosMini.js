@@ -1,6 +1,6 @@
 import Carousel from './Carousel';
 import React from 'react';
-import ProductViewMini from '../ProductViewMini';
+import ProductViewMini from '../productViews/ProductViewMini';
 import { Link } from '../../routes';
 
 export default function ProductosMini(props) {

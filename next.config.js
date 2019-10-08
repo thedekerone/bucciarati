@@ -15,19 +15,6 @@ const nextConfig = {
 
 		runtimeCaching : [
 			{
-				urlPattern : /^https?\/\/chupetinps.herokuapp.com\/.*/,
-				handler    : 'StaleWhileRevalidate',
-				options    : {
-					cacheName         : 'https-calls',
-					cacheableResponse : {
-						statuses : [
-							0,
-							200
-						]
-					}
-				}
-			},
-			{
 				urlPattern : /^https?.*/,
 				handler    : 'NetworkFirst',
 				options    : {
@@ -61,7 +48,7 @@ const nextConfig = {
 					urlPattern : /\.(?:png|jpg|jpeg|svg|webp)$/,
 
 					// Apply a cache-first strategy.
-					handler    : 'NetworkFirst',
+					handler    : 'cacheFirst',
 
 					options    : {
 						// Use a custom cache name.

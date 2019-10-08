@@ -11,9 +11,9 @@ const nextConfig = {
 	// turn on the SW in dev mode so that we can actually test it
 
 	workboxOpts       : {
-		swDest         : 'static/service-worker.js',
-
-		runtimeCaching : [
+		swDest           : 'static/service-worker.js',
+		navigateFallback : '/',
+		runtimeCaching   : [
 			{
 				urlPattern : /^https?.*/,
 				handler    : 'NetworkFirst',
@@ -45,7 +45,7 @@ const nextConfig = {
 			runtimeCaching : [
 				{
 					// Match any request that ends with .png, .jpg, .jpeg or .svg.
-					urlPattern : /\.(?:png|jpg|jpeg|svg|webp)$/,
+					urlPattern : /\.(?:png|jpg|jpeg|svg)$/,
 
 					// Apply a cache-first strategy.
 					handler    : 'cacheFirst',

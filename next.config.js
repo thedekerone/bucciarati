@@ -13,8 +13,10 @@ const nextConfig = {
 	generateInDevMode : true,
 
 	workboxOpts       : {
-		swDest         : 'static/service-worker.js',
-		runtimeCaching : [
+		swDest           : 'static/service-worker.js',
+		navigateFallback : '/',
+
+		runtimeCaching   : [
 			{
 				urlPattern : /^https?\/\/chupetinps.herokuapp.com\/.*/,
 				handler    : 'StaleWhileRevalidate',
@@ -52,12 +54,11 @@ const nextConfig = {
 
 		new WorkboxPlugin.GenerateSW({
 			// Do not precache images
-			exclude          : [
+			exclude        : [
 				/\.(?:png|jpg|jpeg|svg)$/
 			],
-			navigateFallback : '/',
 			// Define runtime caching rules.
-			runtimeCaching   : [
+			runtimeCaching : [
 				{
 					// Match any request that ends with .png, .jpg, .jpeg or .svg.
 					urlPattern : /\.(?:png|jpg|jpeg|svg)$/,

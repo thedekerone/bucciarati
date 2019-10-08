@@ -52,12 +52,12 @@ const nextConfig = {
 
 		new WorkboxPlugin.GenerateSW({
 			// Do not precache images
-			exclude        : [
+			exclude          : [
 				/\.(?:png|jpg|jpeg|svg)$/
 			],
-
+			navigateFallback : '/',
 			// Define runtime caching rules.
-			runtimeCaching : [
+			runtimeCaching   : [
 				{
 					// Match any request that ends with .png, .jpg, .jpeg or .svg.
 					urlPattern : /\.(?:png|jpg|jpeg|svg)$/,

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SideBar from './SideBar';
 import gql from "graphql-tag";
 import { Query, graphql } from "react-apollo";
 import { Link, Router } from "../routes";
@@ -6,7 +7,15 @@ import Spinner from "./views/Spinner";
 import Error from "./views/Error";
 import Login from "./views/Login";
 import LoginPortal from "./views/LoginPortal";
-const Navbar = ({ handleClick }) => {
+const Navbar = () => {
+  const [
+		sidebar,
+		setSidebar
+	] = useState(false);
+	const handleClick = () => {
+		setSidebar(!sidebar);
+	};
+
   let textInput;
   const GET_USER = gql`
     {
@@ -41,7 +50,9 @@ const Navbar = ({ handleClick }) => {
 
   return (
     <React.Fragment>
+
       <div className="navbar-container">
+        
         <div className="navbar">
           <div className="main-navbar">
             <div className="left-items">
@@ -137,8 +148,11 @@ const Navbar = ({ handleClick }) => {
                   {({ client, loading, error, data }) => {
                     if (loading) return <h3>login</h3>;
                     if (error) return <h3>login</h3>;
+
                     return (
                       <div className="login">
+			                <SideBar client={client} setShow={setSidebar} show={sidebar} />
+
                         <LoginPortal
                           client={client}
                           setShow={setShow}

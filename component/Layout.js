@@ -5,18 +5,9 @@ import Head from 'next/head';
 import 'isomorphic-fetch';
 
 export default function Layout(props) {
-	const [
-		show,
-		setShow
-	] = useState(false);
-	const handleClick = () => {
-		setShow(!show);
-		console.log(show);
-	};
-
 	return (
 		<div>
-			<Navbar handleClick={handleClick} />
+			<Navbar />
 			<Head>
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='manifest' href='/static/manifest.json' />
@@ -46,7 +37,6 @@ export default function Layout(props) {
 				<meta name='msapplication-TileImage' content='/static/favicon/ms-icon-144x144.png' />
 				<meta name='theme-color' content='#ffffff' />
 			</Head>
-			<SideBar show={show} />
 			{props.children}
 			<style jsx>
 				{`

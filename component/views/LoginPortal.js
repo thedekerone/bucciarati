@@ -22,7 +22,7 @@ const LoginPortal = ({ show, client, setShow }) => {
 	let username, password;
 
 	const handleLogin = async () => {
-		localStorage.setItem('usuario', username.value.toLowerCase());
+		localStorage.setItem('usuario', username.value);
 		localStorage.setItem('password', password.value);
 		await client.resetStore();
 	};
@@ -35,6 +35,7 @@ const LoginPortal = ({ show, client, setShow }) => {
 				query : GET_USER
 			})
 			.then((result) => {
+				console.log(result);
 				if (result.data.getUsers) {
 					setShow(false);
 					setCount(0);
@@ -59,6 +60,7 @@ const LoginPortal = ({ show, client, setShow }) => {
 
 					<h1>Login</h1>
 					<form
+						action='POST'
 						onSubmit={(e) => {
 							handleSubmit(e);
 						}}>

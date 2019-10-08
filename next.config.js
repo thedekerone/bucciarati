@@ -11,15 +11,14 @@ const nextConfig = {
 	// turn on the SW in dev mode so that we can actually test it
 
 	workboxOpts       : {
-		swDest           : 'static/service-worker.js',
-		navigateFallback : '/',
+		swDest         : 'static/service-worker.js',
 
-		runtimeCaching   : [
+		runtimeCaching : [
 			{
 				urlPattern : /^https?.*/,
 				handler    : 'NetworkFirst',
 				options    : {
-					cacheName             : 'https-calls',
+					cacheName             : 'GET',
 					networkTimeoutSeconds : 15,
 					expiration            : {
 						maxEntries    : 150,

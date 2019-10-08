@@ -47,6 +47,7 @@ const nextConfig = {
 			}
 		]
 	},
+
 	plugins           : [
 		// Other plugins...
 

@@ -53,9 +53,7 @@ const nextConfig = {
 
 		new WorkboxPlugin.GenerateSW({
 			// Do not precache images
-			exclude        : [
-				/\.(?:png|jpg|jpeg|svg)$/
-			],
+
 			// Define runtime caching rules.
 			runtimeCaching : [
 				{
@@ -63,7 +61,7 @@ const nextConfig = {
 					urlPattern : /\.(?:png|jpg|jpeg|svg|webp)$/,
 
 					// Apply a cache-first strategy.
-					handler    : 'CacheFirst',
+					handler    : 'NetworkFirst',
 
 					options    : {
 						// Use a custom cache name.

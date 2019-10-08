@@ -5,9 +5,8 @@ import 'isomorphic-fetch';
 import { initGA, logPageView } from '../utils/analytics';
 
 export default class Layout extends React.Component {
-	constructor() {
+	constructor(props) {
 		super(props);
-		const { props } = this.props;
 	}
 	componentDidMount() {
 		if (!window.GA_INITIALIZED) {
@@ -49,7 +48,7 @@ export default class Layout extends React.Component {
 					<meta name='msapplication-TileImage' content='/static/favicon/ms-icon-144x144.png' />
 					<meta name='theme-color' content='#ffffff' />
 				</Head>
-				{props.children}
+				{this.props.children}
 				<style jsx>
 					{`
 						:global(body) {

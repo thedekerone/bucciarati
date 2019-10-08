@@ -15,7 +15,7 @@ const nextConfig = {
 		navigateFallback : '/',
 		runtimeCaching   : [
 			{
-				urlPattern : /^https?\/\/chupetinps.herokuapp.com.*/,
+				urlPattern : /^https?\/\/chupetinps.herokuapp.com\/(.*)/,
 				handler    : 'StaleWhileRevalidate',
 				options    : {
 					cacheableResponse : {
@@ -27,6 +27,19 @@ const nextConfig = {
 				}
 			},
 			{
+				urlPattern : /^https?\/\/fonts.(?:googleapis|gstatic).com\/(.*)/,
+				handler    : 'cacheFirst',
+				options    : {
+					cacheableResponse : {
+						statuses : [
+							0,
+							200
+						]
+					}
+				}
+			},
+			// default goes last
+			{
 				urlPattern : /^https?.*/,
 				handler    : 'NetworkFirst',
 				options    : {
@@ -34,7 +47,7 @@ const nextConfig = {
 					networkTimeoutSeconds : 15,
 					expiration            : {
 						maxEntries    : 150,
-						maxAgeSeconds : 30 * 24 * 60 * 60 // 1 month
+						maxAgeSeconds : 15 * 24 * 60 * 60 // 1 month
 					},
 					cacheableResponse     : {
 						statuses : [
@@ -68,7 +81,8 @@ const nextConfig = {
 
 						// Only cache 10 images.
 						expiration : {
-							maxEntries : 45
+							maxEntries    : 45,
+							maxAgeSeconds : 15 * 24 * 60 * 60 // 1 month
 						}
 					}
 				}

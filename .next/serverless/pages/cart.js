@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "mU2x");
+/******/ 	return __webpack_require__(__webpack_require__.s = "tKiS");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2350,18 +2350,18 @@ function Error({
   code
 }) {
   return __jsx("div", {
-    className: "jsx-2182318480" + " " + 'error'
+    className: "jsx-1961418889" + " " + 'error'
   }, __jsx("h1", {
-    className: "jsx-2182318480"
+    className: "jsx-1961418889"
   }, code ? code : null, " | Ha ocurrido un error! "), __jsx(_routes__WEBPACK_IMPORTED_MODULE_2__["Link"], {
     route: "/"
   }, __jsx("a", {
-    className: "jsx-2182318480"
+    className: "jsx-1961418889"
   }, __jsx("h2", {
-    className: "jsx-2182318480"
+    className: "jsx-1961418889"
   }, "REGRESAR"))), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "2182318480"
-  }, [".error.jsx-2182318480{height:calc(100vh - 55px);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}", "h2.jsx-2182318480{color:red;}"]));
+    id: "1961418889"
+  }, [".error.jsx-1961418889{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}", "h2.jsx-1961418889{color:red;}"]));
 }
 
 /***/ }),
@@ -7785,7 +7785,7 @@ exports['default'] = result;
 /***/ "LZ9C":
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"devFiles\":[],\"pages\":{\"/\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.e9c9b5311f06df8ab4d6.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/_app\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.e9c9b5311f06df8ab4d6.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/_error\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.e9c9b5311f06df8ab4d6.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/cart\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.e9c9b5311f06df8ab4d6.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/index\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.e9c9b5311f06df8ab4d6.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/producto\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.e9c9b5311f06df8ab4d6.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/single\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.e9c9b5311f06df8ab4d6.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"]}}");
+module.exports = JSON.parse("{\"devFiles\":[],\"pages\":{\"/\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.5e872c168fa77df56052.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/_app\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.5e872c168fa77df56052.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/_error\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.5e872c168fa77df56052.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/cart\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.5e872c168fa77df56052.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/index\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.5e872c168fa77df56052.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/producto\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.5e872c168fa77df56052.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/single\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.5e872c168fa77df56052.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"]}}");
 
 /***/ }),
 
@@ -21223,363 +21223,6 @@ exports.AmpStateContext = React.createContext({});
 
 /***/ }),
 
-/***/ "mU2x":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var cart_namespaceObject = {};
-__webpack_require__.r(cart_namespaceObject);
-__webpack_require__.d(cart_namespaceObject, "default", function() { return cart; });
-
-// EXTERNAL MODULE: external "url"
-var external_url_ = __webpack_require__("bzos");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/render.js
-var render = __webpack_require__("/bjS");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/send-html.js
-var send_html = __webpack_require__("LuNM");
-
-// EXTERNAL MODULE: ./.next/build-manifest.json
-var build_manifest = __webpack_require__("LZ9C");
-
-// EXTERNAL MODULE: ./.next/react-loadable-manifest.json
-var react_loadable_manifest = __webpack_require__("67Bq");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/pages/_document.js
-var _document = __webpack_require__("VDXt");
-var _document_default = /*#__PURE__*/__webpack_require__.n(_document);
-
-// EXTERNAL MODULE: ./pages/_error.js
-var _error = __webpack_require__("Y0NT");
-
-// EXTERNAL MODULE: ./pages/_app.js + 1 modules
-var _app = __webpack_require__("1TCz");
-
-// EXTERNAL MODULE: ./node_modules/styled-jsx/style.js
-var style = __webpack_require__("MX0m");
-var style_default = /*#__PURE__*/__webpack_require__.n(style);
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__("q1tI");
-var react_default = /*#__PURE__*/__webpack_require__.n(react);
-
-// EXTERNAL MODULE: ./node_modules/isomorphic-fetch/fetch-npm-node.js
-var fetch_npm_node = __webpack_require__("VT83");
-
-// EXTERNAL MODULE: ./node_modules/graphql-tag/lib/graphql-tag.umd.js
-var graphql_tag_umd = __webpack_require__("Dugd");
-var graphql_tag_umd_default = /*#__PURE__*/__webpack_require__.n(graphql_tag_umd);
-
-// EXTERNAL MODULE: ./node_modules/react-apollo/lib/react-apollo.cjs.js
-var react_apollo_cjs = __webpack_require__("Kxyt");
-
-// EXTERNAL MODULE: ./routes.js
-var routes = __webpack_require__("8cHP");
-
-// EXTERNAL MODULE: ./node_modules/@apollo/react-hooks/lib/react-hooks.cjs.js
-var react_hooks_cjs = __webpack_require__("gZqA");
-
-// EXTERNAL MODULE: ./component/views/Spinner.js
-var Spinner = __webpack_require__("Zg/l");
-
-// EXTERNAL MODULE: ./component/views/Error.js
-var Error = __webpack_require__("4dR/");
-
-// CONCATENATED MODULE: ./component/productViews/ProductViewInCart.js
-
-var __jsx = react_default.a.createElement;
-
-
-
-
-
-
-
-function Product(props) {
-  const ADD_PRODUCT = graphql_tag_umd_default.a`
-		mutation addProduct($product: ID!, $user: ID!) {
-			addProductToBag(productID: $product, userID: $user) {
-				username
-			}
-		}
-	`;
-  const [addProduct] = Object(react_hooks_cjs["useMutation"])(ADD_PRODUCT);
-
-  const addToCart = (user, client) => {
-    user._id ? addProduct({
-      variables: {
-        product: props.data._id,
-        user: user._id
-      }
-    }) : console.log(user);
-    client.resetStore();
-  };
-
-  return __jsx("div", {
-    className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
-  }, __jsx(react_apollo_cjs["Query"], {
-    query: graphql_tag_umd_default.a`
-					query {
-						getUsers {
-							_id
-							username
-							password
-							bag {
-								title
-							}
-						}
-					}
-				`
-  }, ({
-    client,
-    loading,
-    error,
-    data
-  }) => {
-    if (loading) return __jsx(Spinner["a" /* default */], null);
-    if (error) return __jsx(Error["a" /* default */], null);
-    return __jsx("div", {
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product'
-    }, __jsx("div", {
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product__img'
-    }, __jsx("img", {
-      src: props.data.image,
-      width: "30%",
-      alt: "",
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
-    })), __jsx("div", {
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product__description'
-    }, __jsx("div", {
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-main'
-    }, __jsx("div", {
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-banner'
-    }, __jsx("span", {
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
-    }, "OFERTA EXCLUSIVA")), __jsx("div", {
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-title'
-    }, __jsx("h3", {
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
-    }, props.data.title)), __jsx("div", {
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-discount'
-    }, __jsx("span", {
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-discount__price'
-    }, props.data.price), __jsx("span", {
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-discount__percentage'
-    }, "-", props.data.discount, "%")), __jsx("div", {
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-price'
-    }, __jsx("span", {
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
-    }, Math.round((100 - props.data.discount) * props.data.price / 100), ".00$"))), __jsx("div", {
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-information'
-    }, props.wrap ? __jsx("div", {
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-information__text'
-    }, __jsx("p", {
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
-    }, __jsx("b", {
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
-    }, "Descripci\xF3n:"), " ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero")) : null, __jsx("div", {
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-information__delivery'
-    }, __jsx("img", {
-      src: "/static/icons/icons8-truck-50.png",
-      width: "20px",
-      alt: "",
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
-    }), __jsx("span", {
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
-    }, "Env\xEDo internacional")), __jsx("div", {
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-information__reviews'
-    }, __jsx("img", {
-      src: "/static/icons/icons8-star-filled-48.png",
-      width: "20px",
-      alt: "",
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
-    }), __jsx("img", {
-      src: "/static/icons/icons8-star-filled-48.png",
-      width: "20px",
-      alt: "",
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
-    }), __jsx("img", {
-      src: "/static/icons/icons8-star-filled-48.png",
-      width: "20px",
-      alt: "",
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
-    }), __jsx("img", {
-      src: "/static/icons/icons8-star-filled-48.png",
-      width: "20px",
-      alt: "",
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
-    }), __jsx("img", {
-      src: "/static/icons/icons8-star-filled-48.png",
-      width: "20px",
-      alt: "",
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
-    }), __jsx("span", {
-      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-information__reviews--number'
-    }, Math.round(Math.random() * 100), " reviews")))));
-  }), __jsx(style_default.a, {
-    id: "383142984",
-    dynamic: [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']
-  }, [`.product.__jsx-style-dynamic-selector{display:grid;background:white;max-width:${props.wrap ? '1000px' : '600px'};width:100%;margin-top:5rem;font-size:11px;height:100%;box-sizing:border-box;padding:1em;grid-template:${props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr'};}`, `.product__img.__jsx-style-dynamic-selector{grid-row:1/2;padding:${props.wrap ? '0' : '.9em'};box-sizing:border-box;}`, ".product-title.__jsx-style-dynamic-selector h3.__jsx-style-dynamic-selector{margin:0;padding:.5em 0 .7em 0;}", ".product__description.__jsx-style-dynamic-selector,.product__img.__jsx-style-dynamic-selector{background:white;width:100%;}", `.product__description.__jsx-style-dynamic-selector{padding-left:${props.wrap ? '.5em' : '1.2em'};grid-column:${props.wrap ? '1/2' : '2/4'};grid-row:${props.wrap ? '2/3' : '1/2'};display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;box-sizing:border-box;}`, ".product-banner.__jsx-style-dynamic-selector span.__jsx-style-dynamic-selector{color:white;font-size:.7em;background:rgb(181,0,191);background:linear-gradient(90deg,rgba(181,0,191,1) 0%,rgba(0,8,180,1) 100%);padding:0 .4em;}", ".product-discount.__jsx-style-dynamic-selector{margin-bottom:.6em;}", ".product-discount__price.__jsx-style-dynamic-selector{font-size:.8em;}", ".product-discount__percentage.__jsx-style-dynamic-selector{margin-left:.8em;color:red;font-size:1em;}", ".product-price.__jsx-style-dynamic-selector{font-size:1.rem;color:black;}", ".product-information__delivery.__jsx-style-dynamic-selector{padding:1.5em 0 .8em 0;}", ".product-information__reviews.__jsx-style-dynamic-selector{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}", ".product-information__reviews--number.__jsx-style-dynamic-selector{color:#ffca28;height:20px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}", ".buttons.__jsx-style-dynamic-selector{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;}", ".btn.__jsx-style-dynamic-selector{width:100%;margin:1rem;padding:.6rem;text-align:center;color:white;background:#e84855;position:relative;z-index:19;}", ".cart.__jsx-style-dynamic-selector{background:#fcba04;}", `@media (min-width:660px){.product.__jsx-style-dynamic-selector{border:${props.wrap ? ' 0px' : '1px solid #d5d5d5'};grid-template:${props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr'};font-size:15px;max-width:900px;}.buttons.__jsx-style-dynamic-selector{-webkit-flex-direction:${props.wrap ? ' row' : 'column'};-ms-flex-direction:${props.wrap ? ' row' : 'column'};flex-direction:${props.wrap ? ' row' : 'column'};box-sizing:border-box;}.btn.__jsx-style-dynamic-selector{margin:${props.wrap ? 'none' : '.8rem 0 .2rem'};box-sizing:border-box;}.product__description.__jsx-style-dynamic-selector{grid-column:2/4;grid-row:1/2;padding-left:${props.wrap ? '3em' : '1.2em'};}}`]));
-}
-// CONCATENATED MODULE: ./component/productViews/ProductosInCart.js
-
-var ProductosInCart_jsx = react_default.a.createElement;
-
-
- // aeaeaeaea
-
-function Productos(props) {
-  return ProductosInCart_jsx("div", {
-    className: "jsx-1507994158" + " " + 'productos'
-  }, props.data.map(e => {
-    return ProductosInCart_jsx(Product, {
-      key: e._id,
-      user: props.user,
-      data: e,
-      wrap: false
-    });
-  }), ProductosInCart_jsx(style_default.a, {
-    id: "1507994158"
-  }, [".productos.jsx-1507994158{display:grid;gap:1em;grid-template-columns:1fr;}", "@media (min-width:660px){.productos.jsx-1507994158{grid-template-columns:1fr;}}"]));
-}
-// EXTERNAL MODULE: ./component/Layout.js + 4 modules
-var Layout = __webpack_require__("ezhv");
-
-// CONCATENATED MODULE: ./pages/cart.js
-
-var cart_jsx = react_default.a.createElement;
-
-
-
-
-
-
-
-
-
-const Cart = () => {
-  const GET_USER = graphql_tag_umd_default.a`
-		{
-			getUsers {
-				username
-				bag {
-					_id
-					title
-					image
-					price
-					tags
-					discount
-				}
-			}
-		}
-	`;
-  return cart_jsx(Layout["a" /* default */], null, cart_jsx("div", {
-    className: "jsx-2085888330"
-  }, cart_jsx(react_apollo_cjs["Query"], {
-    query: GET_USER
-  }, ({
-    client,
-    loading,
-    error,
-    data
-  }) => {
-    if (loading) return cart_jsx(Spinner["a" /* default */], null);
-    if (error) return console.log(error);
-    return cart_jsx("div", {
-      className: "jsx-2085888330" + " " + 'container'
-    }, cart_jsx(Productos, {
-      data: data.getUsers.bag,
-      client: client,
-      user: data.getUsers
-    }));
-  })), cart_jsx(style_default.a, {
-    id: "2085888330"
-  }, []));
-};
-
-/* harmony default export */ var cart = (Cart);
-// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-serverless-loader.js?page=%2Fcart&absolutePagePath=private-next-pages%2Fcart.js&absoluteAppPath=private-next-pages%2F_app.js&absoluteDocumentPath=next%2Fdist%2Fpages%2F_document&absoluteErrorPath=private-next-pages%2F_error.js&distDir=private-dot-next&buildId=lGcEve-EtyBE0PAsye83l&assetPrefix=&generateEtags=true&ampBindInitData=false&canonicalBase=
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_app", function() { return next_serverless_loaderpage_2Fcart_absolutePagePath_private_next_pages_2Fcart_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_lGcEve_EtyBE0PAsye83l_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderReqToHTML", function() { return renderReqToHTML; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return next_serverless_loaderpage_2Fcart_absolutePagePath_private_next_pages_2Fcart_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_lGcEve_EtyBE0PAsye83l_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render; });
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    const Component = cart
-    /* harmony default export */ var next_serverless_loaderpage_2Fcart_absolutePagePath_private_next_pages_2Fcart_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_lGcEve_EtyBE0PAsye83l_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_ = __webpack_exports__["default"] = (Component);
-    const config = cart_namespaceObject['confi' + 'g'] || {}
-    const next_serverless_loaderpage_2Fcart_absolutePagePath_private_next_pages_2Fcart_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_lGcEve_EtyBE0PAsye83l_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app = _app["a" /* default */]
-    async function renderReqToHTML(req, res, fromExport) {
-      const options = {
-        App: _app["a" /* default */],
-        Document: _document_default.a,
-        buildManifest: build_manifest,
-        reactLoadableManifest: react_loadable_manifest,
-        canonicalBase: "",
-        buildId: "lGcEve-EtyBE0PAsye83l",
-        assetPrefix: "",
-        ampBindInitData: false
-      }
-      const parsedUrl = Object(external_url_["parse"])(req.url, true)
-      const renderOpts = Object.assign(
-        {
-          Component,
-          pageConfig: config,
-          dataOnly: req.headers && (req.headers.accept || '').indexOf('application/amp.bind+json') !== -1,
-          nextExport: fromExport
-        },
-        options,
-      )
-      try {
-        
-        const params = {};
-        const result = await Object(render["renderToHTML"])(req, res, "/cart", Object.assign({}, parsedUrl.query, params), renderOpts)
-
-        if (fromExport) return { html: result, renderOpts }
-        return result
-      } catch (err) {
-        if (err.code === 'ENOENT') {
-          res.statusCode = 404
-          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
-            Component: _error["default"]
-          }))
-          return result
-        } else {
-          console.error(err)
-          res.statusCode = 500
-          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
-            Component: _error["default"],
-            err
-          }))
-          return result
-        }
-      }
-    }
-    async function next_serverless_loaderpage_2Fcart_absolutePagePath_private_next_pages_2Fcart_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_lGcEve_EtyBE0PAsye83l_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render (req, res) {
-      try {
-        const html = await renderReqToHTML(req, res)
-        Object(send_html["sendHTML"])(req, res, html, {generateEtags: true})
-      } catch(err) {
-        console.error(err)
-        res.statusCode = 500
-        res.end('Internal Server Error')
-      }
-    }
-  
-
-/***/ }),
-
 /***/ "mqhy":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23507,6 +23150,363 @@ module.exports = function (it) {
   return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
 };
 
+
+/***/ }),
+
+/***/ "tKiS":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var cart_namespaceObject = {};
+__webpack_require__.r(cart_namespaceObject);
+__webpack_require__.d(cart_namespaceObject, "default", function() { return cart; });
+
+// EXTERNAL MODULE: external "url"
+var external_url_ = __webpack_require__("bzos");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/render.js
+var render = __webpack_require__("/bjS");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/send-html.js
+var send_html = __webpack_require__("LuNM");
+
+// EXTERNAL MODULE: ./.next/build-manifest.json
+var build_manifest = __webpack_require__("LZ9C");
+
+// EXTERNAL MODULE: ./.next/react-loadable-manifest.json
+var react_loadable_manifest = __webpack_require__("67Bq");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/pages/_document.js
+var _document = __webpack_require__("VDXt");
+var _document_default = /*#__PURE__*/__webpack_require__.n(_document);
+
+// EXTERNAL MODULE: ./pages/_error.js
+var _error = __webpack_require__("Y0NT");
+
+// EXTERNAL MODULE: ./pages/_app.js + 1 modules
+var _app = __webpack_require__("1TCz");
+
+// EXTERNAL MODULE: ./node_modules/styled-jsx/style.js
+var style = __webpack_require__("MX0m");
+var style_default = /*#__PURE__*/__webpack_require__.n(style);
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__("q1tI");
+var react_default = /*#__PURE__*/__webpack_require__.n(react);
+
+// EXTERNAL MODULE: ./node_modules/isomorphic-fetch/fetch-npm-node.js
+var fetch_npm_node = __webpack_require__("VT83");
+
+// EXTERNAL MODULE: ./node_modules/graphql-tag/lib/graphql-tag.umd.js
+var graphql_tag_umd = __webpack_require__("Dugd");
+var graphql_tag_umd_default = /*#__PURE__*/__webpack_require__.n(graphql_tag_umd);
+
+// EXTERNAL MODULE: ./node_modules/react-apollo/lib/react-apollo.cjs.js
+var react_apollo_cjs = __webpack_require__("Kxyt");
+
+// EXTERNAL MODULE: ./routes.js
+var routes = __webpack_require__("8cHP");
+
+// EXTERNAL MODULE: ./node_modules/@apollo/react-hooks/lib/react-hooks.cjs.js
+var react_hooks_cjs = __webpack_require__("gZqA");
+
+// EXTERNAL MODULE: ./component/views/Spinner.js
+var Spinner = __webpack_require__("Zg/l");
+
+// EXTERNAL MODULE: ./component/views/Error.js
+var Error = __webpack_require__("4dR/");
+
+// CONCATENATED MODULE: ./component/productViews/ProductViewInCart.js
+
+var __jsx = react_default.a.createElement;
+
+
+
+
+
+
+
+function Product(props) {
+  const ADD_PRODUCT = graphql_tag_umd_default.a`
+		mutation addProduct($product: ID!, $user: ID!) {
+			addProductToBag(productID: $product, userID: $user) {
+				username
+			}
+		}
+	`;
+  const [addProduct] = Object(react_hooks_cjs["useMutation"])(ADD_PRODUCT);
+
+  const addToCart = (user, client) => {
+    user._id ? addProduct({
+      variables: {
+        product: props.data._id,
+        user: user._id
+      }
+    }) : console.log(user);
+    client.resetStore();
+  };
+
+  return __jsx("div", {
+    className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
+  }, __jsx(react_apollo_cjs["Query"], {
+    query: graphql_tag_umd_default.a`
+					query {
+						getUsers {
+							_id
+							username
+							password
+							bag {
+								title
+							}
+						}
+					}
+				`
+  }, ({
+    client,
+    loading,
+    error,
+    data
+  }) => {
+    if (loading) return __jsx(Spinner["a" /* default */], null);
+    if (error) return __jsx(Error["a" /* default */], null);
+    return __jsx("div", {
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product'
+    }, __jsx("div", {
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product__img'
+    }, __jsx("img", {
+      src: props.data.image,
+      width: "30%",
+      alt: "",
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
+    })), __jsx("div", {
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product__description'
+    }, __jsx("div", {
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-main'
+    }, __jsx("div", {
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-banner'
+    }, __jsx("span", {
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
+    }, "OFERTA EXCLUSIVA")), __jsx("div", {
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-title'
+    }, __jsx("h3", {
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
+    }, props.data.title)), __jsx("div", {
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-discount'
+    }, __jsx("span", {
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-discount__price'
+    }, props.data.price), __jsx("span", {
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-discount__percentage'
+    }, "-", props.data.discount, "%")), __jsx("div", {
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-price'
+    }, __jsx("span", {
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
+    }, Math.round((100 - props.data.discount) * props.data.price / 100), ".00$"))), __jsx("div", {
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-information'
+    }, props.wrap ? __jsx("div", {
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-information__text'
+    }, __jsx("p", {
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
+    }, __jsx("b", {
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
+    }, "Descripci\xF3n:"), " ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero")) : null, __jsx("div", {
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-information__delivery'
+    }, __jsx("img", {
+      src: "/static/icons/icons8-truck-50.png",
+      width: "20px",
+      alt: "",
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
+    }), __jsx("span", {
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
+    }, "Env\xEDo internacional")), __jsx("div", {
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-information__reviews'
+    }, __jsx("img", {
+      src: "/static/icons/icons8-star-filled-48.png",
+      width: "20px",
+      alt: "",
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
+    }), __jsx("img", {
+      src: "/static/icons/icons8-star-filled-48.png",
+      width: "20px",
+      alt: "",
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
+    }), __jsx("img", {
+      src: "/static/icons/icons8-star-filled-48.png",
+      width: "20px",
+      alt: "",
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
+    }), __jsx("img", {
+      src: "/static/icons/icons8-star-filled-48.png",
+      width: "20px",
+      alt: "",
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
+    }), __jsx("img", {
+      src: "/static/icons/icons8-star-filled-48.png",
+      width: "20px",
+      alt: "",
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]])
+    }), __jsx("span", {
+      className: style_default.a.dynamic([["383142984", [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']]]) + " " + 'product-information__reviews--number'
+    }, Math.round(Math.random() * 100), " reviews")))));
+  }), __jsx(style_default.a, {
+    id: "383142984",
+    dynamic: [props.wrap ? '1000px' : '600px', props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr', props.wrap ? '0' : '.9em', props.wrap ? '.5em' : '1.2em', props.wrap ? '1/2' : '2/4', props.wrap ? '2/3' : '1/2', props.wrap ? ' 0px' : '1px solid #d5d5d5', props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr', props.wrap ? ' row' : 'column', props.wrap ? 'none' : '.8rem 0 .2rem', props.wrap ? '3em' : '1.2em']
+  }, [`.product.__jsx-style-dynamic-selector{display:grid;background:white;max-width:${props.wrap ? '1000px' : '600px'};width:100%;margin-top:5rem;font-size:11px;height:100%;box-sizing:border-box;padding:1em;grid-template:${props.wrap ? 'auto auto / 1fr' : 'auto / 1fr 1fr 1fr'};}`, `.product__img.__jsx-style-dynamic-selector{grid-row:1/2;padding:${props.wrap ? '0' : '.9em'};box-sizing:border-box;}`, ".product-title.__jsx-style-dynamic-selector h3.__jsx-style-dynamic-selector{margin:0;padding:.5em 0 .7em 0;}", ".product__description.__jsx-style-dynamic-selector,.product__img.__jsx-style-dynamic-selector{background:white;width:100%;}", `.product__description.__jsx-style-dynamic-selector{padding-left:${props.wrap ? '.5em' : '1.2em'};grid-column:${props.wrap ? '1/2' : '2/4'};grid-row:${props.wrap ? '2/3' : '1/2'};display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;box-sizing:border-box;}`, ".product-banner.__jsx-style-dynamic-selector span.__jsx-style-dynamic-selector{color:white;font-size:.7em;background:rgb(181,0,191);background:linear-gradient(90deg,rgba(181,0,191,1) 0%,rgba(0,8,180,1) 100%);padding:0 .4em;}", ".product-discount.__jsx-style-dynamic-selector{margin-bottom:.6em;}", ".product-discount__price.__jsx-style-dynamic-selector{font-size:.8em;}", ".product-discount__percentage.__jsx-style-dynamic-selector{margin-left:.8em;color:red;font-size:1em;}", ".product-price.__jsx-style-dynamic-selector{font-size:1.rem;color:black;}", ".product-information__delivery.__jsx-style-dynamic-selector{padding:1.5em 0 .8em 0;}", ".product-information__reviews.__jsx-style-dynamic-selector{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}", ".product-information__reviews--number.__jsx-style-dynamic-selector{color:#ffca28;height:20px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}", ".buttons.__jsx-style-dynamic-selector{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;}", ".btn.__jsx-style-dynamic-selector{width:100%;margin:1rem;padding:.6rem;text-align:center;color:white;background:#e84855;position:relative;z-index:19;}", ".cart.__jsx-style-dynamic-selector{background:#fcba04;}", `@media (min-width:660px){.product.__jsx-style-dynamic-selector{border:${props.wrap ? ' 0px' : '1px solid #d5d5d5'};grid-template:${props.wrap ? '  auto /1fr 1fr 1fr' : 'auto/1fr 1fr'};font-size:15px;max-width:900px;}.buttons.__jsx-style-dynamic-selector{-webkit-flex-direction:${props.wrap ? ' row' : 'column'};-ms-flex-direction:${props.wrap ? ' row' : 'column'};flex-direction:${props.wrap ? ' row' : 'column'};box-sizing:border-box;}.btn.__jsx-style-dynamic-selector{margin:${props.wrap ? 'none' : '.8rem 0 .2rem'};box-sizing:border-box;}.product__description.__jsx-style-dynamic-selector{grid-column:2/4;grid-row:1/2;padding-left:${props.wrap ? '3em' : '1.2em'};}}`]));
+}
+// CONCATENATED MODULE: ./component/productViews/ProductosInCart.js
+
+var ProductosInCart_jsx = react_default.a.createElement;
+
+
+ // aeaeaeaea
+
+function Productos(props) {
+  return ProductosInCart_jsx("div", {
+    className: "jsx-1507994158" + " " + 'productos'
+  }, props.data.map(e => {
+    return ProductosInCart_jsx(Product, {
+      key: e._id,
+      user: props.user,
+      data: e,
+      wrap: false
+    });
+  }), ProductosInCart_jsx(style_default.a, {
+    id: "1507994158"
+  }, [".productos.jsx-1507994158{display:grid;gap:1em;grid-template-columns:1fr;}", "@media (min-width:660px){.productos.jsx-1507994158{grid-template-columns:1fr;}}"]));
+}
+// EXTERNAL MODULE: ./component/Layout.js + 4 modules
+var Layout = __webpack_require__("ezhv");
+
+// CONCATENATED MODULE: ./pages/cart.js
+
+var cart_jsx = react_default.a.createElement;
+
+
+
+
+
+
+
+
+
+const Cart = () => {
+  const GET_USER = graphql_tag_umd_default.a`
+		{
+			getUsers {
+				username
+				bag {
+					_id
+					title
+					image
+					price
+					tags
+					discount
+				}
+			}
+		}
+	`;
+  return cart_jsx(Layout["a" /* default */], null, cart_jsx("div", {
+    className: "jsx-2085888330"
+  }, cart_jsx(react_apollo_cjs["Query"], {
+    query: GET_USER
+  }, ({
+    client,
+    loading,
+    error,
+    data
+  }) => {
+    if (loading) return cart_jsx(Spinner["a" /* default */], null);
+    if (error) return console.log(error);
+    return cart_jsx("div", {
+      className: "jsx-2085888330" + " " + 'container'
+    }, cart_jsx(Productos, {
+      data: data.getUsers.bag,
+      client: client,
+      user: data.getUsers
+    }));
+  })), cart_jsx(style_default.a, {
+    id: "2085888330"
+  }, []));
+};
+
+/* harmony default export */ var cart = (Cart);
+// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-serverless-loader.js?page=%2Fcart&absolutePagePath=private-next-pages%2Fcart.js&absoluteAppPath=private-next-pages%2F_app.js&absoluteDocumentPath=next%2Fdist%2Fpages%2F_document&absoluteErrorPath=private-next-pages%2F_error.js&distDir=private-dot-next&buildId=WJlJOXK7gQiLOG80wkFBM&assetPrefix=&generateEtags=true&ampBindInitData=false&canonicalBase=
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_app", function() { return next_serverless_loaderpage_2Fcart_absolutePagePath_private_next_pages_2Fcart_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_WJlJOXK7gQiLOG80wkFBM_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderReqToHTML", function() { return renderReqToHTML; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return next_serverless_loaderpage_2Fcart_absolutePagePath_private_next_pages_2Fcart_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_WJlJOXK7gQiLOG80wkFBM_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render; });
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    const Component = cart
+    /* harmony default export */ var next_serverless_loaderpage_2Fcart_absolutePagePath_private_next_pages_2Fcart_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_WJlJOXK7gQiLOG80wkFBM_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_ = __webpack_exports__["default"] = (Component);
+    const config = cart_namespaceObject['confi' + 'g'] || {}
+    const next_serverless_loaderpage_2Fcart_absolutePagePath_private_next_pages_2Fcart_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_WJlJOXK7gQiLOG80wkFBM_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app = _app["a" /* default */]
+    async function renderReqToHTML(req, res, fromExport) {
+      const options = {
+        App: _app["a" /* default */],
+        Document: _document_default.a,
+        buildManifest: build_manifest,
+        reactLoadableManifest: react_loadable_manifest,
+        canonicalBase: "",
+        buildId: "WJlJOXK7gQiLOG80wkFBM",
+        assetPrefix: "",
+        ampBindInitData: false
+      }
+      const parsedUrl = Object(external_url_["parse"])(req.url, true)
+      const renderOpts = Object.assign(
+        {
+          Component,
+          pageConfig: config,
+          dataOnly: req.headers && (req.headers.accept || '').indexOf('application/amp.bind+json') !== -1,
+          nextExport: fromExport
+        },
+        options,
+      )
+      try {
+        
+        const params = {};
+        const result = await Object(render["renderToHTML"])(req, res, "/cart", Object.assign({}, parsedUrl.query, params), renderOpts)
+
+        if (fromExport) return { html: result, renderOpts }
+        return result
+      } catch (err) {
+        if (err.code === 'ENOENT') {
+          res.statusCode = 404
+          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
+            Component: _error["default"]
+          }))
+          return result
+        } else {
+          console.error(err)
+          res.statusCode = 500
+          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
+            Component: _error["default"],
+            err
+          }))
+          return result
+        }
+      }
+    }
+    async function next_serverless_loaderpage_2Fcart_absolutePagePath_private_next_pages_2Fcart_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_WJlJOXK7gQiLOG80wkFBM_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render (req, res) {
+      try {
+        const html = await renderReqToHTML(req, res)
+        Object(send_html["sendHTML"])(req, res, html, {generateEtags: true})
+      } catch(err) {
+        console.error(err)
+        res.statusCode = 500
+        res.end('Internal Server Error')
+      }
+    }
+  
 
 /***/ }),
 

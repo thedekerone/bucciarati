@@ -23,19 +23,25 @@
       "static\\lGcEve-EtyBE0PAsye83l\\pages\\cart.js": 11,
       "static\\lGcEve-EtyBE0PAsye83l\\pages\\index.js": 12,
       "static\\lGcEve-EtyBE0PAsye83l\\pages\\producto.js": 13,
-      "static\\lGcEve-EtyBE0PAsye83l\\pages\\single.js": 14
+      "static\\lGcEve-EtyBE0PAsye83l\\pages\\single.js": 14,
+      "static\\WJlJOXK7gQiLOG80wkFBM\\pages\\_app.js": 3,
+      "static\\WJlJOXK7gQiLOG80wkFBM\\pages\\_error.js": 4,
+      "static\\WJlJOXK7gQiLOG80wkFBM\\pages\\cart.js": 5,
+      "static\\WJlJOXK7gQiLOG80wkFBM\\pages\\index.js": 6,
+      "static\\WJlJOXK7gQiLOG80wkFBM\\pages\\producto.js": 7,
+      "static\\WJlJOXK7gQiLOG80wkFBM\\pages\\single.js": 8
     },
     "bySource": {},
     "usedIds": [
       0,
       1,
-      10,
-      11,
-      12,
-      13,
-      14,
       2,
-      9
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
     ]
   }
 }

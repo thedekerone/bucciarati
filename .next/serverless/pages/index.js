@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "W8w+");
+/******/ 	return __webpack_require__(__webpack_require__.s = "jzUg");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2350,18 +2350,18 @@ function Error({
   code
 }) {
   return __jsx("div", {
-    className: "jsx-2182318480" + " " + 'error'
+    className: "jsx-1961418889" + " " + 'error'
   }, __jsx("h1", {
-    className: "jsx-2182318480"
+    className: "jsx-1961418889"
   }, code ? code : null, " | Ha ocurrido un error! "), __jsx(_routes__WEBPACK_IMPORTED_MODULE_2__["Link"], {
     route: "/"
   }, __jsx("a", {
-    className: "jsx-2182318480"
+    className: "jsx-1961418889"
   }, __jsx("h2", {
-    className: "jsx-2182318480"
+    className: "jsx-1961418889"
   }, "REGRESAR"))), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "2182318480"
-  }, [".error.jsx-2182318480{height:calc(100vh - 55px);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}", "h2.jsx-2182318480{color:red;}"]));
+    id: "1961418889"
+  }, [".error.jsx-1961418889{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}", "h2.jsx-1961418889{color:red;}"]));
 }
 
 /***/ }),
@@ -7823,7 +7823,7 @@ exports['default'] = result;
 /***/ "LZ9C":
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"devFiles\":[],\"pages\":{\"/\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.e9c9b5311f06df8ab4d6.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/_app\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.e9c9b5311f06df8ab4d6.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/_error\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.e9c9b5311f06df8ab4d6.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/cart\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.e9c9b5311f06df8ab4d6.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/index\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.e9c9b5311f06df8ab4d6.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/producto\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.e9c9b5311f06df8ab4d6.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/single\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.e9c9b5311f06df8ab4d6.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"]}}");
+module.exports = JSON.parse("{\"devFiles\":[],\"pages\":{\"/\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.5e872c168fa77df56052.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/_app\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.5e872c168fa77df56052.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/_error\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.5e872c168fa77df56052.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/cart\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.5e872c168fa77df56052.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/index\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.5e872c168fa77df56052.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/producto\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.5e872c168fa77df56052.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/single\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.5e872c168fa77df56052.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"]}}");
 
 /***/ }),
 
@@ -13677,531 +13677,6 @@ module.exports = function (IS_INCLUDES) {
   };
 };
 
-
-/***/ }),
-
-/***/ "W8w+":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var pages_namespaceObject = {};
-__webpack_require__.r(pages_namespaceObject);
-__webpack_require__.d(pages_namespaceObject, "default", function() { return pages; });
-
-// EXTERNAL MODULE: external "url"
-var external_url_ = __webpack_require__("bzos");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/render.js
-var render = __webpack_require__("/bjS");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/send-html.js
-var send_html = __webpack_require__("LuNM");
-
-// EXTERNAL MODULE: ./.next/build-manifest.json
-var build_manifest = __webpack_require__("LZ9C");
-
-// EXTERNAL MODULE: ./.next/react-loadable-manifest.json
-var react_loadable_manifest = __webpack_require__("67Bq");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/pages/_document.js
-var _document = __webpack_require__("VDXt");
-var _document_default = /*#__PURE__*/__webpack_require__.n(_document);
-
-// EXTERNAL MODULE: ./pages/_error.js
-var _error = __webpack_require__("Y0NT");
-
-// EXTERNAL MODULE: ./pages/_app.js + 1 modules
-var _app = __webpack_require__("1TCz");
-
-// EXTERNAL MODULE: ./node_modules/styled-jsx/style.js
-var style = __webpack_require__("MX0m");
-var style_default = /*#__PURE__*/__webpack_require__.n(style);
-
-// EXTERNAL MODULE: ./component/views/Spinner.js
-var Spinner = __webpack_require__("Zg/l");
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__("q1tI");
-var react_default = /*#__PURE__*/__webpack_require__.n(react);
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/assign.js
-var object_assign = __webpack_require__("UXZV");
-var assign_default = /*#__PURE__*/__webpack_require__.n(object_assign);
-
-// CONCATENATED MODULE: ./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js
-
-function _extends() {
-  _extends = assign_default.a || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/parse-int.js
-var parse_int = __webpack_require__("6BQ9");
-var parse_int_default = /*#__PURE__*/__webpack_require__.n(parse_int);
-
-// EXTERNAL MODULE: ./node_modules/react-spring/web.cjs.js
-var web_cjs = __webpack_require__("ZO3Q");
-
-// EXTERNAL MODULE: ./node_modules/react-use-gesture/dist/index.js
-var dist = __webpack_require__("lKHm");
-
-// CONCATENATED MODULE: ./component/carousel/Carousel.js
-
-
-
-var __jsx = react_default.a.createElement;
-
-
-
-function Carousel(props) {
-  var margin = parse_int_default()(props.margin, 10);
-
-  var slides = parse_int_default()(props.slides, 10);
-
-  var width = parse_int_default()(props.width, 10);
-
-  var height = parse_int_default()(props.height, 10);
-
-  const [{
-    xy
-  }, set] = Object(web_cjs["useSpring"])(() => ({
-    xy: [0, 0]
-  }));
-  const bind = Object(dist["useDrag"])(({
-    down,
-    local,
-    velocity,
-    direction
-  }) => {
-    set({
-      xy: down ? [local[0], 0] : [Math.round(local[0] / (margin + width) + 0.3 * direction[0]) * (margin + width), 0]
-    });
-
-    if (!down) {
-      local[0] = Math.round(local[0] / (margin + width) + 0.3 * direction[0]) * (margin + width);
-
-      if (local[0] > 0 || !window.matchMedia('(max-width:950px)').matches && slides < 6 || !window.matchMedia('(max-width:650px)').matches && slides < 6 || !window.matchMedia('(max-width:500px)').matches && slides < 5) {
-        local[0] = 0;
-        set({
-          xy: [0, 0]
-        });
-      } else if (window.matchMedia('(max-width:950px)').matches) {
-        if (local[0] < window.innerWidth - (width * slides + margin * (slides - 1))) {
-          local[0] = window.innerWidth - 10 - (width * slides + margin * (slides - 1));
-          set({
-            xy: [local[0], 0]
-          });
-        }
-      } else {
-        if (local[0] < 1150 - (width * slides + margin * (slides - 1))) {
-          local[0] = 1150 - 25 - (width * slides + margin * (slides - 1));
-          set({
-            xy: [local[0], 0]
-          });
-        }
-      } //  window.innerWidth - (width * 5 + margin * 4);
-
-    }
-  });
-  var styleNeeded = {
-    transform: xy.interpolate((x, y) => `translate3D(${x}px,0, 0)`),
-    whiteSpace: 'nowrap',
-    margin: '0 auto' // display        : slides < 6 ? 'flex' : 'block',
-    // justifyContent : slides < 6 ? 'center' : null
-
-  };
-  return __jsx("div", _extends({}, bind(), {
-    className: style_default.a.dynamic([["1363126031", [width, height, margin]]]) + " " + 'carousel-container'
-  }), __jsx(web_cjs["animated"].div, {
-    className: `carousel ${slides < 6 ? props.type : null}`,
-    style: styleNeeded
-  }, props.children), __jsx(style_default.a, {
-    id: "1363126031",
-    dynamic: [width, height, margin]
-  }, [".carousel-container.__jsx-style-dynamic-selector{overflow:hidden;}", ".carousel-container.__jsx-style-dynamic-selector:hover{cursor:pointer;}", ".carousel.__jsx-style-dynamic-selector::-webkit-scrollbar{display:none;}", `.carousel-container.__jsx-style-dynamic-selector .carousel__item{display:inline-block;width:${width}px;height:${height}px;background:white;margin-right:${margin}px;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-o-user-select:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}`, "@media (min-width:950px){.marcas,.productos{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}.marcas{-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}.carousel-container.__jsx-style-dynamic-selector{overflow:hidden;}}"]));
-}
-// EXTERNAL MODULE: ./routes.js
-var routes = __webpack_require__("8cHP");
-
-// CONCATENATED MODULE: ./component/carousel/BrandDisplayerCarousel.js
-
-var BrandDisplayerCarousel_jsx = react_default.a.createElement;
-
-
-
-function MarcasDisplay(props) {
-  return BrandDisplayerCarousel_jsx(Carousel, {
-    slides: props.data.length,
-    width: "280px",
-    margin: "25px",
-    height: "120px",
-    type: "marcas"
-  }, props.data.map(e => {
-    return BrandDisplayerCarousel_jsx("div", {
-      key: e._id,
-      className: "jsx-2509371334" + " " + 'carousel__item'
-    }, BrandDisplayerCarousel_jsx(routes["Link"], {
-      route: "producto",
-      params: {
-        tag: e.title
-      }
-    }, BrandDisplayerCarousel_jsx("a", {
-      className: "jsx-2509371334"
-    }, BrandDisplayerCarousel_jsx("img", {
-      src: e.image,
-      width: "100%",
-      height: "100%",
-      alt: "",
-      className: "jsx-2509371334"
-    }))));
-  }), BrandDisplayerCarousel_jsx(style_default.a, {
-    id: "2509371334"
-  }, ["img{-webkit-user-drag:none;-khtml-user-drag:none;-moz-user-drag:none;-o-user-drag:none;-webkit-user-drag:none;-moz-user-drag:none;-ms-user-drag:none;user-drag:none;}"]));
-}
-// CONCATENATED MODULE: ./component/productViews/ProductViewMini.js
-
-
-var ProductViewMini_jsx = react_default.a.createElement;
-
-function ProductViewMini(props) {
-  var number = parse_int_default()(Math.random() * 50) + 12;
-  return ProductViewMini_jsx("div", {
-    className: "jsx-1493471042" + " " + 'product'
-  }, ProductViewMini_jsx("div", {
-    className: "jsx-1493471042" + " " + 'product__img'
-  }, ProductViewMini_jsx("img", {
-    src: props.data.image,
-    width: "100%",
-    alt: "",
-    className: "jsx-1493471042"
-  })), ProductViewMini_jsx("div", {
-    className: "jsx-1493471042" + " " + 'product__description'
-  }, ProductViewMini_jsx("div", {
-    className: "jsx-1493471042" + " " + 'product-title'
-  }, ProductViewMini_jsx("h3", {
-    className: "jsx-1493471042"
-  }, props.data.title)), ProductViewMini_jsx("div", {
-    className: "jsx-1493471042" + " " + 'product-discount'
-  }, ProductViewMini_jsx("span", {
-    className: "jsx-1493471042" + " " + 'product-discount__price'
-  }, props.data.price), ProductViewMini_jsx("span", {
-    className: "jsx-1493471042" + " " + 'product-discount__percentage'
-  }, -props.data.discount, "%")), ProductViewMini_jsx("div", {
-    className: "jsx-1493471042" + " " + 'product-price'
-  }, ProductViewMini_jsx("span", {
-    className: "jsx-1493471042"
-  }, Math.round((100 - props.data.discount) * props.data.price / 100), ".00$"))), ProductViewMini_jsx(style_default.a, {
-    id: "1493471042"
-  }, [".product.jsx-1493471042{display:grid;grid-template:auto auto auto/1fr;overflow:hidden;height:100%;}", ".product__img.jsx-1493471042{grid-row:1/3;}", ".product__description.jsx-1493471042>div.jsx-1493471042{padding-left:.4rem;}", ".product-title.jsx-1493471042{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:35px;border-bottom:1px solid #c5c5c5;}", ".product-title.jsx-1493471042 h3.jsx-1493471042{margin:0;font-size:.6em;white-space:normal;padding:.2rem 0;text-transform:uppercase;}", ".product__img.jsx-1493471042{background:white;width:100%;overflow:hidden;}", ".product__description.jsx-1493471042{width:100%;height:100%;}", ".product__description.jsx-1493471042{box-sizing:border-box;}", ".product-banner.jsx-1493471042 span.jsx-1493471042{color:white;font-size:.7rem;background:rgb(181,0,191);background:linear-gradient(90deg,rgba(181,0,191,1) 0%,rgba(0,8,180,1) 100%);padding:0 .4rem;}", ".product-discount.jsx-1493471042{margin-bottom:.5rem;}", ".product-discount__price.jsx-1493471042{font-size:.8rem;-webkit-text-decoration:line-through;text-decoration:line-through;}", ".product-discount__percentage.jsx-1493471042{margin-left:.4rem;color:red;font-size:.9rem;}", "@media (min-width:760px){}"]));
-}
-// CONCATENATED MODULE: ./component/carousel/ProductosMini.js
-
-var ProductosMini_jsx = react_default.a.createElement;
-
-
-
-
-function ProductosMini(props) {
-  return ProductosMini_jsx(Carousel, {
-    width: "190",
-    height: "255",
-    margin: "10",
-    slides: props.data.length,
-    type: "productos"
-  }, ProductosMini_jsx("div", {
-    className: "jsx-1633074731" + " " + 'productos'
-  }, props.data.map(e => {
-    return ProductosMini_jsx(routes["Link"], {
-      route: "single",
-      params: {
-        slug: e._id
-      },
-      key: e._id
-    }, ProductosMini_jsx("a", {
-      className: "jsx-1633074731" + " " + 'carousel__item'
-    }, ProductosMini_jsx(ProductViewMini, {
-      data: e
-    })));
-  })), ProductosMini_jsx(style_default.a, {
-    id: "1633074731"
-  }, [".productos.jsx-1633074731{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}", ".carousel,.carousel-container{-webkit-tap-highlight-color:transparent;}", ".productos.jsx-1633074731>a.jsx-1633074731{-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;}", ".carousel__item.jsx-1633074731{-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;}"]));
-}
-// CONCATENATED MODULE: ./component/MainDisplayer.js
-
-var MainDisplayer_jsx = react_default.a.createElement;
-
-
-function MainDisplayer() {
-  return MainDisplayer_jsx("div", {
-    className: "jsx-3885105777" + " " + 'main-displayer'
-  }, MainDisplayer_jsx("div", {
-    id: "item1",
-    className: "jsx-3885105777" + " " + 'main-displayer__item'
-  }, MainDisplayer_jsx("div", {
-    className: "jsx-3885105777" + " " + 'main-hero'
-  }, MainDisplayer_jsx("div", {
-    className: "jsx-3885105777" + " " + 'main-hero__text'
-  }, MainDisplayer_jsx("h1", {
-    className: "jsx-3885105777"
-  }, "AIR JORDAN XXIV"), MainDisplayer_jsx("span", {
-    className: "jsx-3885105777"
-  }, "The Future of Flight.")), MainDisplayer_jsx("div", {
-    className: "jsx-3885105777" + " " + 'main-hero__button'
-  }, MainDisplayer_jsx(routes["Link"], {
-    route: "producto",
-    params: {
-      tag: 'zapatillas'
-    }
-  }, MainDisplayer_jsx("a", {
-    className: "jsx-3885105777"
-  }, "BUY NOW"))))), MainDisplayer_jsx(style_default.a, {
-    id: "3885105777"
-  }, [".main-displayer.jsx-3885105777{display:grid;height:40rem;width:100%;overflow:hidden;position:relative;}", ".main-hero.jsx-3885105777{margin:0 auto;max-width:1150px;position:absolute;width:100%;height:60%;}", ".main-hero__text.jsx-3885105777,.main-hero__button.jsx-3885105777{margin:0 1em;}", ".main-hero__text.jsx-3885105777 span.jsx-3885105777,.main-hero__text.jsx-3885105777 h1.jsx-3885105777{margin:.2em 0;color:white;}", ".main-hero__button.jsx-3885105777{display:inline-block;position:relative;z-index:22;margin-top:1.5em;-webkit-transition:.2s;transition:.2s;}", ".main-hero__button.jsx-3885105777:hover{background:#fd486b;}", ".main-hero__button.jsx-3885105777 a.jsx-3885105777{display:block;height:100%;padding:.5em 1.4em;font-weight:bold;border:1px solid #fd486b;font-size:1.2rem;color:white;}", "#item1.jsx-3885105777{background:url('/static/mainView/main2.webp');background-size:cover;background-position:600px top;background-repeat:none;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}", ".main-displayer__item.jsx-3885105777{overflow:hidden;}", "@media (min-width:650px){.main-hero.jsx-3885105777{font-size:20px;}#item1.jsx-3885105777{background-position:center top;}}"]));
-}
-// EXTERNAL MODULE: ./component/Layout.js + 4 modules
-var Layout = __webpack_require__("ezhv");
-
-// EXTERNAL MODULE: ./node_modules/isomorphic-fetch/fetch-npm-node.js
-var fetch_npm_node = __webpack_require__("VT83");
-
-// EXTERNAL MODULE: ./node_modules/react-apollo/lib/react-apollo.cjs.js
-var react_apollo_cjs = __webpack_require__("Kxyt");
-
-// EXTERNAL MODULE: ./node_modules/graphql-tag/lib/graphql-tag.umd.js
-var graphql_tag_umd = __webpack_require__("Dugd");
-var graphql_tag_umd_default = /*#__PURE__*/__webpack_require__.n(graphql_tag_umd);
-
-// CONCATENATED MODULE: ./component/TagDisplayer.js
-
-var TagDisplayer_jsx = react_default.a.createElement;
-
-
-function TagDisplayer() {
-  return TagDisplayer_jsx("div", {
-    className: "jsx-2847285453" + " " + 'tag-displayer'
-  }, TagDisplayer_jsx(routes["Link"], {
-    route: 'producto',
-    params: {
-      tag: 'polo'
-    }
-  }, TagDisplayer_jsx("a", {
-    id: "item1",
-    className: "jsx-2847285453" + " " + 'tag-displayer__item'
-  }, TagDisplayer_jsx("h1", {
-    className: "jsx-2847285453"
-  }, "camisetas"))), TagDisplayer_jsx(routes["Link"], {
-    route: 'producto',
-    params: {
-      tag: 'casaca'
-    }
-  }, TagDisplayer_jsx("a", {
-    id: "item2",
-    className: "jsx-2847285453" + " " + 'tag-displayer__item'
-  }, TagDisplayer_jsx("h1", {
-    className: "jsx-2847285453"
-  }, "casaca"))), TagDisplayer_jsx(routes["Link"], {
-    route: 'producto',
-    params: {
-      tag: 'zapatillas'
-    }
-  }, TagDisplayer_jsx("a", {
-    id: "item3",
-    className: "jsx-2847285453" + " " + 'tag-displayer__item'
-  }, TagDisplayer_jsx("h1", {
-    className: "jsx-2847285453"
-  }, "zapatillas"))), TagDisplayer_jsx(routes["Link"], {
-    route: 'producto',
-    params: {
-      tag: 'pantalon'
-    }
-  }, TagDisplayer_jsx("a", {
-    id: "item4",
-    className: "jsx-2847285453" + " " + 'tag-displayer__item'
-  }, TagDisplayer_jsx("h1", {
-    className: "jsx-2847285453"
-  }, "jean"))), TagDisplayer_jsx(style_default.a, {
-    id: "2847285453"
-  }, [".tag-displayer.jsx-2847285453{display:grid;grid-template-rows:auto;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));}", ".tag-displayer__item.jsx-2847285453{height:300px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-transition:.2s;transition:.2s;gap:1px;}", ".tag-displayer__item.jsx-2847285453 h1.jsx-2847285453{color:white;font-size:2.5rem;text-transform:uppercase;}", "#item3.jsx-2847285453{background:url('/static/mainView/blueTexture.webp');background-size:cover;background-position:center center;}", "#item2.jsx-2847285453{background-position:center center;background:url('/static/mainView/orangeTexture.webp');background-position:center center;background-size:cover;}", "#item1.jsx-2847285453{background:url('/static/mainView/polo.webp');background-position:center center;background-size:cover;}", "#item4.jsx-2847285453{background-position:center center;background:url('/static/mainView/purpleTexture.webp');background-size:cover;}", "@media (min-width:650px){.tag-displayer__item.jsx-2847285453:hover{opacity:0.8;cursor:pointer;}}"]));
-}
-// EXTERNAL MODULE: ./component/views/Error.js
-var Error = __webpack_require__("4dR/");
-
-// CONCATENATED MODULE: ./pages/index.js
-
-var pages_jsx = react_default.a.createElement;
-
-
-
-
-
-
-
-
-
-
-
-
-class pages_index extends react["Component"] {
-  render() {
-    return pages_jsx(Layout["a" /* default */], null, pages_jsx(MainDisplayer, null), pages_jsx(TagDisplayer, null), pages_jsx(react_apollo_cjs["Query"], {
-      query: graphql_tag_umd_default.a`
-						{
-							getProducts {
-								_id
-								title
-								image
-								price
-								tags
-								discount
-							}
-							getBrands {
-								_id
-								title
-								image
-							}
-						}
-					`
-    }, ({
-      client,
-      loading,
-      error,
-      data
-    }) => {
-      if (loading) return pages_jsx(Spinner["a" /* default */], null);
-      if (error) return pages_jsx(Error["a" /* default */], {
-        code: "502"
-      });
-      return pages_jsx(react_default.a.Fragment, null, pages_jsx("div", {
-        className: "jsx-201685393" + " " + 'container'
-      }, pages_jsx("div", {
-        className: "jsx-201685393" + " " + 'tiendas'
-      }, pages_jsx("h2", {
-        className: "jsx-201685393"
-      }, "TIENDAS DISPONIBLES"), pages_jsx(MarcasDisplay, {
-        data: data.getBrands
-      })), pages_jsx("div", {
-        className: "jsx-201685393" + " " + 'ofertas'
-      }, pages_jsx("h2", {
-        className: "jsx-201685393"
-      }, "HASTA 50% DE DESCUENTO"), pages_jsx(ProductosMini, {
-        data: data.getProducts.filter(e => e.discount > 50)
-      })), pages_jsx("div", {
-        className: "jsx-201685393" + " " + 'ofertas'
-      }, pages_jsx("h2", {
-        className: "jsx-201685393"
-      }, "ZAPATILLAS"), pages_jsx(ProductosMini, {
-        data: data.getProducts.filter(e => e.tags.includes('zapatillas'))
-      })), pages_jsx("div", {
-        className: "jsx-201685393" + " " + 'ofertas'
-      }, pages_jsx("h2", {
-        className: "jsx-201685393"
-      }, "CASACAS"), pages_jsx(ProductosMini, {
-        data: data.getProducts.filter(e => e.tags.includes('casaca'))
-      })), pages_jsx("div", {
-        className: "jsx-201685393" + " " + 'ofertas'
-      }, pages_jsx("h2", {
-        className: "jsx-201685393"
-      }, "POLOS"), pages_jsx(ProductosMini, {
-        data: data.getProducts.filter(e => e.tags.includes('polo'))
-      }))));
-    }), pages_jsx(style_default.a, {
-      id: "201685393"
-    }, ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap\");", ".container.jsx-201685393{max-width:1150px;width:100%;padding:0;overflow:hidden;margin:0 auto 4rem;}", ".tiendas.jsx-201685393{padding-left:10px;}", "h2.jsx-201685393{font-size:1rem;font-weight:400;margin-bottom:1.5em;text-transform:uppercase;}", ".tiendas.jsx-201685393 h2.jsx-201685393{font-size:0.9em;}", ".ofertas.jsx-201685393{padding-left:10px;}", ".tiendas.jsx-201685393,.ofertas.jsx-201685393{margin-top:2.5rem;}", "@media (min-width:660px){.container.jsx-201685393{padding-top:30px;}}"]));
-  }
-
-}
-
-/* harmony default export */ var pages = (pages_index);
-// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-serverless-loader.js?page=%2F&absolutePagePath=private-next-pages%2Findex.js&absoluteAppPath=private-next-pages%2F_app.js&absoluteDocumentPath=next%2Fdist%2Fpages%2F_document&absoluteErrorPath=private-next-pages%2F_error.js&distDir=private-dot-next&buildId=lGcEve-EtyBE0PAsye83l&assetPrefix=&generateEtags=true&ampBindInitData=false&canonicalBase=
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_app", function() { return next_serverless_loaderpage_2F_absolutePagePath_private_next_pages_2Findex_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_lGcEve_EtyBE0PAsye83l_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderReqToHTML", function() { return renderReqToHTML; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return next_serverless_loaderpage_2F_absolutePagePath_private_next_pages_2Findex_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_lGcEve_EtyBE0PAsye83l_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render; });
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    const Component = pages
-    /* harmony default export */ var next_serverless_loaderpage_2F_absolutePagePath_private_next_pages_2Findex_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_lGcEve_EtyBE0PAsye83l_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_ = __webpack_exports__["default"] = (Component);
-    const config = pages_namespaceObject['confi' + 'g'] || {}
-    const next_serverless_loaderpage_2F_absolutePagePath_private_next_pages_2Findex_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_lGcEve_EtyBE0PAsye83l_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app = _app["a" /* default */]
-    async function renderReqToHTML(req, res, fromExport) {
-      const options = {
-        App: _app["a" /* default */],
-        Document: _document_default.a,
-        buildManifest: build_manifest,
-        reactLoadableManifest: react_loadable_manifest,
-        canonicalBase: "",
-        buildId: "lGcEve-EtyBE0PAsye83l",
-        assetPrefix: "",
-        ampBindInitData: false
-      }
-      const parsedUrl = Object(external_url_["parse"])(req.url, true)
-      const renderOpts = Object.assign(
-        {
-          Component,
-          pageConfig: config,
-          dataOnly: req.headers && (req.headers.accept || '').indexOf('application/amp.bind+json') !== -1,
-          nextExport: fromExport
-        },
-        options,
-      )
-      try {
-        
-        const params = {};
-        const result = await Object(render["renderToHTML"])(req, res, "/", Object.assign({}, parsedUrl.query, params), renderOpts)
-
-        if (fromExport) return { html: result, renderOpts }
-        return result
-      } catch (err) {
-        if (err.code === 'ENOENT') {
-          res.statusCode = 404
-          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
-            Component: _error["default"]
-          }))
-          return result
-        } else {
-          console.error(err)
-          res.statusCode = 500
-          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
-            Component: _error["default"],
-            err
-          }))
-          return result
-        }
-      }
-    }
-    async function next_serverless_loaderpage_2F_absolutePagePath_private_next_pages_2Findex_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_lGcEve_EtyBE0PAsye83l_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render (req, res) {
-      try {
-        const html = await renderReqToHTML(req, res)
-        Object(send_html["sendHTML"])(req, res, html, {generateEtags: true})
-      } catch(err) {
-        console.error(err)
-        res.statusCode = 500
-        res.end('Internal Server Error')
-      }
-    }
-  
 
 /***/ }),
 
@@ -23434,6 +22909,531 @@ const React = __importStar(__webpack_require__("q1tI")); // @ts-ignore for some 
 
 
 exports.LoadableContext = React.createContext(null);
+
+/***/ }),
+
+/***/ "jzUg":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var pages_namespaceObject = {};
+__webpack_require__.r(pages_namespaceObject);
+__webpack_require__.d(pages_namespaceObject, "default", function() { return pages; });
+
+// EXTERNAL MODULE: external "url"
+var external_url_ = __webpack_require__("bzos");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/render.js
+var render = __webpack_require__("/bjS");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/send-html.js
+var send_html = __webpack_require__("LuNM");
+
+// EXTERNAL MODULE: ./.next/build-manifest.json
+var build_manifest = __webpack_require__("LZ9C");
+
+// EXTERNAL MODULE: ./.next/react-loadable-manifest.json
+var react_loadable_manifest = __webpack_require__("67Bq");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/pages/_document.js
+var _document = __webpack_require__("VDXt");
+var _document_default = /*#__PURE__*/__webpack_require__.n(_document);
+
+// EXTERNAL MODULE: ./pages/_error.js
+var _error = __webpack_require__("Y0NT");
+
+// EXTERNAL MODULE: ./pages/_app.js + 1 modules
+var _app = __webpack_require__("1TCz");
+
+// EXTERNAL MODULE: ./node_modules/styled-jsx/style.js
+var style = __webpack_require__("MX0m");
+var style_default = /*#__PURE__*/__webpack_require__.n(style);
+
+// EXTERNAL MODULE: ./component/views/Spinner.js
+var Spinner = __webpack_require__("Zg/l");
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__("q1tI");
+var react_default = /*#__PURE__*/__webpack_require__.n(react);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/assign.js
+var object_assign = __webpack_require__("UXZV");
+var assign_default = /*#__PURE__*/__webpack_require__.n(object_assign);
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js
+
+function _extends() {
+  _extends = assign_default.a || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/parse-int.js
+var parse_int = __webpack_require__("6BQ9");
+var parse_int_default = /*#__PURE__*/__webpack_require__.n(parse_int);
+
+// EXTERNAL MODULE: ./node_modules/react-spring/web.cjs.js
+var web_cjs = __webpack_require__("ZO3Q");
+
+// EXTERNAL MODULE: ./node_modules/react-use-gesture/dist/index.js
+var dist = __webpack_require__("lKHm");
+
+// CONCATENATED MODULE: ./component/carousel/Carousel.js
+
+
+
+var __jsx = react_default.a.createElement;
+
+
+
+function Carousel(props) {
+  var margin = parse_int_default()(props.margin, 10);
+
+  var slides = parse_int_default()(props.slides, 10);
+
+  var width = parse_int_default()(props.width, 10);
+
+  var height = parse_int_default()(props.height, 10);
+
+  const [{
+    xy
+  }, set] = Object(web_cjs["useSpring"])(() => ({
+    xy: [0, 0]
+  }));
+  const bind = Object(dist["useDrag"])(({
+    down,
+    local,
+    velocity,
+    direction
+  }) => {
+    set({
+      xy: down ? [local[0], 0] : [Math.round(local[0] / (margin + width) + 0.3 * direction[0]) * (margin + width), 0]
+    });
+
+    if (!down) {
+      local[0] = Math.round(local[0] / (margin + width) + 0.3 * direction[0]) * (margin + width);
+
+      if (local[0] > 0 || !window.matchMedia('(max-width:950px)').matches && slides < 6 || !window.matchMedia('(max-width:650px)').matches && slides < 6 || !window.matchMedia('(max-width:500px)').matches && slides < 5) {
+        local[0] = 0;
+        set({
+          xy: [0, 0]
+        });
+      } else if (window.matchMedia('(max-width:950px)').matches) {
+        if (local[0] < window.innerWidth - (width * slides + margin * (slides - 1))) {
+          local[0] = window.innerWidth - 10 - (width * slides + margin * (slides - 1));
+          set({
+            xy: [local[0], 0]
+          });
+        }
+      } else {
+        if (local[0] < 1150 - (width * slides + margin * (slides - 1))) {
+          local[0] = 1150 - 25 - (width * slides + margin * (slides - 1));
+          set({
+            xy: [local[0], 0]
+          });
+        }
+      } //  window.innerWidth - (width * 5 + margin * 4);
+
+    }
+  });
+  var styleNeeded = {
+    transform: xy.interpolate((x, y) => `translate3D(${x}px,0, 0)`),
+    whiteSpace: 'nowrap',
+    margin: '0 auto' // display        : slides < 6 ? 'flex' : 'block',
+    // justifyContent : slides < 6 ? 'center' : null
+
+  };
+  return __jsx("div", _extends({}, bind(), {
+    className: style_default.a.dynamic([["1363126031", [width, height, margin]]]) + " " + 'carousel-container'
+  }), __jsx(web_cjs["animated"].div, {
+    className: `carousel ${slides < 6 ? props.type : null}`,
+    style: styleNeeded
+  }, props.children), __jsx(style_default.a, {
+    id: "1363126031",
+    dynamic: [width, height, margin]
+  }, [".carousel-container.__jsx-style-dynamic-selector{overflow:hidden;}", ".carousel-container.__jsx-style-dynamic-selector:hover{cursor:pointer;}", ".carousel.__jsx-style-dynamic-selector::-webkit-scrollbar{display:none;}", `.carousel-container.__jsx-style-dynamic-selector .carousel__item{display:inline-block;width:${width}px;height:${height}px;background:white;margin-right:${margin}px;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-o-user-select:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}`, "@media (min-width:950px){.marcas,.productos{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}.marcas{-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}.carousel-container.__jsx-style-dynamic-selector{overflow:hidden;}}"]));
+}
+// EXTERNAL MODULE: ./routes.js
+var routes = __webpack_require__("8cHP");
+
+// CONCATENATED MODULE: ./component/carousel/BrandDisplayerCarousel.js
+
+var BrandDisplayerCarousel_jsx = react_default.a.createElement;
+
+
+
+function MarcasDisplay(props) {
+  return BrandDisplayerCarousel_jsx(Carousel, {
+    slides: props.data.length,
+    width: "280px",
+    margin: "25px",
+    height: "120px",
+    type: "marcas"
+  }, props.data.map(e => {
+    return BrandDisplayerCarousel_jsx("div", {
+      key: e._id,
+      className: "jsx-2509371334" + " " + 'carousel__item'
+    }, BrandDisplayerCarousel_jsx(routes["Link"], {
+      route: "producto",
+      params: {
+        tag: e.title
+      }
+    }, BrandDisplayerCarousel_jsx("a", {
+      className: "jsx-2509371334"
+    }, BrandDisplayerCarousel_jsx("img", {
+      src: e.image,
+      width: "100%",
+      height: "100%",
+      alt: "",
+      className: "jsx-2509371334"
+    }))));
+  }), BrandDisplayerCarousel_jsx(style_default.a, {
+    id: "2509371334"
+  }, ["img{-webkit-user-drag:none;-khtml-user-drag:none;-moz-user-drag:none;-o-user-drag:none;-webkit-user-drag:none;-moz-user-drag:none;-ms-user-drag:none;user-drag:none;}"]));
+}
+// CONCATENATED MODULE: ./component/productViews/ProductViewMini.js
+
+
+var ProductViewMini_jsx = react_default.a.createElement;
+
+function ProductViewMini(props) {
+  var number = parse_int_default()(Math.random() * 50) + 12;
+  return ProductViewMini_jsx("div", {
+    className: "jsx-1493471042" + " " + 'product'
+  }, ProductViewMini_jsx("div", {
+    className: "jsx-1493471042" + " " + 'product__img'
+  }, ProductViewMini_jsx("img", {
+    src: props.data.image,
+    width: "100%",
+    alt: "",
+    className: "jsx-1493471042"
+  })), ProductViewMini_jsx("div", {
+    className: "jsx-1493471042" + " " + 'product__description'
+  }, ProductViewMini_jsx("div", {
+    className: "jsx-1493471042" + " " + 'product-title'
+  }, ProductViewMini_jsx("h3", {
+    className: "jsx-1493471042"
+  }, props.data.title)), ProductViewMini_jsx("div", {
+    className: "jsx-1493471042" + " " + 'product-discount'
+  }, ProductViewMini_jsx("span", {
+    className: "jsx-1493471042" + " " + 'product-discount__price'
+  }, props.data.price), ProductViewMini_jsx("span", {
+    className: "jsx-1493471042" + " " + 'product-discount__percentage'
+  }, -props.data.discount, "%")), ProductViewMini_jsx("div", {
+    className: "jsx-1493471042" + " " + 'product-price'
+  }, ProductViewMini_jsx("span", {
+    className: "jsx-1493471042"
+  }, Math.round((100 - props.data.discount) * props.data.price / 100), ".00$"))), ProductViewMini_jsx(style_default.a, {
+    id: "1493471042"
+  }, [".product.jsx-1493471042{display:grid;grid-template:auto auto auto/1fr;overflow:hidden;height:100%;}", ".product__img.jsx-1493471042{grid-row:1/3;}", ".product__description.jsx-1493471042>div.jsx-1493471042{padding-left:.4rem;}", ".product-title.jsx-1493471042{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:35px;border-bottom:1px solid #c5c5c5;}", ".product-title.jsx-1493471042 h3.jsx-1493471042{margin:0;font-size:.6em;white-space:normal;padding:.2rem 0;text-transform:uppercase;}", ".product__img.jsx-1493471042{background:white;width:100%;overflow:hidden;}", ".product__description.jsx-1493471042{width:100%;height:100%;}", ".product__description.jsx-1493471042{box-sizing:border-box;}", ".product-banner.jsx-1493471042 span.jsx-1493471042{color:white;font-size:.7rem;background:rgb(181,0,191);background:linear-gradient(90deg,rgba(181,0,191,1) 0%,rgba(0,8,180,1) 100%);padding:0 .4rem;}", ".product-discount.jsx-1493471042{margin-bottom:.5rem;}", ".product-discount__price.jsx-1493471042{font-size:.8rem;-webkit-text-decoration:line-through;text-decoration:line-through;}", ".product-discount__percentage.jsx-1493471042{margin-left:.4rem;color:red;font-size:.9rem;}", "@media (min-width:760px){}"]));
+}
+// CONCATENATED MODULE: ./component/carousel/ProductosMini.js
+
+var ProductosMini_jsx = react_default.a.createElement;
+
+
+
+
+function ProductosMini(props) {
+  return ProductosMini_jsx(Carousel, {
+    width: "190",
+    height: "255",
+    margin: "10",
+    slides: props.data.length,
+    type: "productos"
+  }, ProductosMini_jsx("div", {
+    className: "jsx-1633074731" + " " + 'productos'
+  }, props.data.map(e => {
+    return ProductosMini_jsx(routes["Link"], {
+      route: "single",
+      params: {
+        slug: e._id
+      },
+      key: e._id
+    }, ProductosMini_jsx("a", {
+      className: "jsx-1633074731" + " " + 'carousel__item'
+    }, ProductosMini_jsx(ProductViewMini, {
+      data: e
+    })));
+  })), ProductosMini_jsx(style_default.a, {
+    id: "1633074731"
+  }, [".productos.jsx-1633074731{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}", ".carousel,.carousel-container{-webkit-tap-highlight-color:transparent;}", ".productos.jsx-1633074731>a.jsx-1633074731{-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;}", ".carousel__item.jsx-1633074731{-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;}"]));
+}
+// CONCATENATED MODULE: ./component/MainDisplayer.js
+
+var MainDisplayer_jsx = react_default.a.createElement;
+
+
+function MainDisplayer() {
+  return MainDisplayer_jsx("div", {
+    className: "jsx-3885105777" + " " + 'main-displayer'
+  }, MainDisplayer_jsx("div", {
+    id: "item1",
+    className: "jsx-3885105777" + " " + 'main-displayer__item'
+  }, MainDisplayer_jsx("div", {
+    className: "jsx-3885105777" + " " + 'main-hero'
+  }, MainDisplayer_jsx("div", {
+    className: "jsx-3885105777" + " " + 'main-hero__text'
+  }, MainDisplayer_jsx("h1", {
+    className: "jsx-3885105777"
+  }, "AIR JORDAN XXIV"), MainDisplayer_jsx("span", {
+    className: "jsx-3885105777"
+  }, "The Future of Flight.")), MainDisplayer_jsx("div", {
+    className: "jsx-3885105777" + " " + 'main-hero__button'
+  }, MainDisplayer_jsx(routes["Link"], {
+    route: "producto",
+    params: {
+      tag: 'zapatillas'
+    }
+  }, MainDisplayer_jsx("a", {
+    className: "jsx-3885105777"
+  }, "BUY NOW"))))), MainDisplayer_jsx(style_default.a, {
+    id: "3885105777"
+  }, [".main-displayer.jsx-3885105777{display:grid;height:40rem;width:100%;overflow:hidden;position:relative;}", ".main-hero.jsx-3885105777{margin:0 auto;max-width:1150px;position:absolute;width:100%;height:60%;}", ".main-hero__text.jsx-3885105777,.main-hero__button.jsx-3885105777{margin:0 1em;}", ".main-hero__text.jsx-3885105777 span.jsx-3885105777,.main-hero__text.jsx-3885105777 h1.jsx-3885105777{margin:.2em 0;color:white;}", ".main-hero__button.jsx-3885105777{display:inline-block;position:relative;z-index:22;margin-top:1.5em;-webkit-transition:.2s;transition:.2s;}", ".main-hero__button.jsx-3885105777:hover{background:#fd486b;}", ".main-hero__button.jsx-3885105777 a.jsx-3885105777{display:block;height:100%;padding:.5em 1.4em;font-weight:bold;border:1px solid #fd486b;font-size:1.2rem;color:white;}", "#item1.jsx-3885105777{background:url('/static/mainView/main2.webp');background-size:cover;background-position:600px top;background-repeat:none;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}", ".main-displayer__item.jsx-3885105777{overflow:hidden;}", "@media (min-width:650px){.main-hero.jsx-3885105777{font-size:20px;}#item1.jsx-3885105777{background-position:center top;}}"]));
+}
+// EXTERNAL MODULE: ./component/Layout.js + 4 modules
+var Layout = __webpack_require__("ezhv");
+
+// EXTERNAL MODULE: ./node_modules/isomorphic-fetch/fetch-npm-node.js
+var fetch_npm_node = __webpack_require__("VT83");
+
+// EXTERNAL MODULE: ./node_modules/react-apollo/lib/react-apollo.cjs.js
+var react_apollo_cjs = __webpack_require__("Kxyt");
+
+// EXTERNAL MODULE: ./node_modules/graphql-tag/lib/graphql-tag.umd.js
+var graphql_tag_umd = __webpack_require__("Dugd");
+var graphql_tag_umd_default = /*#__PURE__*/__webpack_require__.n(graphql_tag_umd);
+
+// CONCATENATED MODULE: ./component/TagDisplayer.js
+
+var TagDisplayer_jsx = react_default.a.createElement;
+
+
+function TagDisplayer() {
+  return TagDisplayer_jsx("div", {
+    className: "jsx-2847285453" + " " + 'tag-displayer'
+  }, TagDisplayer_jsx(routes["Link"], {
+    route: 'producto',
+    params: {
+      tag: 'polo'
+    }
+  }, TagDisplayer_jsx("a", {
+    id: "item1",
+    className: "jsx-2847285453" + " " + 'tag-displayer__item'
+  }, TagDisplayer_jsx("h1", {
+    className: "jsx-2847285453"
+  }, "camisetas"))), TagDisplayer_jsx(routes["Link"], {
+    route: 'producto',
+    params: {
+      tag: 'casaca'
+    }
+  }, TagDisplayer_jsx("a", {
+    id: "item2",
+    className: "jsx-2847285453" + " " + 'tag-displayer__item'
+  }, TagDisplayer_jsx("h1", {
+    className: "jsx-2847285453"
+  }, "casaca"))), TagDisplayer_jsx(routes["Link"], {
+    route: 'producto',
+    params: {
+      tag: 'zapatillas'
+    }
+  }, TagDisplayer_jsx("a", {
+    id: "item3",
+    className: "jsx-2847285453" + " " + 'tag-displayer__item'
+  }, TagDisplayer_jsx("h1", {
+    className: "jsx-2847285453"
+  }, "zapatillas"))), TagDisplayer_jsx(routes["Link"], {
+    route: 'producto',
+    params: {
+      tag: 'pantalon'
+    }
+  }, TagDisplayer_jsx("a", {
+    id: "item4",
+    className: "jsx-2847285453" + " " + 'tag-displayer__item'
+  }, TagDisplayer_jsx("h1", {
+    className: "jsx-2847285453"
+  }, "jean"))), TagDisplayer_jsx(style_default.a, {
+    id: "2847285453"
+  }, [".tag-displayer.jsx-2847285453{display:grid;grid-template-rows:auto;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));}", ".tag-displayer__item.jsx-2847285453{height:300px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-transition:.2s;transition:.2s;gap:1px;}", ".tag-displayer__item.jsx-2847285453 h1.jsx-2847285453{color:white;font-size:2.5rem;text-transform:uppercase;}", "#item3.jsx-2847285453{background:url('/static/mainView/blueTexture.webp');background-size:cover;background-position:center center;}", "#item2.jsx-2847285453{background-position:center center;background:url('/static/mainView/orangeTexture.webp');background-position:center center;background-size:cover;}", "#item1.jsx-2847285453{background:url('/static/mainView/polo.webp');background-position:center center;background-size:cover;}", "#item4.jsx-2847285453{background-position:center center;background:url('/static/mainView/purpleTexture.webp');background-size:cover;}", "@media (min-width:650px){.tag-displayer__item.jsx-2847285453:hover{opacity:0.8;cursor:pointer;}}"]));
+}
+// EXTERNAL MODULE: ./component/views/Error.js
+var Error = __webpack_require__("4dR/");
+
+// CONCATENATED MODULE: ./pages/index.js
+
+var pages_jsx = react_default.a.createElement;
+
+
+
+
+
+
+
+
+
+
+
+
+class pages_index extends react["Component"] {
+  render() {
+    return pages_jsx(Layout["a" /* default */], null, pages_jsx(MainDisplayer, null), pages_jsx(TagDisplayer, null), pages_jsx(react_apollo_cjs["Query"], {
+      query: graphql_tag_umd_default.a`
+						{
+							getProducts {
+								_id
+								title
+								image
+								price
+								tags
+								discount
+							}
+							getBrands {
+								_id
+								title
+								image
+							}
+						}
+					`
+    }, ({
+      client,
+      loading,
+      error,
+      data
+    }) => {
+      if (loading) return pages_jsx(Spinner["a" /* default */], null);
+      if (error) return pages_jsx(Error["a" /* default */], {
+        code: "502"
+      });
+      return pages_jsx(react_default.a.Fragment, null, pages_jsx("div", {
+        className: "jsx-201685393" + " " + 'container'
+      }, pages_jsx("div", {
+        className: "jsx-201685393" + " " + 'tiendas'
+      }, pages_jsx("h2", {
+        className: "jsx-201685393"
+      }, "TIENDAS DISPONIBLES"), pages_jsx(MarcasDisplay, {
+        data: data.getBrands
+      })), pages_jsx("div", {
+        className: "jsx-201685393" + " " + 'ofertas'
+      }, pages_jsx("h2", {
+        className: "jsx-201685393"
+      }, "HASTA 50% DE DESCUENTO"), pages_jsx(ProductosMini, {
+        data: data.getProducts.filter(e => e.discount > 50)
+      })), pages_jsx("div", {
+        className: "jsx-201685393" + " " + 'ofertas'
+      }, pages_jsx("h2", {
+        className: "jsx-201685393"
+      }, "ZAPATILLAS"), pages_jsx(ProductosMini, {
+        data: data.getProducts.filter(e => e.tags.includes('zapatillas'))
+      })), pages_jsx("div", {
+        className: "jsx-201685393" + " " + 'ofertas'
+      }, pages_jsx("h2", {
+        className: "jsx-201685393"
+      }, "CASACAS"), pages_jsx(ProductosMini, {
+        data: data.getProducts.filter(e => e.tags.includes('casaca'))
+      })), pages_jsx("div", {
+        className: "jsx-201685393" + " " + 'ofertas'
+      }, pages_jsx("h2", {
+        className: "jsx-201685393"
+      }, "POLOS"), pages_jsx(ProductosMini, {
+        data: data.getProducts.filter(e => e.tags.includes('polo'))
+      }))));
+    }), pages_jsx(style_default.a, {
+      id: "201685393"
+    }, ["@import url(\"https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap\");", ".container.jsx-201685393{max-width:1150px;width:100%;padding:0;overflow:hidden;margin:0 auto 4rem;}", ".tiendas.jsx-201685393{padding-left:10px;}", "h2.jsx-201685393{font-size:1rem;font-weight:400;margin-bottom:1.5em;text-transform:uppercase;}", ".tiendas.jsx-201685393 h2.jsx-201685393{font-size:0.9em;}", ".ofertas.jsx-201685393{padding-left:10px;}", ".tiendas.jsx-201685393,.ofertas.jsx-201685393{margin-top:2.5rem;}", "@media (min-width:660px){.container.jsx-201685393{padding-top:30px;}}"]));
+  }
+
+}
+
+/* harmony default export */ var pages = (pages_index);
+// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-serverless-loader.js?page=%2F&absolutePagePath=private-next-pages%2Findex.js&absoluteAppPath=private-next-pages%2F_app.js&absoluteDocumentPath=next%2Fdist%2Fpages%2F_document&absoluteErrorPath=private-next-pages%2F_error.js&distDir=private-dot-next&buildId=WJlJOXK7gQiLOG80wkFBM&assetPrefix=&generateEtags=true&ampBindInitData=false&canonicalBase=
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_app", function() { return next_serverless_loaderpage_2F_absolutePagePath_private_next_pages_2Findex_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_WJlJOXK7gQiLOG80wkFBM_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderReqToHTML", function() { return renderReqToHTML; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return next_serverless_loaderpage_2F_absolutePagePath_private_next_pages_2Findex_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_WJlJOXK7gQiLOG80wkFBM_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render; });
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    const Component = pages
+    /* harmony default export */ var next_serverless_loaderpage_2F_absolutePagePath_private_next_pages_2Findex_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_WJlJOXK7gQiLOG80wkFBM_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_ = __webpack_exports__["default"] = (Component);
+    const config = pages_namespaceObject['confi' + 'g'] || {}
+    const next_serverless_loaderpage_2F_absolutePagePath_private_next_pages_2Findex_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_WJlJOXK7gQiLOG80wkFBM_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app = _app["a" /* default */]
+    async function renderReqToHTML(req, res, fromExport) {
+      const options = {
+        App: _app["a" /* default */],
+        Document: _document_default.a,
+        buildManifest: build_manifest,
+        reactLoadableManifest: react_loadable_manifest,
+        canonicalBase: "",
+        buildId: "WJlJOXK7gQiLOG80wkFBM",
+        assetPrefix: "",
+        ampBindInitData: false
+      }
+      const parsedUrl = Object(external_url_["parse"])(req.url, true)
+      const renderOpts = Object.assign(
+        {
+          Component,
+          pageConfig: config,
+          dataOnly: req.headers && (req.headers.accept || '').indexOf('application/amp.bind+json') !== -1,
+          nextExport: fromExport
+        },
+        options,
+      )
+      try {
+        
+        const params = {};
+        const result = await Object(render["renderToHTML"])(req, res, "/", Object.assign({}, parsedUrl.query, params), renderOpts)
+
+        if (fromExport) return { html: result, renderOpts }
+        return result
+      } catch (err) {
+        if (err.code === 'ENOENT') {
+          res.statusCode = 404
+          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
+            Component: _error["default"]
+          }))
+          return result
+        } else {
+          console.error(err)
+          res.statusCode = 500
+          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
+            Component: _error["default"],
+            err
+          }))
+          return result
+        }
+      }
+    }
+    async function next_serverless_loaderpage_2F_absolutePagePath_private_next_pages_2Findex_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_WJlJOXK7gQiLOG80wkFBM_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render (req, res) {
+      try {
+        const html = await renderReqToHTML(req, res)
+        Object(send_html["sendHTML"])(req, res, html, {generateEtags: true})
+      } catch(err) {
+        console.error(err)
+        res.statusCode = 500
+        res.end('Internal Server Error')
+      }
+    }
+  
 
 /***/ }),
 

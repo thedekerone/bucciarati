@@ -1,8 +1,8 @@
 self.__precacheManifest = [
   "/",
   {
-    "url": "/_next/static/chunks/commons.e9c9b5311f06df8ab4d6.js",
-    "revision": "e675dfff00cb298173cf"
+    "url": "/_next/static/chunks/commons.5e872c168fa77df56052.js",
+    "revision": "c9b395954834e1c5b353"
   },
   {
     "url": "/_next/static/runtime/main-d1468aaee677d1fa07af.js",
@@ -13,28 +13,28 @@ self.__precacheManifest = [
     "revision": "be4b6cc6d10632d2262c"
   },
   {
-    "url": "/_next/static\\lGcEve-EtyBE0PAsye83l\\pages\\_app.js",
-    "revision": "fc0c1eb301b30af0c642"
+    "url": "/_next/static\\WJlJOXK7gQiLOG80wkFBM\\pages\\_app.js",
+    "revision": "8e378ffc35d04d5085b2"
   },
   {
-    "url": "/_next/static\\lGcEve-EtyBE0PAsye83l\\pages\\_error.js",
-    "revision": "41f10daba63e37302ae2"
+    "url": "/_next/static\\WJlJOXK7gQiLOG80wkFBM\\pages\\_error.js",
+    "revision": "204319f781630984934e"
   },
   {
-    "url": "/_next/static\\lGcEve-EtyBE0PAsye83l\\pages\\cart.js",
-    "revision": "1ea6d2be3afe87d65d84"
+    "url": "/_next/static\\WJlJOXK7gQiLOG80wkFBM\\pages\\cart.js",
+    "revision": "9bdcaec1a70b41198b2b"
   },
   {
-    "url": "/_next/static\\lGcEve-EtyBE0PAsye83l\\pages\\index.js",
-    "revision": "1b6730527f646e5e2e84"
+    "url": "/_next/static\\WJlJOXK7gQiLOG80wkFBM\\pages\\index.js",
+    "revision": "8a84e69ab7fff46a1505"
   },
   {
-    "url": "/_next/static\\lGcEve-EtyBE0PAsye83l\\pages\\producto.js",
-    "revision": "d1fcdef281469035da40"
+    "url": "/_next/static\\WJlJOXK7gQiLOG80wkFBM\\pages\\producto.js",
+    "revision": "35404b28ada754e6c8cc"
   },
   {
-    "url": "/_next/static\\lGcEve-EtyBE0PAsye83l\\pages\\single.js",
-    "revision": "04bd4a18f1db86766013"
+    "url": "/_next/static\\WJlJOXK7gQiLOG80wkFBM\\pages\\single.js",
+    "revision": "031b9d7f9492c7023154"
   }
 ];
 
@@ -71,5 +71,5 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerRoute(/^https?\/\/chupetinps.herokuapp.com\/.*/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
+workbox.routing.registerRoute(/^https?\/\/chupetinps.herokuapp.com\/.*/, new workbox.strategies.StaleWhileRevalidate({ plugins: [new workbox.cacheableResponse.Plugin({ statuses: [ 0, 200 ] })] }), 'GET');
 workbox.routing.registerRoute(/^https?.*/, new workbox.strategies.NetworkFirst({ "cacheName":"https-calls","networkTimeoutSeconds":15, plugins: [new workbox.expiration.Plugin({ maxEntries: 150, maxAgeSeconds: 2592000, purgeOnQuotaError: false }), new workbox.cacheableResponse.Plugin({ statuses: [ 0, 200 ] })] }), 'GET');

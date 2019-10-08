@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "iHfA");
+/******/ 	return __webpack_require__(__webpack_require__.s = "zuAr");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2350,18 +2350,18 @@ function Error({
   code
 }) {
   return __jsx("div", {
-    className: "jsx-2182318480" + " " + 'error'
+    className: "jsx-1961418889" + " " + 'error'
   }, __jsx("h1", {
-    className: "jsx-2182318480"
+    className: "jsx-1961418889"
   }, code ? code : null, " | Ha ocurrido un error! "), __jsx(_routes__WEBPACK_IMPORTED_MODULE_2__["Link"], {
     route: "/"
   }, __jsx("a", {
-    className: "jsx-2182318480"
+    className: "jsx-1961418889"
   }, __jsx("h2", {
-    className: "jsx-2182318480"
+    className: "jsx-1961418889"
   }, "REGRESAR"))), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "2182318480"
-  }, [".error.jsx-2182318480{height:calc(100vh - 55px);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}", "h2.jsx-2182318480{color:red;}"]));
+    id: "1961418889"
+  }, [".error.jsx-1961418889{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}", "h2.jsx-1961418889{color:red;}"]));
 }
 
 /***/ }),
@@ -7785,7 +7785,7 @@ exports['default'] = result;
 /***/ "LZ9C":
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"devFiles\":[],\"pages\":{\"/\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.e9c9b5311f06df8ab4d6.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/_app\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.e9c9b5311f06df8ab4d6.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/_error\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.e9c9b5311f06df8ab4d6.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/cart\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.e9c9b5311f06df8ab4d6.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/index\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.e9c9b5311f06df8ab4d6.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/producto\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.e9c9b5311f06df8ab4d6.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/single\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.e9c9b5311f06df8ab4d6.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"]}}");
+module.exports = JSON.parse("{\"devFiles\":[],\"pages\":{\"/\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.5e872c168fa77df56052.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/_app\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.5e872c168fa77df56052.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/_error\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.5e872c168fa77df56052.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/cart\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.5e872c168fa77df56052.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/index\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.5e872c168fa77df56052.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/producto\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.5e872c168fa77df56052.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"],\"/single\":[\"static/runtime/webpack-035ac2b14bde147cb4a8.js\",\"static/chunks/commons.5e872c168fa77df56052.js\",\"static/runtime/main-d1468aaee677d1fa07af.js\"]}}");
 
 /***/ }),
 
@@ -20573,337 +20573,6 @@ module.exports = JSON.parse("[[\"0\",\"\\u0000\",127],[\"a140\",\"　，、。�
 
 /***/ }),
 
-/***/ "iHfA":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var single_namespaceObject = {};
-__webpack_require__.r(single_namespaceObject);
-__webpack_require__.d(single_namespaceObject, "default", function() { return pages_single; });
-
-// EXTERNAL MODULE: external "url"
-var external_url_ = __webpack_require__("bzos");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/render.js
-var render = __webpack_require__("/bjS");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/send-html.js
-var send_html = __webpack_require__("LuNM");
-
-// EXTERNAL MODULE: ./.next/build-manifest.json
-var build_manifest = __webpack_require__("LZ9C");
-
-// EXTERNAL MODULE: ./.next/react-loadable-manifest.json
-var react_loadable_manifest = __webpack_require__("67Bq");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/pages/_document.js
-var _document = __webpack_require__("VDXt");
-var _document_default = /*#__PURE__*/__webpack_require__.n(_document);
-
-// EXTERNAL MODULE: ./pages/_error.js
-var _error = __webpack_require__("Y0NT");
-
-// EXTERNAL MODULE: ./pages/_app.js + 1 modules
-var _app = __webpack_require__("1TCz");
-
-// EXTERNAL MODULE: ./node_modules/styled-jsx/style.js
-var style = __webpack_require__("MX0m");
-var style_default = /*#__PURE__*/__webpack_require__.n(style);
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__("q1tI");
-var react_default = /*#__PURE__*/__webpack_require__.n(react);
-
-// EXTERNAL MODULE: ./component/productViews/ProductView.js
-var ProductView = __webpack_require__("dgzm");
-
-// EXTERNAL MODULE: ./component/productViews/Productos.js
-var Productos = __webpack_require__("laAw");
-
-// EXTERNAL MODULE: ./node_modules/react-apollo/lib/react-apollo.cjs.js
-var react_apollo_cjs = __webpack_require__("Kxyt");
-
-// EXTERNAL MODULE: ./node_modules/graphql-tag/lib/graphql-tag.umd.js
-var graphql_tag_umd = __webpack_require__("Dugd");
-var graphql_tag_umd_default = /*#__PURE__*/__webpack_require__.n(graphql_tag_umd);
-
-// EXTERNAL MODULE: ./component/Layout.js + 4 modules
-var Layout = __webpack_require__("ezhv");
-
-// EXTERNAL MODULE: ./component/views/Spinner.js
-var Spinner = __webpack_require__("Zg/l");
-
-// EXTERNAL MODULE: ./component/views/Error.js
-var Error = __webpack_require__("4dR/");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/next-server/lib/head.js
-var head = __webpack_require__("8Kt/");
-var head_default = /*#__PURE__*/__webpack_require__.n(head);
-
-// CONCATENATED MODULE: ./pages/single.js
-
-var __jsx = react_default.a.createElement;
-
-
-
-
-
-
-
-
-
-const GETTER = graphql_tag_umd_default.a`
-	query Product($PR: ID!) {
-		getProduct(id: $PR) {
-			_id
-			title
-			image
-			price
-			discount
-			tags
-		}
-	}
-`;
-
-class single_single extends react_default.a.Component {
-  static async getInitialProps({
-    query
-  }) {
-    return {
-      id: query.slug
-    };
-  }
-
-  render() {
-    return __jsx(Layout["a" /* default */], null, __jsx(head_default.a, null, __jsx("meta", {
-      name: "viewport",
-      content: "width=device-width, initial-scale=1.0",
-      className: "jsx-2024405385"
-    }), __jsx("title", {
-      className: "jsx-2024405385"
-    }, "Bucciarati Store"), __jsx("link", {
-      rel: "apple-touch-icon",
-      sizes: "57x57",
-      href: "/static/favicon/apple-icon-57x57.png",
-      className: "jsx-2024405385"
-    }), __jsx("link", {
-      rel: "apple-touch-icon",
-      sizes: "60x60",
-      href: "/static/favicon/apple-icon-60x60.png",
-      className: "jsx-2024405385"
-    }), __jsx("link", {
-      rel: "apple-touch-icon",
-      sizes: "72x72",
-      href: "/static/favicon/apple-icon-72x72.png",
-      className: "jsx-2024405385"
-    }), __jsx("link", {
-      rel: "apple-touch-icon",
-      sizes: "76x76",
-      href: "/static/favicon/apple-icon-76x76.png",
-      className: "jsx-2024405385"
-    }), __jsx("link", {
-      rel: "apple-touch-icon",
-      sizes: "114x114",
-      href: "/static/favicon/apple-icon-114x114.png",
-      className: "jsx-2024405385"
-    }), __jsx("link", {
-      rel: "apple-touch-icon",
-      sizes: "120x120",
-      href: "/static/favicon/apple-icon-120x120.png",
-      className: "jsx-2024405385"
-    }), __jsx("link", {
-      rel: "apple-touch-icon",
-      sizes: "144x144",
-      href: "/static/favicon/apple-icon-144x144.png",
-      className: "jsx-2024405385"
-    }), __jsx("link", {
-      rel: "apple-touch-icon",
-      sizes: "152x152",
-      href: "/static/favicon/apple-icon-152x152.png",
-      className: "jsx-2024405385"
-    }), __jsx("link", {
-      rel: "apple-touch-icon",
-      sizes: "180x180",
-      href: "/static/favicon/apple-icon-180x180.png",
-      className: "jsx-2024405385"
-    }), __jsx("link", {
-      rel: "icon",
-      type: "image/png",
-      sizes: "192x192",
-      href: "/static/favicon/android-icon-192x192.png",
-      className: "jsx-2024405385"
-    }), __jsx("link", {
-      rel: "icon",
-      type: "image/png",
-      sizes: "32x32",
-      href: "/static/favicon/favicon-32x32.png",
-      className: "jsx-2024405385"
-    }), __jsx("link", {
-      rel: "icon",
-      type: "image/png",
-      sizes: "96x96",
-      href: "/static/favicon/favicon-96x96.png",
-      className: "jsx-2024405385"
-    }), __jsx("link", {
-      rel: "icon",
-      type: "image/png",
-      sizes: "16x16",
-      href: "/static/favicon/favicon-16x16.png",
-      className: "jsx-2024405385"
-    }), __jsx("link", {
-      rel: "manifest",
-      href: "/static/favicon/manifest.json",
-      className: "jsx-2024405385"
-    }), __jsx("meta", {
-      name: "msapplication-TileColor",
-      content: "#ffffff",
-      className: "jsx-2024405385"
-    }), __jsx("meta", {
-      name: "msapplication-TileImage",
-      content: "/static/favicon/ms-icon-144x144.png",
-      className: "jsx-2024405385"
-    }), __jsx("meta", {
-      name: "theme-color",
-      content: "#ffffff",
-      className: "jsx-2024405385"
-    })), __jsx(react_apollo_cjs["Query"], {
-      query: GETTER,
-      variables: {
-        PR: this.props.id
-      }
-    }, ({
-      loading,
-      error,
-      data
-    }) => {
-      if (loading) return __jsx(Spinner["a" /* default */], null);
-      if (error) return __jsx(Error["a" /* default */], null);
-      if (!data.getProduct) return __jsx(Error["a" /* default */], null);
-      return __jsx("div", {
-        className: "jsx-2024405385" + " " + 'container'
-      }, __jsx(ProductView["a" /* default */], {
-        data: data.getProduct,
-        wrap: true
-      }), __jsx("div", {
-        className: "jsx-2024405385" + " " + 'tiendas'
-      }, __jsx("h2", {
-        className: "jsx-2024405385"
-      }, "Tambi\xE9n podr\xEDa gustarte: "), __jsx(react_apollo_cjs["Query"], {
-        query: graphql_tag_umd_default.a`
-											query search($filter: String) {
-												searchProducts(filter: $filter) {
-													title
-													_id
-													image
-													price
-													tags
-													discount
-												}
-											}
-										`,
-        variables: {
-          filter: data.getProduct.tags[0]
-        }
-      }, ({
-        loading,
-        error,
-        data
-      }) => {
-        if (loading) return __jsx(Spinner["a" /* default */], null);
-        if (error) return __jsx(Error["a" /* default */], null);
-        return __jsx(Productos["a" /* default */], {
-          data: data.searchProducts
-        });
-      })));
-    }), __jsx(style_default.a, {
-      id: "2024405385"
-    }, ["@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');", ".container.jsx-2024405385{max-width:1150px;width:100%;padding:0;overflow:hidden;margin:2rem auto 4rem;}", ".loading.jsx-2024405385{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:absolute;padding:0;width:100vw;height:90vh;margin-top:-90px;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}", "h2.jsx-2024405385{font-size:1rem;font-weight:400;margin-bottom:1.5em;text-transform:uppercase;}", "@media (min-width:660px){.container.jsx-2024405385{padding-top:30px;}}"]));
-  }
-
-}
-
-/* harmony default export */ var pages_single = (single_single);
-// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-serverless-loader.js?page=%2Fsingle&absolutePagePath=private-next-pages%2Fsingle.js&absoluteAppPath=private-next-pages%2F_app.js&absoluteDocumentPath=next%2Fdist%2Fpages%2F_document&absoluteErrorPath=private-next-pages%2F_error.js&distDir=private-dot-next&buildId=lGcEve-EtyBE0PAsye83l&assetPrefix=&generateEtags=true&ampBindInitData=false&canonicalBase=
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_app", function() { return next_serverless_loaderpage_2Fsingle_absolutePagePath_private_next_pages_2Fsingle_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_lGcEve_EtyBE0PAsye83l_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderReqToHTML", function() { return renderReqToHTML; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return next_serverless_loaderpage_2Fsingle_absolutePagePath_private_next_pages_2Fsingle_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_lGcEve_EtyBE0PAsye83l_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render; });
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    const Component = pages_single
-    /* harmony default export */ var next_serverless_loaderpage_2Fsingle_absolutePagePath_private_next_pages_2Fsingle_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_lGcEve_EtyBE0PAsye83l_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_ = __webpack_exports__["default"] = (Component);
-    const config = single_namespaceObject['confi' + 'g'] || {}
-    const next_serverless_loaderpage_2Fsingle_absolutePagePath_private_next_pages_2Fsingle_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_lGcEve_EtyBE0PAsye83l_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app = _app["a" /* default */]
-    async function renderReqToHTML(req, res, fromExport) {
-      const options = {
-        App: _app["a" /* default */],
-        Document: _document_default.a,
-        buildManifest: build_manifest,
-        reactLoadableManifest: react_loadable_manifest,
-        canonicalBase: "",
-        buildId: "lGcEve-EtyBE0PAsye83l",
-        assetPrefix: "",
-        ampBindInitData: false
-      }
-      const parsedUrl = Object(external_url_["parse"])(req.url, true)
-      const renderOpts = Object.assign(
-        {
-          Component,
-          pageConfig: config,
-          dataOnly: req.headers && (req.headers.accept || '').indexOf('application/amp.bind+json') !== -1,
-          nextExport: fromExport
-        },
-        options,
-      )
-      try {
-        
-        const params = {};
-        const result = await Object(render["renderToHTML"])(req, res, "/single", Object.assign({}, parsedUrl.query, params), renderOpts)
-
-        if (fromExport) return { html: result, renderOpts }
-        return result
-      } catch (err) {
-        if (err.code === 'ENOENT') {
-          res.statusCode = 404
-          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
-            Component: _error["default"]
-          }))
-          return result
-        } else {
-          console.error(err)
-          res.statusCode = 500
-          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
-            Component: _error["default"],
-            err
-          }))
-          return result
-        }
-      }
-    }
-    async function next_serverless_loaderpage_2Fsingle_absolutePagePath_private_next_pages_2Fsingle_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_lGcEve_EtyBE0PAsye83l_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render (req, res) {
-      try {
-        const html = await renderReqToHTML(req, res)
-        Object(send_html["sendHTML"])(req, res, html, {generateEtags: true})
-      } catch(err) {
-        console.error(err)
-        res.statusCode = 500
-        res.end('Internal Server Error')
-      }
-    }
-  
-
-/***/ }),
-
 /***/ "iq4v":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29937,6 +29606,337 @@ module.exports = function (KEY, exec) {
   $export($export.S + $export.F * fails(function () { fn(1); }), 'Object', exp);
 };
 
+
+/***/ }),
+
+/***/ "zuAr":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var single_namespaceObject = {};
+__webpack_require__.r(single_namespaceObject);
+__webpack_require__.d(single_namespaceObject, "default", function() { return pages_single; });
+
+// EXTERNAL MODULE: external "url"
+var external_url_ = __webpack_require__("bzos");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/render.js
+var render = __webpack_require__("/bjS");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/send-html.js
+var send_html = __webpack_require__("LuNM");
+
+// EXTERNAL MODULE: ./.next/build-manifest.json
+var build_manifest = __webpack_require__("LZ9C");
+
+// EXTERNAL MODULE: ./.next/react-loadable-manifest.json
+var react_loadable_manifest = __webpack_require__("67Bq");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/pages/_document.js
+var _document = __webpack_require__("VDXt");
+var _document_default = /*#__PURE__*/__webpack_require__.n(_document);
+
+// EXTERNAL MODULE: ./pages/_error.js
+var _error = __webpack_require__("Y0NT");
+
+// EXTERNAL MODULE: ./pages/_app.js + 1 modules
+var _app = __webpack_require__("1TCz");
+
+// EXTERNAL MODULE: ./node_modules/styled-jsx/style.js
+var style = __webpack_require__("MX0m");
+var style_default = /*#__PURE__*/__webpack_require__.n(style);
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__("q1tI");
+var react_default = /*#__PURE__*/__webpack_require__.n(react);
+
+// EXTERNAL MODULE: ./component/productViews/ProductView.js
+var ProductView = __webpack_require__("dgzm");
+
+// EXTERNAL MODULE: ./component/productViews/Productos.js
+var Productos = __webpack_require__("laAw");
+
+// EXTERNAL MODULE: ./node_modules/react-apollo/lib/react-apollo.cjs.js
+var react_apollo_cjs = __webpack_require__("Kxyt");
+
+// EXTERNAL MODULE: ./node_modules/graphql-tag/lib/graphql-tag.umd.js
+var graphql_tag_umd = __webpack_require__("Dugd");
+var graphql_tag_umd_default = /*#__PURE__*/__webpack_require__.n(graphql_tag_umd);
+
+// EXTERNAL MODULE: ./component/Layout.js + 4 modules
+var Layout = __webpack_require__("ezhv");
+
+// EXTERNAL MODULE: ./component/views/Spinner.js
+var Spinner = __webpack_require__("Zg/l");
+
+// EXTERNAL MODULE: ./component/views/Error.js
+var Error = __webpack_require__("4dR/");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/next-server/lib/head.js
+var head = __webpack_require__("8Kt/");
+var head_default = /*#__PURE__*/__webpack_require__.n(head);
+
+// CONCATENATED MODULE: ./pages/single.js
+
+var __jsx = react_default.a.createElement;
+
+
+
+
+
+
+
+
+
+const GETTER = graphql_tag_umd_default.a`
+	query Product($PR: ID!) {
+		getProduct(id: $PR) {
+			_id
+			title
+			image
+			price
+			discount
+			tags
+		}
+	}
+`;
+
+class single_single extends react_default.a.Component {
+  static async getInitialProps({
+    query
+  }) {
+    return {
+      id: query.slug
+    };
+  }
+
+  render() {
+    return __jsx(Layout["a" /* default */], null, __jsx(head_default.a, null, __jsx("meta", {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1.0",
+      className: "jsx-2024405385"
+    }), __jsx("title", {
+      className: "jsx-2024405385"
+    }, "Bucciarati Store"), __jsx("link", {
+      rel: "apple-touch-icon",
+      sizes: "57x57",
+      href: "/static/favicon/apple-icon-57x57.png",
+      className: "jsx-2024405385"
+    }), __jsx("link", {
+      rel: "apple-touch-icon",
+      sizes: "60x60",
+      href: "/static/favicon/apple-icon-60x60.png",
+      className: "jsx-2024405385"
+    }), __jsx("link", {
+      rel: "apple-touch-icon",
+      sizes: "72x72",
+      href: "/static/favicon/apple-icon-72x72.png",
+      className: "jsx-2024405385"
+    }), __jsx("link", {
+      rel: "apple-touch-icon",
+      sizes: "76x76",
+      href: "/static/favicon/apple-icon-76x76.png",
+      className: "jsx-2024405385"
+    }), __jsx("link", {
+      rel: "apple-touch-icon",
+      sizes: "114x114",
+      href: "/static/favicon/apple-icon-114x114.png",
+      className: "jsx-2024405385"
+    }), __jsx("link", {
+      rel: "apple-touch-icon",
+      sizes: "120x120",
+      href: "/static/favicon/apple-icon-120x120.png",
+      className: "jsx-2024405385"
+    }), __jsx("link", {
+      rel: "apple-touch-icon",
+      sizes: "144x144",
+      href: "/static/favicon/apple-icon-144x144.png",
+      className: "jsx-2024405385"
+    }), __jsx("link", {
+      rel: "apple-touch-icon",
+      sizes: "152x152",
+      href: "/static/favicon/apple-icon-152x152.png",
+      className: "jsx-2024405385"
+    }), __jsx("link", {
+      rel: "apple-touch-icon",
+      sizes: "180x180",
+      href: "/static/favicon/apple-icon-180x180.png",
+      className: "jsx-2024405385"
+    }), __jsx("link", {
+      rel: "icon",
+      type: "image/png",
+      sizes: "192x192",
+      href: "/static/favicon/android-icon-192x192.png",
+      className: "jsx-2024405385"
+    }), __jsx("link", {
+      rel: "icon",
+      type: "image/png",
+      sizes: "32x32",
+      href: "/static/favicon/favicon-32x32.png",
+      className: "jsx-2024405385"
+    }), __jsx("link", {
+      rel: "icon",
+      type: "image/png",
+      sizes: "96x96",
+      href: "/static/favicon/favicon-96x96.png",
+      className: "jsx-2024405385"
+    }), __jsx("link", {
+      rel: "icon",
+      type: "image/png",
+      sizes: "16x16",
+      href: "/static/favicon/favicon-16x16.png",
+      className: "jsx-2024405385"
+    }), __jsx("link", {
+      rel: "manifest",
+      href: "/static/favicon/manifest.json",
+      className: "jsx-2024405385"
+    }), __jsx("meta", {
+      name: "msapplication-TileColor",
+      content: "#ffffff",
+      className: "jsx-2024405385"
+    }), __jsx("meta", {
+      name: "msapplication-TileImage",
+      content: "/static/favicon/ms-icon-144x144.png",
+      className: "jsx-2024405385"
+    }), __jsx("meta", {
+      name: "theme-color",
+      content: "#ffffff",
+      className: "jsx-2024405385"
+    })), __jsx(react_apollo_cjs["Query"], {
+      query: GETTER,
+      variables: {
+        PR: this.props.id
+      }
+    }, ({
+      loading,
+      error,
+      data
+    }) => {
+      if (loading) return __jsx(Spinner["a" /* default */], null);
+      if (error) return __jsx(Error["a" /* default */], null);
+      if (!data.getProduct) return __jsx(Error["a" /* default */], null);
+      return __jsx("div", {
+        className: "jsx-2024405385" + " " + 'container'
+      }, __jsx(ProductView["a" /* default */], {
+        data: data.getProduct,
+        wrap: true
+      }), __jsx("div", {
+        className: "jsx-2024405385" + " " + 'tiendas'
+      }, __jsx("h2", {
+        className: "jsx-2024405385"
+      }, "Tambi\xE9n podr\xEDa gustarte: "), __jsx(react_apollo_cjs["Query"], {
+        query: graphql_tag_umd_default.a`
+											query search($filter: String) {
+												searchProducts(filter: $filter) {
+													title
+													_id
+													image
+													price
+													tags
+													discount
+												}
+											}
+										`,
+        variables: {
+          filter: data.getProduct.tags[0]
+        }
+      }, ({
+        loading,
+        error,
+        data
+      }) => {
+        if (loading) return __jsx(Spinner["a" /* default */], null);
+        if (error) return __jsx(Error["a" /* default */], null);
+        return __jsx(Productos["a" /* default */], {
+          data: data.searchProducts
+        });
+      })));
+    }), __jsx(style_default.a, {
+      id: "2024405385"
+    }, ["@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');", ".container.jsx-2024405385{max-width:1150px;width:100%;padding:0;overflow:hidden;margin:2rem auto 4rem;}", ".loading.jsx-2024405385{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:absolute;padding:0;width:100vw;height:90vh;margin-top:-90px;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}", "h2.jsx-2024405385{font-size:1rem;font-weight:400;margin-bottom:1.5em;text-transform:uppercase;}", "@media (min-width:660px){.container.jsx-2024405385{padding-top:30px;}}"]));
+  }
+
+}
+
+/* harmony default export */ var pages_single = (single_single);
+// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-serverless-loader.js?page=%2Fsingle&absolutePagePath=private-next-pages%2Fsingle.js&absoluteAppPath=private-next-pages%2F_app.js&absoluteDocumentPath=next%2Fdist%2Fpages%2F_document&absoluteErrorPath=private-next-pages%2F_error.js&distDir=private-dot-next&buildId=WJlJOXK7gQiLOG80wkFBM&assetPrefix=&generateEtags=true&ampBindInitData=false&canonicalBase=
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_app", function() { return next_serverless_loaderpage_2Fsingle_absolutePagePath_private_next_pages_2Fsingle_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_WJlJOXK7gQiLOG80wkFBM_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderReqToHTML", function() { return renderReqToHTML; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return next_serverless_loaderpage_2Fsingle_absolutePagePath_private_next_pages_2Fsingle_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_WJlJOXK7gQiLOG80wkFBM_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render; });
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    const Component = pages_single
+    /* harmony default export */ var next_serverless_loaderpage_2Fsingle_absolutePagePath_private_next_pages_2Fsingle_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_WJlJOXK7gQiLOG80wkFBM_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_ = __webpack_exports__["default"] = (Component);
+    const config = single_namespaceObject['confi' + 'g'] || {}
+    const next_serverless_loaderpage_2Fsingle_absolutePagePath_private_next_pages_2Fsingle_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_WJlJOXK7gQiLOG80wkFBM_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app = _app["a" /* default */]
+    async function renderReqToHTML(req, res, fromExport) {
+      const options = {
+        App: _app["a" /* default */],
+        Document: _document_default.a,
+        buildManifest: build_manifest,
+        reactLoadableManifest: react_loadable_manifest,
+        canonicalBase: "",
+        buildId: "WJlJOXK7gQiLOG80wkFBM",
+        assetPrefix: "",
+        ampBindInitData: false
+      }
+      const parsedUrl = Object(external_url_["parse"])(req.url, true)
+      const renderOpts = Object.assign(
+        {
+          Component,
+          pageConfig: config,
+          dataOnly: req.headers && (req.headers.accept || '').indexOf('application/amp.bind+json') !== -1,
+          nextExport: fromExport
+        },
+        options,
+      )
+      try {
+        
+        const params = {};
+        const result = await Object(render["renderToHTML"])(req, res, "/single", Object.assign({}, parsedUrl.query, params), renderOpts)
+
+        if (fromExport) return { html: result, renderOpts }
+        return result
+      } catch (err) {
+        if (err.code === 'ENOENT') {
+          res.statusCode = 404
+          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
+            Component: _error["default"]
+          }))
+          return result
+        } else {
+          console.error(err)
+          res.statusCode = 500
+          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
+            Component: _error["default"],
+            err
+          }))
+          return result
+        }
+      }
+    }
+    async function next_serverless_loaderpage_2Fsingle_absolutePagePath_private_next_pages_2Fsingle_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_next_2Fdist_2Fpages_2F_document_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_WJlJOXK7gQiLOG80wkFBM_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render (req, res) {
+      try {
+        const html = await renderReqToHTML(req, res)
+        Object(send_html["sendHTML"])(req, res, html, {generateEtags: true})
+      } catch(err) {
+        console.error(err)
+        res.statusCode = 500
+        res.end('Internal Server Error')
+      }
+    }
+  
 
 /***/ })
 

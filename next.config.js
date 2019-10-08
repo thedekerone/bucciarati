@@ -62,7 +62,11 @@ const nextConfig = {
 
 	plugins           : [
 		// Other plugins...
-
+		workbox.googleAnalytics.initialize({
+			parameterOverrides : {
+				cd1 : 'offline'
+			}
+		}),
 		new WorkboxPlugin.GenerateSW({
 			// Do not precache images
 

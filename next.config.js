@@ -12,7 +12,40 @@ const nextConfig = {
 
 	workboxOpts       : {
 		swDest           : 'static/service-worker.js',
-		navigateFallback : '/index.html'
+		navigateFallback : '/index.html',
+
+		runtimeCaching   : [
+			{
+				urlPattern : /^https?\/\/chupetinps.herokuapp.com\/.*/,
+				handler    : 'StaleWhileRevalidate',
+				options    : {
+					cacheableResponse : {
+						statuses : [
+							0,
+							200
+						]
+					}
+				}
+			},
+			{
+				urlPattern : /^https?.*/,
+				handler    : 'NetworkFirst',
+				options    : {
+					cacheName             : 'https-calls',
+					networkTimeoutSeconds : 15,
+					expiration            : {
+						maxEntries    : 150,
+						maxAgeSeconds : 30 * 24 * 60 * 60 // 1 month
+					},
+					cacheableResponse     : {
+						statuses : [
+							0,
+							200
+						]
+					}
+				}
+			}
+		]
 	},
 	plugins           : [
 		// Other plugins...
@@ -38,36 +71,6 @@ const nextConfig = {
 						// Only cache 10 images.
 						expiration : {
 							maxEntries : 40
-						}
-					}
-				},
-				{
-					urlPattern : /^https?\/\/chupetinps.herokuapp.com\/.*/,
-					handler    : 'StaleWhileRevalidate',
-					options    : {
-						cacheableResponse : {
-							statuses : [
-								0,
-								200
-							]
-						}
-					}
-				},
-				{
-					urlPattern : /^https?.*/,
-					handler    : 'NetworkFirst',
-					options    : {
-						cacheName             : 'https-calls',
-						networkTimeoutSeconds : 15,
-						expiration            : {
-							maxEntries    : 150,
-							maxAgeSeconds : 30 * 24 * 60 * 60 // 1 month
-						},
-						cacheableResponse     : {
-							statuses : [
-								0,
-								200
-							]
 						}
 					}
 				}

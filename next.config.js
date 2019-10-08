@@ -71,7 +71,7 @@ const nextConfig = {
 
 						// Only cache 10 images.
 						expiration : {
-							maxEntries : 40
+							maxEntries : 45
 						}
 					}
 				}

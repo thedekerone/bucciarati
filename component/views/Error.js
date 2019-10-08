@@ -13,7 +13,6 @@ export default function Error({ code }) {
 			<style jsx>
 				{`
 					.error {
-						height: calc(100vh - 55px);
 						display: flex;
 						align-items: center;
 						justify-content: center;

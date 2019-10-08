@@ -11,24 +11,21 @@ const nextConfig = {
 	// turn on the SW in dev mode so that we can actually test it
 
 	generateInDevMode : true,
-	runtimeCaching    : [
-		{
-			urlPattern : /^https?.*/,
-			handler    : 'NetworkFirst',
-			options    : {
-				cacheName  : 'offlineCache',
-				expiration : {
-					maxEntries : 200
-				}
-			}
-		}
-	],
+
 	workboxOpts       : {
 		swDest         : 'static/service-worker.js',
 		runtimeCaching : [
 			{
 				urlPattern : /^https?\/\/chupetinps.herokuapp.com\/.*/,
-				handler    : 'StaleWhileRevalidate'
+				handler    : 'StaleWhileRevalidate',
+				options    : {
+					cacheableResponse : {
+						statuses : [
+							0,
+							200
+						]
+					}
+				}
 			},
 			{
 				urlPattern : /^https?.*/,

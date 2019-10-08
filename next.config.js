@@ -61,7 +61,7 @@ const nextConfig = {
 			runtimeCaching : [
 				{
 					// Match any request that ends with .png, .jpg, .jpeg or .svg.
-					urlPattern : /\.(?:png|jpg|jpeg|svg)$/,
+					urlPattern : /\.(?:png|jpg|jpeg|svg|webp)$/,
 
 					// Apply a cache-first strategy.
 					handler    : 'CacheFirst',

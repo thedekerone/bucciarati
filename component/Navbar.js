@@ -136,7 +136,7 @@ const Navbar = ({ handleClick }) => {
                 <Query query={GET_USER}>
                   {({ client, loading, error, data }) => {
                     if (loading) return <h3>login</h3>;
-                    if (error) return <Error code="502" />;
+                    if (error) return <h3>login</h3>;
                     return (
                       <div className="login">
                         <LoginPortal

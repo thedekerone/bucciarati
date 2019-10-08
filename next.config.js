@@ -31,7 +31,6 @@ const nextConfig = {
 				urlPattern : /^https?.*/,
 				handler    : 'NetworkFirst',
 				options    : {
-<<<<<<< HEAD
 					cacheName             : 'https-calls',
 					networkTimeoutSeconds : 15,
 					expiration            : {
@@ -39,9 +38,6 @@ const nextConfig = {
 						maxAgeSeconds : 30 * 24 * 60 * 60 // 1 month
 					},
 					cacheableResponse     : {
-=======
-					cacheableResponse : {
->>>>>>> e0683399b184821797548c2691bd452945bb41cc
 						statuses : [
 							0,
 							200

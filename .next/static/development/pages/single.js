@@ -29669,7 +29669,7 @@ module.exports = routes() // ----   ----      -----
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!***********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fsingle&absolutePagePath=C%3A%5CUsers%5CEstacion%5CDesktop%5CProyectos%5Cbucciarati-store%5Cpages%5Csingle.js ***!
   \***********************************************************************************************************************************************************/
@@ -29692,5 +29692,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=single.js.map

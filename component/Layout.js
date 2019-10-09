@@ -4,7 +4,7 @@ import Head from 'next/head';
 import 'isomorphic-fetch';
 import { initGA, logPageView } from '../utils/analytics';
 
-export default class Layout extends React.Component {
+class Layout extends React.Component {
 	constructor(props) {
 		super(props);
 	}
@@ -90,3 +90,4 @@ export default class Layout extends React.Component {
 		);
 	}
 }
+export default Layout;

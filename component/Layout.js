@@ -18,6 +18,7 @@ export default class Layout extends React.Component {
 	render() {
 		return (
 			<div>
+				<Navbar />
 				<Head>
 					<meta name='viewport' content='width=device-width, initial-scale=1' />
 					<link rel='manifest' href='/static/manifest.json' />
@@ -48,6 +49,43 @@ export default class Layout extends React.Component {
 					<meta name='theme-color' content='#ffffff' />
 				</Head>
 				{this.props.children}
+				<style jsx>
+					{`
+						:global(body) {
+							background: #f3f3f3;
+							margin: 0;
+							position: relative;
+							font-family: "Montserrat", sans-serif;
+						}
+						:global(*) {
+							color: #646464;
+						}
+						:global(a) {
+							text-decoration: none;
+						}
+						:global(*) {
+							-webkit-user-drag: none;
+							-khtml-user-drag: none;
+							-moz-user-drag: none;
+							-o-user-drag: none;
+							user-drag: none;
+						}
+
+						@media (min-width: 660px) {
+							:global(#flex) {
+								display: flex;
+								justify-content: center;
+							}
+							:global(body) {
+								background: white;
+							}
+
+							:global(.carousel__item) {
+								border: 1px solid #e8e8e8;
+							}
+						}
+					`}
+				</style>
 			</div>
 		);
 	}

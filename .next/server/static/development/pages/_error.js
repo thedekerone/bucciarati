@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1614,14 +1614,14 @@ __webpack_require__.r(__webpack_exports__);
 
 const initGA = () => {
   console.log('GA init');
-  react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.initialize('UA-xxxxxxxxx-1');
+  react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.initialize('UA-149614956-1');
 };
 const logPageView = () => {
-  console.log(`Logging pageview for ${window.location.pathname}`);
+  console.log(`Logging pageview for ${window.location.pathname + window.location.search}`);
   react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.set({
     page: window.location.pathname
   });
-  react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.pageview(window.location.pathname);
+  react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.pageview(window.location.pathname + window.location.search);
 };
 const logEvent = (category = '', action = '') => {
   if (category && action) {
@@ -1642,7 +1642,7 @@ const logException = (description = '', fatal = false) => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!*******************************!*\
   !*** multi ./pages/_error.js ***!
   \*******************************/

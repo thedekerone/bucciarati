@@ -29936,14 +29936,14 @@ __webpack_require__.r(__webpack_exports__);
 
 var initGA = function initGA() {
   console.log('GA init');
-  react_ga__WEBPACK_IMPORTED_MODULE_0__["default"].initialize('UA-xxxxxxxxx-1');
+  react_ga__WEBPACK_IMPORTED_MODULE_0__["default"].initialize('UA-149614956-1');
 };
 var logPageView = function logPageView() {
-  console.log("Logging pageview for ".concat(window.location.pathname));
+  console.log("Logging pageview for ".concat(window.location.pathname + window.location.search));
   react_ga__WEBPACK_IMPORTED_MODULE_0__["default"].set({
     page: window.location.pathname
   });
-  react_ga__WEBPACK_IMPORTED_MODULE_0__["default"].pageview(window.location.pathname);
+  react_ga__WEBPACK_IMPORTED_MODULE_0__["default"].pageview(window.location.pathname + window.location.search);
 };
 var logEvent = function logEvent() {
   var category = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
@@ -29970,7 +29970,7 @@ var logException = function logException() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!***********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F_error&absolutePagePath=C%3A%5CUsers%5CEstacion%5CDesktop%5CProyectos%5Cbucciarati-store%5Cpages%5C_error.js ***!
   \***********************************************************************************************************************************************************/
@@ -29993,5 +29993,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=_error.js.map

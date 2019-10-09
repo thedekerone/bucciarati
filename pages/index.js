@@ -10,11 +10,33 @@ import gql from 'graphql-tag';
 import TagDisplayer from '../component/TagDisplayer';
 import Error from '../component/views/Error';
 class index extends Component {
+	compartir = (e, name) => {
+		e.preventDefault();
+		if (!navigator.share) {
+			alert('browser no soporta la web share api');
+			return;
+		}
+		navigator
+			.share({
+				title : name,
+				text  : 'Bucciarati Store',
+				url   : document.location.href
+			})
+			.then(() => alert('Contenido compartido'))
+			.catch((err) => alert('hubo un error'));
+	};
+
 	render() {
 		return (
 			<Layout>
 				<MainDisplayer />
 				<TagDisplayer />
+				<a
+					onClick={(e) => {
+						this.compartir(e, 'Products from bStore');
+					}}>
+					COMPARTIR
+				</a>
 				<Query
 					query={gql`
 						{

@@ -50,6 +50,8 @@ class Layout extends React.Component {
 					<meta name='msapplication-TileColor' content='#ffffff' />
 					<meta name='msapplication-TileImage' content='/static/favicon/ms-icon-144x144.png' />
 					<meta name='theme-color' content='#ffffff' />
+
+					<meta property='og:url' content='http://bucciarati.mauriciofow.now.sh' />
 					<meta
 						property='og:image'
 						content='https://sdtuts.com/wp-content/uploads/Laravel-custom-columns-login-authentication.png'

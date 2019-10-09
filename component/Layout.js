@@ -54,7 +54,7 @@ class Layout extends React.Component {
 					<meta property='og:url' content='http://bucciarati.mauriciofow.now.sh' />
 					<meta property='og:image' content='/static/mainView/polo.jpg' />
 					<meta property='og:image:secure_url' content='/static/mainView/polo.jpg' />
-					<meta property='og:image:width' content='500' />
+					<meta property='og:image:width' content='700' />
 					<meta property='og:image:height' content='500' />
 				</Head>
 				{this.props.children}

@@ -26,6 +26,7 @@ const nextConfig = {
 					}
 					// ae
 				}
+				// asdasadsasdasd
 			},
 			{
 				urlPattern : /^https?\/\/fonts.(?:googleapis|gstatic).com\/(.*)/,

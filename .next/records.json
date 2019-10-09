@@ -1,0 +1,35 @@
+{
+  "modules": {
+    "byIdentifier": {
+      "multi node_modules/next-offline/register-sw-compiled.js .\\node_modules\\next\\dist\\client\\next.js": 0
+    },
+    "usedIds": {
+      "0": 0
+    }
+  },
+  "chunks": {
+    "byName": {
+      "commons": 0,
+      "static/runtime/webpack.js": 1,
+      "static/runtime/main.js": 2,
+      "static\\BcKjzkvow8RPxgTFnedvZ\\pages\\_app.js": 3,
+      "static\\BcKjzkvow8RPxgTFnedvZ\\pages\\_error.js": 4,
+      "static\\BcKjzkvow8RPxgTFnedvZ\\pages\\cart.js": 5,
+      "static\\BcKjzkvow8RPxgTFnedvZ\\pages\\index.js": 6,
+      "static\\BcKjzkvow8RPxgTFnedvZ\\pages\\producto.js": 7,
+      "static\\BcKjzkvow8RPxgTFnedvZ\\pages\\single.js": 8
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  }
+}

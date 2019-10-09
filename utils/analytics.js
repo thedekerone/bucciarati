@@ -18,3 +18,4 @@ export const logException = (description = '', fatal = false) => {
 		ReactGA.exception({ description, fatal });
 	}
 };
+// das

@@ -33,7 +33,7 @@ class index extends Component {
 				<TagDisplayer />
 				<a
 					onClick={(e) => {
-						compartir(e, 'aea mongol');
+						this.compartir(e, 'aea mongol');
 					}}>
 					COMPARTIR
 				</a>

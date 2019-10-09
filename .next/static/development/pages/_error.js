@@ -14978,7 +14978,7 @@ var logException = function logException() {
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!***********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F_error&absolutePagePath=C%3A%5CUsers%5CEstacion%5CDesktop%5CProyectos%5Cbucciarati-store%5Cpages%5C_error.js ***!
   \***********************************************************************************************************************************************************/
@@ -15001,5 +15001,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=_error.js.map

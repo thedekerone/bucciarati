@@ -10,11 +10,32 @@ import gql from 'graphql-tag';
 import TagDisplayer from '../component/TagDisplayer';
 import Error from '../component/views/Error';
 class index extends Component {
+	compartir = (e, name) => {
+		e.preventDefault();
+		if (!navigator.share) {
+			alert('no funca');
+			return;
+		}
+		navigator
+			.share({
+				title : name,
+				text  : 'Buciarati Store',
+				url   : document.location.href
+			})
+			.then(() => alert('contenido compartido'))
+			.catch((err) => null);
+	};
+
 	render() {
 		return (
 			<Layout>
 				<MainDisplayer />
 				<TagDisplayer />
+				<a
+					onClick={(e) => {
+						compartir(e, 'aea mongol');
+					}}
+				/>
 				<Query
 					query={gql`
 						{

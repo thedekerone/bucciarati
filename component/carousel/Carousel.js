@@ -1,5 +1,5 @@
-import React from 'react';
-import { useSpring, animated } from 'react-spring';
+import React, {useState} from 'react';
+import { useSpring, animated, config } from 'react-spring';
 import { useDrag, useScroll } from 'react-use-gesture';
 
 export default function Carousel(props) {
@@ -14,10 +14,18 @@ export default function Carousel(props) {
 		xy : [
 			0,
 			0
-		]
+		],
+		immediate:true
 	}));
+    const [gaa, setGaa]= useState(true)
 
-	const bind = useDrag(({ down, local, velocity, direction }) => {
+
+	const bind = useDrag(({ down,delta, local, velocity, direction }) => {
+
+        //Handle on mouseup click event
+		down?Math.abs( delta[0])<10 ? setGaa(true): setGaa(false):setGaa(true)
+		
+		console.log(gaa)
 		set({
 			xy : down
 				? [
@@ -31,6 +39,7 @@ export default function Carousel(props) {
 		});
 
 		if (!down) {
+			
 			local[0] = Math.round(local[0] / (margin + width) + 0.3 * direction[0]) * (margin + width);
 			if (
 				local[0] > 0 ||
@@ -78,8 +87,9 @@ export default function Carousel(props) {
 		// display        : slides < 6 ? 'flex' : 'block',
 		// justifyContent : slides < 6 ? 'center' : null
 	};
+
 	return (
-		<div className='carousel-container' {...bind()}>
+		<div className='carousel-container'  {...bind()}>
 			<animated.div className={`carousel ${slides < 6 ? props.type : null}`} style={styleNeeded}>
 				{props.children}
 			</animated.div>
@@ -117,7 +127,9 @@ export default function Carousel(props) {
 					.carousel-container {
 						overflow: hidden;
 					}
-					:global(.carousel) {
+					:global(.carousel__item) {
+						position: relative;
+						z-index: ${gaa?"1":'-1'};
 					}
 				}
 			`}</style>

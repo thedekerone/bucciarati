@@ -18,9 +18,10 @@ class index extends Component {
 		}
 		navigator
 			.share({
-				title : name,
-				text  : 'Buciarati Store',
-				url   : document.location.href
+				title     : name,
+				text      : 'Buciarati Store',
+				url       : document.location.href,
+				thumbnail : '/static/mainView/polo.webp'
 			})
 			.then(() => alert('contenido compartido'))
 			.catch((err) => null);

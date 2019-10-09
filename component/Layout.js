@@ -25,7 +25,7 @@ class Layout extends React.Component {
 					{/*  */}
 					<meta name='viewport' content='width=device-width, initial-scale=1' />
 					<link rel='manifest' href='/static/manifest.json' />
-					<link rel='shortcut icon' href='/static/favi2.png' />
+					{/* <link rel='shortcut icon' href='/static/favi2.png' /> */}
 					<meta name='theme-color' content='#ff6600' />
 					<link rel='apple-touch-icon' href='/static/favi2.png' />
 					<meta name='apple-mobile-web-app-title' content='Hacker News' />
@@ -52,16 +52,10 @@ class Layout extends React.Component {
 					<meta name='theme-color' content='#ffffff' />
 
 					<meta property='og:url' content='http://bucciarati.mauriciofow.now.sh' />
-					<meta
-						property='og:image'
-						content='https://sdtuts.com/wp-content/uploads/Laravel-custom-columns-login-authentication.png'
-					/>
-					<meta
-						property='og:image:secure_url'
-						content='https://sdtuts.com/wp-content/uploads/Laravel-custom-columns-login-authentication.png'
-					/>
-					<meta property='og:image:width' content='1316' />
-					<meta property='og:image:height' content='328' />
+					<meta property='og:image' content='/static/mainView/polo.jpg' />
+					<meta property='og:image:secure_url' content='/static/mainView/polo.jpg' />
+					<meta property='og:image:width' content='500' />
+					<meta property='og:image:height' content='500' />
 				</Head>
 				{this.props.children}
 				<style jsx>

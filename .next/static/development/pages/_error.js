@@ -29939,7 +29939,7 @@ var initGA = function initGA() {
   react_ga__WEBPACK_IMPORTED_MODULE_0__["default"].initialize('UA-149614956-1');
 };
 var logPageView = function logPageView() {
-  console.log("Logging pageview for ".concat(window.location.pathname + window.location.search));
+  console.log("Logging pageview for ".concat(window.location.pathname));
   react_ga__WEBPACK_IMPORTED_MODULE_0__["default"].set({
     page: window.location.pathname
   });

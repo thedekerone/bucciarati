@@ -1617,7 +1617,7 @@ const initGA = () => {
   react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.initialize('UA-149614956-1');
 };
 const logPageView = () => {
-  console.log(`Logging pageview for ${window.location.pathname + window.location.search}`);
+  console.log(`Logging pageview for ${window.location.pathname}`);
   react_ga__WEBPACK_IMPORTED_MODULE_0___default.a.set({
     page: window.location.pathname
   });

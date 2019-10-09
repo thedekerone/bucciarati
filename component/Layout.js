@@ -20,6 +20,19 @@ class Layout extends React.Component {
 			<div>
 				<Navbar />
 				<Head>
+					{/* thumbnail for share */}
+					<meta
+						property='og:image'
+						content='https://sdtuts.com/wp-content/uploads/Laravel-custom-columns-login-authentication.png'
+					/>
+					<meta
+						property='og:image:secure_url'
+						content='https://sdtuts.com/wp-content/uploads/Laravel-custom-columns-login-authentication.png'
+					/>
+					<meta property='og:image:width' content='1316' />
+					<meta property='og:image:height' content='328' />
+
+					{/*  */}
 					<meta name='viewport' content='width=device-width, initial-scale=1' />
 					<link rel='manifest' href='/static/manifest.json' />
 					<link rel='shortcut icon' href='/static/favi2.png' />

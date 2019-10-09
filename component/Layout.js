@@ -21,16 +21,6 @@ class Layout extends React.Component {
 				<Navbar />
 				<Head>
 					{/* thumbnail for share */}
-					<meta
-						property='og:image'
-						content='https://sdtuts.com/wp-content/uploads/Laravel-custom-columns-login-authentication.png'
-					/>
-					<meta
-						property='og:image:secure_url'
-						content='https://sdtuts.com/wp-content/uploads/Laravel-custom-columns-login-authentication.png'
-					/>
-					<meta property='og:image:width' content='1316' />
-					<meta property='og:image:height' content='328' />
 
 					{/*  */}
 					<meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -60,6 +50,16 @@ class Layout extends React.Component {
 					<meta name='msapplication-TileColor' content='#ffffff' />
 					<meta name='msapplication-TileImage' content='/static/favicon/ms-icon-144x144.png' />
 					<meta name='theme-color' content='#ffffff' />
+					<meta
+						property='og:image'
+						content='https://sdtuts.com/wp-content/uploads/Laravel-custom-columns-login-authentication.png'
+					/>
+					<meta
+						property='og:image:secure_url'
+						content='https://sdtuts.com/wp-content/uploads/Laravel-custom-columns-login-authentication.png'
+					/>
+					<meta property='og:image:width' content='1316' />
+					<meta property='og:image:height' content='328' />
 				</Head>
 				{this.props.children}
 				<style jsx>

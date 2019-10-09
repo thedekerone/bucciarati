@@ -15,7 +15,6 @@ const Navbar = () => {
 	const handleClick = () => {
 		setSidebar(!sidebar);
 	};
-
   let textInput;
   const GET_USER = gql`
     {
@@ -34,23 +33,19 @@ const Navbar = () => {
       }
     }
   `;
-
   const [display, setDisplay] = useState(true);
   const [show, setShow] = useState(false);
   const handleSubmit = e => {
     e.preventDefault();
     Router.pushRoute("producto", { tag: textInput.value });
   };
-
   const handleLogout = async client => {
     await localStorage.removeItem("usuario");
     await localStorage.removeItem("password");
     await Router.pushRoute("/");
   };
-
   return (
     <React.Fragment>
-
       <div className="navbar-container">
         
         <div className="navbar">
@@ -67,7 +62,6 @@ const Navbar = () => {
                   alt="menu"
                 />
               </div>
-
               <div className="logo">
                 <Link route="/">
                   <a>
@@ -81,7 +75,6 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
-
             <nav className="main-navbar__items">
               <ul>
                 <li>
@@ -111,7 +104,6 @@ const Navbar = () => {
                 </li>
               </ul>
             </nav>
-
             <div className="right-items">
               <div className="search">
                 <span className="main-navbar__icon">
@@ -142,24 +134,20 @@ const Navbar = () => {
                   </form>
                 </span>
               </div>
-
               <div className="login">
                 <Query query={GET_USER}>
                   {({ client, loading, error, data }) => {
                     if (loading) return <h3>login</h3>;
                     if (error) return <h3>login</h3>;
-
                     return (
                       <div className="login">
 			                <SideBar client={client} setShow={setSidebar} show={sidebar} />
-
                         <LoginPortal
                           client={client}
                           setShow={setShow}
                           show={show}
                           users={() => data.getUsers}
                         ></LoginPortal>
-
                         {!data.getUsers ? (
                           <h3
                             onClick={() => {
@@ -200,7 +188,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
       <style jsx>
         {`
           p {
@@ -234,7 +221,6 @@ const Navbar = () => {
             align-items: center;
             padding: 0.5rem 1rem;
           }
-
           .left-items {
             display: flex;
             align-items: center;
@@ -251,7 +237,6 @@ const Navbar = () => {
             align-items: flex-end;
             height: auto;
           }
-
           //   search
           .search {
             flex-shrink: 1;
@@ -267,7 +252,6 @@ const Navbar = () => {
           #search {
             padding: 0.6rem;
             border: 0;
-
             width: 100%;
             border-radius: 15px;
             background: #dee8ef;
@@ -285,7 +269,6 @@ const Navbar = () => {
           .main-navbar__items li:hover a {
             color: #fd486b;
           }
-
           .main-navbar__icon {
             display: flex;
             align-item: center;
@@ -308,7 +291,6 @@ const Navbar = () => {
             transition-duration: 1s, 0s;
             display: ${display ? "block" : "none"};
           }
-
           //login
           .login {
             display: ${display ? "block" : "none"};
@@ -340,7 +322,6 @@ const Navbar = () => {
             font-weight: bold;
             color: white;
           }
-
           @media (min-width: 860px) {
             .logo {
               display: flex;
@@ -350,7 +331,6 @@ const Navbar = () => {
               flex-shrink: initial;
               width: 250px;
             }
-
             .main-navbar__icon {
               flex-grow: 0;
             }

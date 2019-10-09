@@ -34,8 +34,9 @@ class index extends Component {
 				<a
 					onClick={(e) => {
 						compartir(e, 'aea mongol');
-					}}
-				/>
+					}}>
+					COMPARTIR
+				</a>
 				<Query
 					query={gql`
 						{

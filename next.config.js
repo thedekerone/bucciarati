@@ -8,8 +8,10 @@ const nextConfig = {
 			'/'
 		].concat(manifest), // add the homepage to the cache
 	// Trying to set NODE_ENV=production when running yarn dev causes a build-time error so we
-	// turn on the SW in dev mode so that we can actually test i
-
+	// turn on the SW in dev mode so that we can actually test it
+	googleAnalytics   : {
+		initialize : true
+	},
 	workboxOpts       : {
 		swDest           : 'static/service-worker.js',
 		navigateFallback : '/',

@@ -11,9 +11,9 @@ const nextConfig = {
 	// turn on the SW in dev mode so that we can actually test i
 
 	workboxOpts       : {
-		swDest           : 'static/service-worker.js',
-		navigateFallback : '/',
-		runtimeCaching   : [
+		swDest         : 'static/service-worker.js',
+		// navigateFallback : '/',
+		runtimeCaching : [
 			{
 				urlPattern : /^https?\/\/chupetinps.herokuapp.com\/(.*)/,
 				handler    : 'StaleWhileRevalidate',

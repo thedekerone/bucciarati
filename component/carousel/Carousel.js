@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { useSpring, animated, config } from 'react-spring';
 import { useDrag, useScroll } from 'react-use-gesture';
 
@@ -7,25 +7,31 @@ export default function Carousel(props) {
 	var slides = parseInt(props.slides, 10);
 	var width = parseInt(props.width, 10);
 	var height = parseInt(props.height, 10);
+
+	const [
+		immediate,
+		setImmediate
+	] = useState(true);
 	const [
 		{ xy },
 		set
 	] = useSpring(() => ({
-		xy : [
+		xy        : [
 			0,
 			0
 		],
-		immediate:true
+		immediate : true
 	}));
-    const [gaa, setGaa]= useState(true)
 
+	const [
+		gaa,
+		setGaa
+	] = useState(true);
 
-	const bind = useDrag(({ down,delta, local, velocity, direction }) => {
-
-        //Handle on mouseup click event
-		down?Math.abs( delta[0])<10 ? setGaa(true): setGaa(false):setGaa(true)
-		
-		console.log(gaa)
+	const bind = useDrag(({ down, delta, local, velocity, direction }) => {
+		//Handle on mouseup click event
+		down ? (Math.abs(delta[0]) < 10 ? setGaa(true) : setGaa(false)) : setGaa(true);
+		setImmediate(false);
 		set({
 			xy : down
 				? [
@@ -39,7 +45,7 @@ export default function Carousel(props) {
 		});
 
 		if (!down) {
-			
+			setImmediate(true);
 			local[0] = Math.round(local[0] / (margin + width) + 0.3 * direction[0]) * (margin + width);
 			if (
 				local[0] > 0 ||
@@ -82,14 +88,15 @@ export default function Carousel(props) {
 	var styleNeeded = {
 		transform  : xy.interpolate((x, y) => `translate3D(${x}px,0, 0)`),
 		whiteSpace : 'nowrap',
-		margin     : '0 auto'
+		margin     : '0 auto',
+		transition : immediate ? '.4s' : '0s'
 
 		// display        : slides < 6 ? 'flex' : 'block',
 		// justifyContent : slides < 6 ? 'center' : null
 	};
 
 	return (
-		<div className='carousel-container'  {...bind()}>
+		<div className='carousel-container' {...bind()}>
 			<animated.div className={`carousel ${slides < 6 ? props.type : null}`} style={styleNeeded}>
 				{props.children}
 			</animated.div>
@@ -129,7 +136,7 @@ export default function Carousel(props) {
 					}
 					:global(.carousel__item) {
 						position: relative;
-						z-index: ${gaa?"1":'-1'};
+						z-index: ${gaa ? '1' : '-1'};
 					}
 				}
 			`}</style>

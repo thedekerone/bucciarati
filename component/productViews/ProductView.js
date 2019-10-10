@@ -163,6 +163,7 @@ export default function Product(props) {
 					}
 					.product-discount__price {
 						font-size: .8em;
+						text-decoration: line-through;
 					}
 					.product-discount__percentage {
 						margin-left: .8em;
@@ -171,7 +172,8 @@ export default function Product(props) {
 						font-size: 1em;
 					}
 					.product-price {
-						font-size: 1.rem;
+						font-size: 1.2rem;
+						font-weight: bold;
 						color: black;
 					}
 

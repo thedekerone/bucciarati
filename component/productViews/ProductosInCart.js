@@ -1,12 +1,22 @@
 import React from 'react';
 import ProductViewInCart from './ProductViewInCart';
+import ProductView from './ProductView';
 import { Link } from '../../routes';
 // aeaeaeaea
 export default function Productos(props) {
 	return (
 		<div className='productos'>
 			{props.data.map((e) => {
-				return <ProductViewInCart key={e._id} user={props.user} data={e} wrap={false} />;
+				return (
+					<ProductViewInCart
+						client={props.client}
+						key={e._id}
+						user={props.user}
+						data={e}
+						gaa={'xddd'}
+						wrap={false}
+					/>
+				);
 			})}
 
 			<style jsx>
@@ -14,7 +24,7 @@ export default function Productos(props) {
 					.productos {
 						display: grid;
 						gap: 1em;
-
+						margin-top: 20px;
 						grid-template-columns: 1fr;
 					}
 					@media (min-width: 660px) {

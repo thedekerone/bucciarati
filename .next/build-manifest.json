@@ -1,7 +1,7 @@
 {
   "devFiles": [
-    "static/development/dll/dll_397dc449097af0b4e992.js",
-    "static/development/dll/dll_397dc449097af0b4e992.js.map"
+    "static/development/dll/dll_430e25a76c820c804541.js",
+    "static/development/dll/dll_430e25a76c820c804541.js.map"
   ],
   "pages": {
     "/": [
@@ -16,7 +16,15 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/cart": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/index": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/producto": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],

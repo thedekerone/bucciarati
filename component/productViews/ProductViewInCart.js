@@ -27,6 +27,8 @@ export default function Product(props) {
 						product : props.data._id,
 						user    : user._id
 					}
+				}).then(() => {
+					client.resetStore();
 				})
 			: console.log(user);
 	};
@@ -67,10 +69,7 @@ export default function Product(props) {
 						<div
 							className='product-extra__remove'
 							onClick={async () => {
-								await props.client.resetStore();
-
-								await removeFromCart(props.user, props.client);
-								await props.client.resetStore();
+								removeFromCart(props.user, props.client);
 							}}>
 							Eliminar del carrito
 						</div>

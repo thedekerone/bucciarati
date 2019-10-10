@@ -24,9 +24,10 @@ export default function Product(props) {
 						product : props.data._id,
 						user    : user._id
 					}
+				}).then(() => {
+					client.resetStore();
 				})
 			: console.log(user);
-		client.resetStore();
 	};
 
 	return (

@@ -7,16 +7,7 @@ export default function Productos(props) {
 	return (
 		<div className='productos'>
 			{props.data.map((e) => {
-				return (
-					<ProductViewInCart
-						client={props.client}
-						key={e._id}
-						user={props.user}
-						data={e}
-						gaa={'xddd'}
-						wrap={false}
-					/>
-				);
+				return <ProductViewInCart client={props.client} key={e._id} user={props.user} data={e} wrap={false} />;
 			})}
 
 			<style jsx>

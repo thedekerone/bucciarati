@@ -15,7 +15,7 @@ export default function Productos(props) {
 					.productos {
 						display: grid;
 						gap: 1em;
-						margin-top: 20px;
+						margin-top: 40px;
 						grid-template-columns: 1fr;
 					}
 					@media (min-width: 660px) {

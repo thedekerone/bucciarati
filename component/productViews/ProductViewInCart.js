@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from '../../routes';
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/react-hooks';
-import { Query, graphql } from 'react-apollo';
-import Spinner from '../views/Spinner';
-import Error from '../views/Error';
 
 export default function Product(props) {
 	let agregar;
@@ -24,7 +20,6 @@ export default function Product(props) {
 		removeProduct
 	] = useMutation(REMOVE_PRODUCT);
 	const removeFromCart = async (user, client) => {
-		console.log('xd');
 		user._id
 			? removeProduct({
 					variables : {
@@ -34,9 +29,8 @@ export default function Product(props) {
 				}).then(() => {
 					client.resetStore();
 				})
-			: console.log(user);
+			: null;
 	};
-	console.log(cantidad);
 
 	return (
 		<div>

@@ -7,6 +7,7 @@ import Spinner from "./views/Spinner";
 import Error from "./views/Error";
 import Login from "./views/Login";
 import LoginPortal from "./views/LoginPortal";
+import RegisterPortal from "./views/RegisterPortal";
 const Navbar = () => {
   const [
 		sidebar,
@@ -35,6 +36,7 @@ const Navbar = () => {
   `;
   const [display, setDisplay] = useState(true);
   const [show, setShow] = useState(false);
+  const [register, setRegister] = useState(false);
   const handleSubmit = e => {
     e.preventDefault();
     Router.pushRoute("producto", { tag: textInput.value });
@@ -148,6 +150,10 @@ const Navbar = () => {
                           show={show}
                           users={() => data.getUsers}
                         ></LoginPortal>
+                        <RegisterPortal client={client}
+                          setShow={setShow}
+                          show={register}
+                          users={() => data.getUsers}></RegisterPortal>
                         {!data.getUsers ? (
                           <div className="login-container">
 
@@ -161,7 +167,7 @@ const Navbar = () => {
                           </h3>
                           <h3
                             onClick={() => {
-                              setShow(true);
+                              setRegister(true);
                             }}
                             className='login-register'
                           >
@@ -235,7 +241,6 @@ const Navbar = () => {
             padding: 0.5rem 1rem;
           }
           .left-items {
-            width:100%;
             max-width: 270px;
             display: flex;
             align-items: center;
@@ -313,7 +318,6 @@ const Navbar = () => {
           .login-container{
             box-sizing: border-box;
             display:flex;
-            padding-right: 2em;
           }
           .login-title,.login-register{
             font-weight: lighter;
@@ -352,6 +356,10 @@ const Navbar = () => {
             .logo {
               display: flex;
               width: 100%;
+            }
+            .left-items{
+            width:100%;
+
             }
             .right-items {
               flex-shrink: initial;
@@ -394,6 +402,9 @@ const Navbar = () => {
             }
             .login {
               display: block;
+            }
+            .icon-menu{
+              display:block
             }
           }
         `}

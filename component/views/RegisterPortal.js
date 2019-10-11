@@ -13,13 +13,13 @@ const GET_USER = gql`
 	}
 `;
 let message = 'wrong username or password';
-const LoginPortal = ({ show, client, setShow }) => {
+const RegisterPortal = ({ show, client, setShow }) => {
 	const [
 		count,
 		setCount
 	] = useState(0);
 
-	let username, password;
+	let username, password, email;
 
 	const handleLogin = async () => {
 		localStorage.setItem('usuario', username.value);
@@ -64,7 +64,7 @@ const LoginPortal = ({ show, client, setShow }) => {
 						</svg>
 					</div>
 
-					<h1>Login</h1>
+					<h1>Register</h1>
 					<form
 						action='POST'
 						onSubmit={(e) => {
@@ -91,6 +91,16 @@ const LoginPortal = ({ show, client, setShow }) => {
 									placeholder='password'
 								/>
 							</div>
+						</div>
+						<div className='email'>
+							<label htmlFor='username'>Correo:</label>
+							<input
+								type='text'
+								ref={(input) => {
+									email = input;
+								}}
+								placeholder='email@mail.com'
+							/>
 						</div>
 
 						<input className='btn' type='submit' />
@@ -134,6 +144,9 @@ const LoginPortal = ({ show, client, setShow }) => {
 						font-size: 0.6rem;
 						display: ${count < 1 ? 'none' : 'inline'};
 					}
+					.email {
+						margin: 0 auto;
+					}
 					.portal {
 						height: 100vh;
 
@@ -172,4 +185,4 @@ const LoginPortal = ({ show, client, setShow }) => {
 	);
 };
 
-export default LoginPortal;
+export default RegisterPortal;

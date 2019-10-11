@@ -28,7 +28,7 @@ class Cart extends React.Component {
 	render() {
 		return (
 			<Layout>
-				<div>
+				<div className='container'>
 					<h2>Carrito de compras </h2>
 					<Query query={GET_USER}>
 						{({ client, loading, error, data }) => {
@@ -42,6 +42,13 @@ class Cart extends React.Component {
 						}}
 					</Query>
 				</div>
+				<style jsx>
+					{`
+						.container {
+							margin-top: 50px;
+						}
+					`}
+				</style>
 			</Layout>
 		);
 	}

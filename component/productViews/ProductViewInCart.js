@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from '../../routes';
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/react-hooks';
@@ -7,7 +7,11 @@ import Spinner from '../views/Spinner';
 import Error from '../views/Error';
 
 export default function Product(props) {
-	let cantidad;
+	let agregar;
+	const [
+		cantidad,
+		setCantidad
+	] = useState(1);
 
 	const REMOVE_PRODUCT = gql`
 		mutation removeProduct($product: ID!, $user: ID!) {
@@ -32,6 +36,7 @@ export default function Product(props) {
 				})
 			: console.log(user);
 	};
+	console.log(cantidad);
 
 	return (
 		<div>
@@ -58,9 +63,11 @@ export default function Product(props) {
 						<div className='product-extra__cantidad'>
 							<label>Cantidad: </label>
 							<input
-								ref={(input) => {
-									cantidad = input;
+								defaultValue={1}
+								onChange={(value) => {
+									setCantidad(agregar.value);
 								}}
+								ref={(value) => (agregar = value)}
 								type='number'
 								name='cantidad'
 								id='cantidad'

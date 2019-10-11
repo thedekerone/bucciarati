@@ -55,7 +55,14 @@ const LoginPortal = ({ show, client, setShow }) => {
 							setShow(false);
 						}}
 						className='exit'>
-						X
+						<svg
+							xmlns='http://www.w3.org/2000/svg'
+							viewBox='0 0 26 26'
+							width='18'
+							height='18'
+							fill='#000000'>
+							<path d='M 3 0 L 3 5 C 3.003906 5.527344 3.21875 6.035156 3.59375 6.40625 L 10.1875 13 L 3.59375 19.59375 C 3.21875 19.964844 3.003906 20.472656 3 21 L 3 26 L 7 26 L 7 21.8125 L 13 15.8125 L 19 21.8125 L 19 26 L 23 26 L 23 21 C 22.996094 20.472656 22.78125 19.964844 22.40625 19.59375 L 15.8125 13 L 22.40625 6.40625 C 22.78125 6.035156 22.996094 5.527344 23 5 L 23 0 L 19 0 L 19 4.1875 L 13 10.1875 L 7 4.1875 L 7 0 Z' />
+						</svg>
 					</div>
 
 					<h1>Login</h1>
@@ -91,6 +98,7 @@ const LoginPortal = ({ show, client, setShow }) => {
 				{`
 					h1 {
 						color: #db415d;
+						font-size: 1.7em;
 						text-transform: uppercase;
 					}
 					.exit {
@@ -101,7 +109,6 @@ const LoginPortal = ({ show, client, setShow }) => {
 					}
 					input {
 						padding: .5em;
-						border-radius: 20px;
 						border: 0;
 						margin: .8em .4em;
 					}
@@ -133,12 +140,15 @@ const LoginPortal = ({ show, client, setShow }) => {
 					}
 					.login-container {
 						background: white;
-						border-radius: 20px;
 						width: 300px;
 						margin: 10% auto;
 						padding: 30px;
 						position: relative;
 						height: 300px;
+					}
+					.exit svg:hover {
+						cursor: pointer;
+						fill: red;
 					}
 				`}
 			</style>

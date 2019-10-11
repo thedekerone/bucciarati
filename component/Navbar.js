@@ -149,13 +149,26 @@ const Navbar = () => {
                           users={() => data.getUsers}
                         ></LoginPortal>
                         {!data.getUsers ? (
+                          <div className="login-container">
+
                           <h3
                             onClick={() => {
                               setShow(true);
                             }}
+                            className='login-title'
                           >
                             login
                           </h3>
+                          <h3
+                            onClick={() => {
+                              setShow(true);
+                            }}
+                            className='login-register'
+                          >
+                            register
+                          </h3>
+                          </div>
+                          
                         ) : (
                           <div
                             className="logged"
@@ -222,6 +235,8 @@ const Navbar = () => {
             padding: 0.5rem 1rem;
           }
           .left-items {
+            width:100%;
+            max-width: 270px;
             display: flex;
             align-items: center;
             justify-content: flex-start;
@@ -295,6 +310,17 @@ const Navbar = () => {
           .login {
             display: ${display ? "block" : "none"};
           }
+          .login-container{
+            box-sizing: border-box;
+            display:flex;
+            padding-right: 2em;
+          }
+          .login-title,.login-register{
+            font-weight: lighter;
+            margin: 0 .4em;
+            box-sizing: border-box;
+            font-size: 1em;
+          }
           .logged {
             display: flex;
             align-items: center;
@@ -329,7 +355,8 @@ const Navbar = () => {
             }
             .right-items {
               flex-shrink: initial;
-              width: 250px;
+              width: 100%;
+              max-width: 270px;
             }
             .main-navbar__icon {
               flex-grow: 0;

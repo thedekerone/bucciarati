@@ -193,6 +193,7 @@ export default function Product(props) {
 					}
 					.buttons {
 						display: flex;
+						position: relative;
 						width: 100%;
 					}
 					.btn {

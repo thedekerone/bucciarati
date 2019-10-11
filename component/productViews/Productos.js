@@ -23,6 +23,10 @@ export default function Productos(props) {
 
 						grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 					}
+					a {
+						position: relative;
+						z-index: 1;
+					}
 					@media (min-width: 660px) {
 						.productos {
 							grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from '../routes';
+import hero from '../static/mainView/main2.webp'
 
 export default function MainDisplayer() {
 	return (
@@ -66,7 +67,7 @@ export default function MainDisplayer() {
 					}
 
 					#item1 {
-						background: url('/static/mainView/main2.webp');
+						background: url(${hero});
 						background-size: cover;
 						background-position: 600px top;
 						background-repeat: none;

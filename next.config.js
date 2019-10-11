@@ -1,5 +1,7 @@
 const withOffline = require('next-offline');
 const WorkboxPlugin = require('workbox-webpack-plugin');
+const withPlugins= require('next-compose-plugins')
+const optimizedImages = require('next-optimized-images');
 
 const nextConfig = {
 	target            : 'serverless',
@@ -92,4 +94,6 @@ const nextConfig = {
 	]
 };
 
-module.exports = withOffline(nextConfig);
+module.exports = withPlugins( [withOffline, [optimizedImages, {
+	
+}]], nextConfig);

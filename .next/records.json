@@ -1,0 +1,43 @@
+{
+  "modules": {
+    "byIdentifier": {
+      "multi node_modules/next-offline/register-sw-compiled.js ./node_modules/next/dist/client/next.js": 0
+    },
+    "usedIds": {
+      "0": 0
+    }
+  },
+  "chunks": {
+    "byName": {
+      "commons": 0,
+      "static/runtime/webpack.js": 1,
+      "static/VdxMzE_oxczEGucwFUqry/pages/_app.js": 2,
+      "static/VdxMzE_oxczEGucwFUqry/pages/_error.js": 3,
+      "static/VdxMzE_oxczEGucwFUqry/pages/cart.js": 4,
+      "static/VdxMzE_oxczEGucwFUqry/pages/index.js": 5,
+      "static/VdxMzE_oxczEGucwFUqry/pages/producto.js": 6,
+      "static/VdxMzE_oxczEGucwFUqry/pages/single.js": 7,
+      "static/runtime/main.js": 8,
+      "static/53b0p848gQ2AoyOug65JU/pages/_app.js": 9,
+      "static/53b0p848gQ2AoyOug65JU/pages/_error.js": 10,
+      "static/53b0p848gQ2AoyOug65JU/pages/cart.js": 11,
+      "static/53b0p848gQ2AoyOug65JU/pages/index.js": 12,
+      "static/53b0p848gQ2AoyOug65JU/pages/mongol.js": 13,
+      "static/53b0p848gQ2AoyOug65JU/pages/producto.js": 14,
+      "static/53b0p848gQ2AoyOug65JU/pages/single.js": 15
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      8,
+      9
+    ]
+  }
+}

@@ -34,9 +34,11 @@ const Navbar = () => {
       }
     }
   `;
+  
   const [display, setDisplay] = useState(true);
   const [show, setShow] = useState(false);
   const [register, setRegister] = useState(false);
+
   const handleSubmit = e => {
     e.preventDefault();
     Router.pushRoute("producto", { tag: textInput.value });
@@ -151,7 +153,7 @@ const Navbar = () => {
                           users={() => data.getUsers}
                         ></LoginPortal>
                         <RegisterPortal client={client}
-                          setShow={setShow}
+                          setShow={setRegister}
                           show={register}
                           users={() => data.getUsers}></RegisterPortal>
                         {!data.getUsers ? (

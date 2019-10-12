@@ -1,0 +1,45 @@
+{
+  "devFiles": [],
+  "pages": {
+    "/": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.4ea7dca44df85e173cfe.js",
+      "static/runtime/main-d62091e4eb1f54212129.js"
+    ],
+    "/_app": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.4ea7dca44df85e173cfe.js",
+      "static/runtime/main-d62091e4eb1f54212129.js"
+    ],
+    "/_error": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.4ea7dca44df85e173cfe.js",
+      "static/runtime/main-d62091e4eb1f54212129.js"
+    ],
+    "/cart": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.4ea7dca44df85e173cfe.js",
+      "static/runtime/main-d62091e4eb1f54212129.js"
+    ],
+    "/index": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.4ea7dca44df85e173cfe.js",
+      "static/runtime/main-d62091e4eb1f54212129.js"
+    ],
+    "/mongol": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.4ea7dca44df85e173cfe.js",
+      "static/runtime/main-d62091e4eb1f54212129.js"
+    ],
+    "/producto": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.4ea7dca44df85e173cfe.js",
+      "static/runtime/main-d62091e4eb1f54212129.js"
+    ],
+    "/single": [
+      "static/runtime/webpack-035ac2b14bde147cb4a8.js",
+      "static/chunks/commons.4ea7dca44df85e173cfe.js",
+      "static/runtime/main-d62091e4eb1f54212129.js"
+    ]
+  }
+}

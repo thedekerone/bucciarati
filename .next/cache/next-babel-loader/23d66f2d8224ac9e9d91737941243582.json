@@ -1,1 +1,0 @@
-{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\nimport test from '../static/mainView/mainImage.jpg?trace';\nexport default function mongol() {\n  return __jsx(\"div\", null, __jsx(\"img\", {\n    src: test.trace,\n    alt: \"\"\n  }), __jsx(\"img\", {\n    src: test.src,\n    alt: \"\"\n  }));\n}","map":null,"metadata":{},"sourceType":"module"}

@@ -1,26 +1,39 @@
 import React from 'react';
 import { Link } from '../routes';
+import item1 from '../static/mainView/polo.jpg?lqip'
+import item2 from '../static/mainView/orangeTexture.jpg?lqip'
+import item3 from '../static/mainView/blueTexture.jpg?lqip'
+import item4 from '../static/mainView/purpleTexture.jpg?lqip'
+
 
 export default function TagDisplayer() {
 	return (
 		<div className='tag-displayer'>
 			<Link route={'producto'} params={{ tag: 'polo' }}>
-				<a className='tag-displayer__item' id='item1'>
+				<a   className='tag-displayer__item' >
+					<img className='tag-displayer__img' id='item1' height='100%' width='100%' src='/static/mainView/polo.webp' alt=""/>
 					<h1>camisetas</h1>
 				</a>
 			</Link>
 			<Link route={'producto'} params={{ tag: 'casaca' }}>
-				<a className='tag-displayer__item' id='item2'>
+				<a className='tag-displayer__item' >
 					<h1>casaca</h1>
+					<img  height='100%' id='item2' width='100%' className='tag-displayer__img' src='/static/mainView/orangeTexture.webp' alt=""/>
+
 				</a>
 			</Link>
 			<Link route={'producto'} params={{ tag: 'zapatillas' }}>
-				<a className='tag-displayer__item' id='item3'>
+
+				<a className='tag-displayer__item' >
+			<img  height='100%' width='100%' id='item3' className='tag-displayer__img' src='/static/mainView/blueTexture.webp' alt=""/>
+
 					<h1>zapatillas</h1>
 				</a>
 			</Link>
 			<Link route={'producto'} params={{ tag: 'pantalon' }}>
-				<a className='tag-displayer__item' id='item4'>
+				<a className='tag-displayer__item'>
+				<img height='100%' width='100%'  id='item4' className='tag-displayer__img' src='/static/mainView/purpleTexture.webp' alt=""/>
+
 					<h1>jean</h1>
 				</a>
 			</Link>
@@ -38,7 +51,8 @@ export default function TagDisplayer() {
 						justify-content: center;
 						align-items: center;
 						transition: .2s;
-						gap: 1px;
+						position: relative;
+						gap: 1px;	
 					}
 
 					.tag-displayer__item h1 {
@@ -46,25 +60,29 @@ export default function TagDisplayer() {
 						font-size: 2.5rem;
 						text-transform: uppercase;
 					}
+					.tag-displayer__img{
+						position: absolute;
+						object-fit: cover;
+					}
 					#item3 {
-						background: url('/static/mainView/blueTexture.webp');
+						background: url(${item3});
 						background-size: cover;
 						background-position: center center;
 					}
 					#item2 {
 						background-position: center center;
-						background: url('/static/mainView/orangeTexture.webp');
+						background: url(${item2});
 						background-position: center center;
 						background-size: cover;
 					}
 					#item1 {
-						background: url('/static/mainView/polo.webp');
+						background: url(${item1});
 						background-position: center center;
 						background-size: cover;
 					}
 					#item4 {
 						background-position: center center;
-						background: url('/static/mainView/purpleTexture.webp');
+						background: url(${item4});
 
 						background-size: cover;
 					}

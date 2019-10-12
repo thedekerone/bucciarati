@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from '../routes';
 import hero from '../static/mainView/main2.webp'
+import heroMini from '../static/mainView/main2.jpg?lqip'
+
 
 export default function MainDisplayer() {
 	return (
 		<div className='main-displayer'>
-			<div className='main-displayer__item' id='item1'>
+			<div className='main-displayer__item' >
+				<img src={hero} id='item1'  alt=""/>
 				<div className='main-hero'>
 					<div className='main-hero__text'>
 						<h1>AIR JORDAN XXIV</h1>
@@ -65,9 +68,11 @@ export default function MainDisplayer() {
 
 						color: white;
 					}
-
-					#item1 {
-						background: url(${hero});
+					#item1{
+						position:absolute
+					}
+					.main-displayer__item {
+						background: url(${heroMini});
 						background-size: cover;
 						background-position: 600px top;
 						background-repeat: none;

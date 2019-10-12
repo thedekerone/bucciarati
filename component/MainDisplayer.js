@@ -69,7 +69,10 @@ export default function MainDisplayer() {
 						color: white;
 					}
 					#item1{
-						position:absolute
+						position:absolute;
+						height: 100%;
+						width: 100%;
+						object-fit: cover
 					}
 					.main-displayer__item {
 						background: url(${heroMini});

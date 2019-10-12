@@ -1,14 +1,20 @@
 import React from 'react';
-import { Link } from '../routes';
+import { Link, Router } from '../routes';
 import hero from '../static/mainView/main2.webp'
 import heroMini from '../static/mainView/main2.jpg?lqip'
 
 
 export default function MainDisplayer() {
+
 	return (
 		<div className='main-displayer'>
 			<div className='main-displayer__item' >
-				<img src={hero} id='item1'  alt=""/>
+			<picture id='item1'>
+			<source src={heroMini} width='100%' className='item-image' alt=""/>
+
+			<img src={hero} width='100%' className='item-image' alt=""/>
+
+  </picture>
 				<div className='main-hero'>
 					<div className='main-hero__text'>
 						<h1>AIR JORDAN XXIV</h1>
@@ -67,6 +73,11 @@ export default function MainDisplayer() {
 						font-size: 1.2rem;
 
 						color: white;
+					}
+					.item-image{
+						object-fit: cover;
+						height:100%;
+						width: 100%
 					}
 					#item1{
 						position:absolute;

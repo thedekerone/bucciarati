@@ -1,8 +1,10 @@
 import React from 'react';
 import ProductView from './ProductView';
-import { Link } from '../../routes';
+import { Link, Router } from '../../routes';
 // aeaeaeaea
 export default function Productos(props) {
+
+
 	return (
 		<div className='productos'>
 			{props.data.map((e) => {

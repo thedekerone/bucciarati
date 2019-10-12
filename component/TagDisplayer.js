@@ -11,13 +11,13 @@ export default function TagDisplayer() {
 		<div className='tag-displayer'>
 			<Link route={'producto'} params={{ tag: 'polo' }}>
 				<a   className='tag-displayer__item' >
+					<h1 className='item-title'>camisetas</h1>
 					<img className='tag-displayer__img' id='item1' height='100%' width='100%' src='/static/mainView/polo.webp' alt=""/>
-					<h1>camisetas</h1>
 				</a>
 			</Link>
 			<Link route={'producto'} params={{ tag: 'casaca' }}>
 				<a className='tag-displayer__item' >
-					<h1>casaca</h1>
+					<h1 className='item-title'>casaca</h1>
 					<img  height='100%' id='item2' width='100%' className='tag-displayer__img' src='/static/mainView/orangeTexture.webp' alt=""/>
 
 				</a>
@@ -25,16 +25,16 @@ export default function TagDisplayer() {
 			<Link route={'producto'} params={{ tag: 'zapatillas' }}>
 
 				<a className='tag-displayer__item' >
+					<h1 className='item-title'>zapatillas</h1>
 			<img  height='100%' width='100%' id='item3' className='tag-displayer__img' src='/static/mainView/blueTexture.webp' alt=""/>
 
-					<h1>zapatillas</h1>
 				</a>
 			</Link>
 			<Link route={'producto'} params={{ tag: 'pantalon' }}>
 				<a className='tag-displayer__item'>
+					<h1 className='item-title'>jean</h1>
 				<img height='100%' width='100%'  id='item4' className='tag-displayer__img' src='/static/mainView/purpleTexture.webp' alt=""/>
 
-					<h1>jean</h1>
 				</a>
 			</Link>
 
@@ -85,6 +85,10 @@ export default function TagDisplayer() {
 						background: url(${item4});
 
 						background-size: cover;
+					}
+					.item-title{
+						position:relative;
+						z-index: 10
 					}
 					@media (min-width: 650px) {
 						.tag-displayer__item:hover {

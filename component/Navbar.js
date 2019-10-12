@@ -48,6 +48,10 @@ const Navbar = () => {
     await localStorage.removeItem("password");
     await Router.pushRoute("/");
   };
+
+
+ 
+
   return (
     <React.Fragment>
       <div className="navbar-container">

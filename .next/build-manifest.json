@@ -12,14 +12,6 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/cart": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/producto": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/single": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"

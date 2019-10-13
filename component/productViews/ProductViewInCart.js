@@ -1,91 +1,95 @@
-import React, { useState } from 'react';
-import gql from 'graphql-tag';
-import { useMutation } from '@apollo/react-hooks';
+import React, { useState } from "react";
+import gql from "graphql-tag";
+import { useMutation } from "@apollo/react-hooks";
 
 export default function Product(props) {
-	let agregar;
-	const [
-		cantidad,
-		setCantidad
-	] = useState(1);
+  let agregar;
+  const [cantidad, setCantidad] = useState(1);
 
-	const REMOVE_PRODUCT = gql`
-		mutation removeProduct($product: ID!, $user: ID!) {
-			removeProductFromBag(productID: $product, userID: $user) {
-				username
-			}
-		}
-	`;
-	const [
-		removeProduct
-	] = useMutation(REMOVE_PRODUCT);
-	const removeFromCart = async (user, client) => {
-		user._id
-			? removeProduct({
-					variables : {
-						product : props.data._id,
-						user    : user._id
-					}
-				}).then(() => {
-					client.resetStore();
-				})
-			: null;
-	};
+  const REMOVE_PRODUCT = gql`
+    mutation removeProduct($product: ID!, $user: ID!) {
+      removeProductFromBag(productID: $product, userID: $user) {
+        username
+      }
+    }
+  `;
+  const [removeProduct] = useMutation(REMOVE_PRODUCT);
+  const removeFromCart = async (user, client) => {
+    user._id
+      ? removeProduct({
+          variables: {
+            product: props.data._id,
+            user: user._id
+          }
+        }).then(() => {
+          client.resetStore();
+        })
+      : null;
+  };
 
-	return (
-		<div>
-			<div className='product'>
-				<div className='product__img'>
-					<img src={props.data.image} width='100%' alt='' />
-				</div>
-				<div className='product__description'>
-					<div className='product-main'>
-						<div className='product-title'>
-							<h3>{props.data.title}</h3>
-						</div>
-						<div className='product-discount'>
-							<span className='product-discount__price'>{props.data.price}</span>
-							<span className='product-discount__percentage'>-{props.data.discount}%</span>
-						</div>
-						<div className='product-price'>
-							<span>{Math.round((100 - props.data.discount) * props.data.price / 100)}.00$</span>
-						</div>
-					</div>
+  return (
+    <div>
+      <div className="product">
+        <div className="product__img">
+          <img src={props.data.image} width="100%" alt="" />
+        </div>
+        <div className="product__description">
+          <div className="product-main">
+            <div className="product-title">
+              <h3>{props.data.title.toLowerCase()}</h3>
+            </div>
+            <div className="product-discount">
+              <span className="product-discount__price">
+                {props.data.price}
+              </span>
+              <span className="product-discount__percentage">
+                -{props.data.discount}%
+              </span>
+            </div>
+            <div className="product-price">
+              <span>
+                {Math.round(
+                  ((100 - props.data.discount) * props.data.price) / 100
+                )}
+                .00$
+              </span>
+            </div>
+          </div>
 
-					{/* info */}
-					<div className='product-extra'>
-						<div className='product-extra__cantidad'>
-							<label>Cantidad: </label>
-							<input
-								defaultValue={1}
-								onChange={(value) => {
-									setCantidad(agregar.value);
-								}}
-								ref={(value) => (agregar = value)}
-								type='number'
-								name='cantidad'
-								id='cantidad'
-							/>
-						</div>
-						<div
-							className='product-extra__remove'
-							onClick={async () => {
-								removeFromCart(props.user, props.client);
-							}}>
-							Eliminar del carrito
-						</div>
-					</div>
-				</div>
-			</div>
+          {/* info */}
+          <div className="product-extra">
+            <div className="product-extra__cantidad">
+              <label>Cantidad: </label>
+              <input
+                defaultValue={1}
+                onChange={value => {
+                  setCantidad(agregar.value);
+                }}
+                ref={value => (agregar = value)}
+                type="number"
+                name="cantidad"
+                id="cantidad"
+              />
+            </div>
+            <div
+              className="product-extra__remove"
+              onClick={async () => {
+                removeFromCart(props.user, props.client);
+              }}
+            >
+              Eliminar del carrito
+            </div>
+          </div>
+        </div>
+      </div>
 
-			<style jsx>
-				{`
+      <style jsx>
+        {`
 					.product {
 						display: grid;
 						background: white;
 						max-width: 1000px
 						width: 100%;
-						margin: 0 auto;
 						font-size: 11px;
 						height: 100%;
 						box-sizing: border-box;
@@ -94,13 +98,15 @@ export default function Product(props) {
 					}
 					.product__img {
 						grid-row: 1/2;
-						padding: ${props.wrap ? '0' : '.9em'};
+						padding: ${props.wrap ? "0" : ".9em"};
+						text-align: center;
 						box-sizing: border-box;
 					}
 					.product__img img {
 						max-width: 150px;
 					}
 					.product-title h3 {
+						text-transform: capitalize;
 						margin: 0;
 						padding: .5em 0 .7em 0;
 					}
@@ -168,6 +174,9 @@ export default function Product(props) {
 					.product-extra__remove{
 						color:red;
 					}
+					.product-extra__remove:hover{
+						cursor: pointer
+					}
 					#cantidad{
 						width: 40px;
 						border: 1px solid #aaa;
@@ -197,7 +206,7 @@ export default function Product(props) {
 					}
 					
 
-					@media (min-width: 660px) {
+					@media (min-width: 860px) {
 						.product {
 							border-top: 1px solid grey;
 							grid-template: auto/ auto 1fr;
@@ -206,19 +215,19 @@ export default function Product(props) {
 							max-width: 900px;
 						}
 						.buttons {
-							flex-direction: ${props.wrap ? ' row' : 'column'};
+							flex-direction: ${props.wrap ? " row" : "column"};
 							box-sizing: border-box;
 						}
 						.btn {
-							margin: ${props.wrap ? 'none' : '.8rem 0 .2rem'};
+							margin: ${props.wrap ? "none" : ".8rem 0 .2rem"};
 							box-sizing: border-box;
 						}
 						.product__description {
-							padding-left: ${props.wrap ? '3em' : '1.2em'};
+							padding-left: ${props.wrap ? "3em" : "1.2em"};
 						}
 					}
 				`}
-			</style>
-		</div>
-	);
+      </style>
+    </div>
+  );
 }

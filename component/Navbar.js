@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SideBar from './SideBar';
+import SideBar from "./SideBar";
 import gql from "graphql-tag";
 import { Query, graphql } from "react-apollo";
 import { Link, Router } from "../routes";
@@ -9,13 +9,10 @@ import Login from "./views/Login";
 import LoginPortal from "./views/LoginPortal";
 import RegisterPortal from "./views/RegisterPortal";
 const Navbar = () => {
-  const [
-		sidebar,
-		setSidebar
-	] = useState(false);
-	const handleClick = () => {
-		setSidebar(!sidebar);
-	};
+  const [sidebar, setSidebar] = useState(false);
+  const handleClick = () => {
+    setSidebar(!sidebar);
+  };
   let textInput;
   const GET_USER = gql`
     {
@@ -23,18 +20,13 @@ const Navbar = () => {
         _id
         username
         password
-        bag{
+        bag {
           _id
-								title
-								image
-								price
-								tags
-								discount
         }
       }
     }
   `;
-  
+
   const [display, setDisplay] = useState(true);
   const [show, setShow] = useState(false);
   const [register, setRegister] = useState(false);
@@ -49,20 +41,16 @@ const Navbar = () => {
     await Router.pushRoute("/");
   };
 
-
- 
-
   return (
     <React.Fragment>
       <div className="navbar-container">
-        
         <div className="navbar">
           <div className="main-navbar">
             <div className="left-items">
               <div className="menu">
                 <img
                   onClick={e => {
-                    handleClick()
+                    handleClick();
                   }}
                   className="icon-menu"
                   width="30px"
@@ -149,43 +137,47 @@ const Navbar = () => {
                     if (error) return <h3>login</h3>;
                     return (
                       <div className="login">
-			                <SideBar client={client} setShow={setSidebar} show={sidebar} />
+                        <SideBar
+                          client={client}
+                          setShow={setSidebar}
+                          show={sidebar}
+                        />
                         <LoginPortal
                           client={client}
                           setShow={setShow}
                           show={show}
                           users={() => data.getUsers}
                         ></LoginPortal>
-                        <RegisterPortal client={client}
+                        <RegisterPortal
+                          client={client}
                           setShow={setRegister}
                           show={register}
-                          users={() => data.getUsers}></RegisterPortal>
+                          users={() => data.getUsers}
+                        ></RegisterPortal>
                         {!data.getUsers ? (
                           <div className="login-container">
-
-                          <h3
-                            onClick={() => {
-                              setShow(true);
-                            }}
-                            className='login-title'
-                          >
-                            login
-                          </h3>
-                          <h3
-                            onClick={() => {
-                              setRegister(true);
-                            }}
-                            className='login-register'
-                          >
-                            register
-                          </h3>
+                            <h3
+                              onClick={() => {
+                                setShow(true);
+                              }}
+                              className="login-title"
+                            >
+                              login
+                            </h3>
+                            <h3
+                              onClick={() => {
+                                setRegister(true);
+                              }}
+                              className="login-register"
+                            >
+                              register
+                            </h3>
                           </div>
-                          
                         ) : (
                           <div
                             className="logged"
                             onClick={() => {
-                              Router.pushRoute('/cart')
+                              Router.pushRoute("/cart");
                               // handleLogout(client).then(() => {
                               //   client.resetStore();
                               // });
@@ -321,13 +313,14 @@ const Navbar = () => {
           .login {
             display: ${display ? "block" : "none"};
           }
-          .login-container{
+          .login-container {
             box-sizing: border-box;
-            display:flex;
+            display: flex;
           }
-          .login-title,.login-register{
+          .login-title,
+          .login-register {
             font-weight: lighter;
-            margin: 0 .4em;
+            margin: 0 0.4em;
             box-sizing: border-box;
             font-size: 1em;
           }
@@ -363,9 +356,8 @@ const Navbar = () => {
               display: flex;
               width: 100%;
             }
-            .left-items{
-            width:100%;
-
+            .left-items {
+              width: 100%;
             }
             .right-items {
               flex-shrink: initial;
@@ -409,8 +401,8 @@ const Navbar = () => {
             .login {
               display: block;
             }
-            .icon-menu{
-              display:block
+            .icon-menu {
+              display: block;
             }
           }
         `}

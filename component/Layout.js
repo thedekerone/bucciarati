@@ -237,6 +237,9 @@ class Layout extends React.Component {
                 transform: rotate(360deg);
               }
             }
+            .btn:hover {
+              cursor: pointer;
+            }
 
             @media (min-width: 660px) {
               #flex {

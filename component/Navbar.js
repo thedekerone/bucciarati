@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import SideBar from "./SideBar";
 import gql from "graphql-tag";
-import { Query, graphql } from "react-apollo";
+import { Query } from "react-apollo";
 import { Link, Router } from "../routes";
-import Spinner from "./views/Spinner";
-import Error from "./views/Error";
+
 import Login from "./views/Login";
 import LoginPortal from "./views/LoginPortal";
 import RegisterPortal from "./views/RegisterPortal";
@@ -174,26 +173,22 @@ const Navbar = () => {
                             </h3>
                           </div>
                         ) : (
-                          <div
-                            className="logged"
-                            onClick={() => {
-                              Router.pushRoute("/cart");
-                              // handleLogout(client).then(() => {
-                              //   client.resetStore();
-                              // });
-                            }}
-                          >
+                          <div className="logged">
                             <Login username={data.getUsers.username}></Login>
-                            <div className="shopping-bag">
-                              <img
-                                width="50px"
-                                src="/static/icons/icons8-shopping-bag.svg"
-                                alt=""
-                              />
-                              <div className="shopping-bag__number">
-                                <p>{data.getUsers.bag.length}</p>
-                              </div>
-                            </div>
+
+                            <Link route="/cart">
+                              <a className="shopping-bag">
+                                <img
+                                  width="50px"
+                                  src="/static/icons/icons8-shopping-bag.svg"
+                                  alt=""
+                                />
+
+                                <div className="shopping-bag__number">
+                                  <p>{data.getUsers.bag.length}</p>
+                                </div>
+                              </a>
+                            </Link>
                           </div>
                         )}
                       </div>
@@ -216,6 +211,13 @@ const Navbar = () => {
             height: 60px;
             box-sizing: border-box;
             overflow: hidden;
+          }
+          .login-register,
+          .login-title {
+            cursor: pointer;
+          }
+          .shopping-bag:hover {
+            cursor: pointer;
           }
           .navbar {
             width: 100%;

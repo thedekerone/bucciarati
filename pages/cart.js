@@ -92,6 +92,7 @@ class Cart extends React.Component {
                           ${pricesDiscount}.00
                         </span>
                       </li>
+                      <div className="btn">PAY NOW</div>
                     </ul>
                   </div>
                 </div>
@@ -143,6 +144,19 @@ class Cart extends React.Component {
             .original {
               text-decoration: line-through;
               color: red;
+            }
+            .btn {
+              width: 100%;
+              box-sizing: border-box;
+              padding: 0.6rem;
+              text-align: center;
+              color: white;
+              background: #e84855;
+              position: relative;
+              z-index: 19;
+            }
+            .btn:hover {
+              cursor: pointer;
             }
             @media (min-width: 660px) {
               .cart-boleta {

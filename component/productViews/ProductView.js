@@ -14,6 +14,8 @@ export default function Product(props) {
       }
     }
   `;
+
+  //mutation to add product to the sh
   const [addProduct] = useMutation(ADD_PRODUCT);
   const addToCart = (user, client) => {
     user._id
@@ -26,6 +28,24 @@ export default function Product(props) {
           client.resetStore();
         })
       : console.log(user);
+  };
+
+  //web share api
+  const compartir = (e, name) => {
+    e.preventDefault();
+    if (!navigator.share) {
+      alert("Browser doesn't support this feature");
+      return;
+    }
+    navigator
+      .share({
+        title: name,
+        text: "Buciarati Store",
+        url: document.location.href,
+        icon: "/static/mainView/polo.jpg"
+      })
+      .then(() => alert("contenido compartido"))
+      .catch(err => null);
   };
 
   return (
@@ -54,11 +74,21 @@ export default function Product(props) {
               </div>
               <div className="product__description">
                 <div className="product-main">
-                  <div className="product-banner">
-                    <span>OFERTA EXCLUSIVA</span>
-                  </div>
+                  {props.data.discount > 30 ? (
+                    <div className="product-banner">
+                      <span>OFERTA EXCLUSIVA</span>
+                    </div>
+                  ) : null}
                   <div className="product-title">
                     <h3>{props.data.title}</h3>
+                    <img
+                      onClick={e => {
+                        compartir(e, props.data.title);
+                      }}
+                      width="20px"
+                      src="../../static/icons/icons8-share-24.png"
+                      alt="share"
+                    />
                   </div>
                   <div className="product-discount">
                     <span className="product-discount__price">
@@ -173,6 +203,11 @@ export default function Product(props) {
             padding: ${props.wrap ? "0" : ".9em"};
             box-sizing: border-box;
           }
+          .product-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
           .product-title h3 {
             margin: 0;
             padding: 0.5em 0 0.7em 0;
@@ -194,14 +229,18 @@ export default function Product(props) {
 
           .product-banner span {
             color: white;
-            font-size: 0.7em;
+            font-size: 0.9em;
             background: rgb(181, 0, 191);
             background: linear-gradient(
               90deg,
               rgba(181, 0, 191, 1) 0%,
               rgba(0, 8, 180, 1) 100%
             );
-            padding: 0 0.4em;
+            padding: 0.3em;
+            font-weight: bold;
+          }
+          .btn {
+            margin: 0 0.5em;
           }
           .product-discount {
             margin-bottom: 0.6em;
@@ -240,16 +279,7 @@ export default function Product(props) {
             position: relative;
             width: 100%;
           }
-          .btn {
-            width: 100%;
-            margin: 1rem;
-            padding: 0.6rem;
-            text-align: center;
-            color: white;
-            background: #e84855;
-            position: relative;
-            z-index: 19;
-          }
+
           .btn:hover {
             cursor: pointer;
           }

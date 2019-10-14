@@ -174,13 +174,11 @@ const Navbar = () => {
                           </div>
                         ) : (
                           <div className="logged">
-                            <Login username={data.getUsers.username}></Login>
-
                             <Link route="/cart">
                               <a className="shopping-bag">
                                 <img
-                                  width="50px"
-                                  src="/static/icons/icons8-shopping-bag.svg"
+                                  width="30px"
+                                  src="../static/icons/icons8-shopping-cart-64 (1).png"
                                   alt=""
                                 />
 
@@ -238,7 +236,7 @@ const Navbar = () => {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0rem 1rem;
+            padding: 0rem 0.6em;
           }
           .left-items {
             max-width: 270px;
@@ -259,6 +257,9 @@ const Navbar = () => {
           }
           //   search
           .search {
+            display: flex;
+            height: 60px;
+            align-items: center;
             flex-shrink: 1;
             width: 100%;
           }
@@ -281,7 +282,7 @@ const Navbar = () => {
             color: grey;
           }
           .search-icon {
-            display: ${display ? "inline-block" : "none"};
+            display: none;
           }
           .main-navbar__items {
             display: none;
@@ -307,9 +308,14 @@ const Navbar = () => {
           }
           .icon-menu {
             color: red;
+
+            margin-right: 0.3em;
             transition-property: width, opacity;
             transition-duration: 1s, 0s;
             display: ${display ? "block" : "none"};
+          }
+          .icon-menu:hover {
+            cursor: pointer;
           }
           //login
           .login {
@@ -344,7 +350,7 @@ const Navbar = () => {
             background: red;
             position: absolute;
             border-radius: 100%;
-            right: 1px;
+            right: -4px;
             bottom: 1px;
           }
           .shopping-bag__number p {
@@ -376,7 +382,7 @@ const Navbar = () => {
               width: 120px;
             }
             .search-icon {
-              display: none;
+              display: ${display ? "inline-block" : "none"};
             }
             .main-navbar__items ul {
               display: flex;

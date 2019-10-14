@@ -237,6 +237,18 @@ class Layout extends React.Component {
                 transform: rotate(360deg);
               }
             }
+            .btn {
+              width: 100%;
+              max-width: 450px;
+              margin: 0 auto;
+              padding: 0.6rem;
+              text-align: center;
+              color: white;
+              background: #e84855;
+              position: relative;
+              box-sizing: border-box;
+              z-index: 19;
+            }
             .btn:hover {
               cursor: pointer;
             }

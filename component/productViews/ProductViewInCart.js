@@ -94,16 +94,17 @@ export default function Product(props) {
 						height: 100%;
 						box-sizing: border-box;
 						padding: 1em;
-						grid-template: auto auto / 1fr ;
+						grid-template: auto / auto 1fr ;
 					}
 					.product__img {
 						grid-row: 1/2;
-						padding: ${props.wrap ? "0" : ".9em"};
+						padding-right: 1.5em;
 						text-align: center;
 						box-sizing: border-box;
 					}
 					.product__img img {
 						max-width: 50px;
+
 					}
 					.product-title h3 {
 						text-transform: capitalize;
@@ -214,14 +215,7 @@ export default function Product(props) {
 							
 							max-width: 900px;
 						}
-						.buttons {
-							flex-direction: ${props.wrap ? " row" : "column"};
-							box-sizing: border-box;
-						}
-						.btn {
-							margin: ${props.wrap ? "none" : ".8rem 0 .2rem"};
-							box-sizing: border-box;
-						}
+						
 						.product__description {
 							padding-left: ${props.wrap ? "3em" : "1.2em"};
 						}

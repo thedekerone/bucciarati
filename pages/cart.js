@@ -8,6 +8,7 @@ import Layout from "../component/Layout";
 import Error from "../component/views/Error";
 import Spinner from "../component/views/Spinner";
 import { Router } from "../routes";
+import Boleta from "../component/views/Boleta";
 const GET_USER = gql`
   {
     getUsers {
@@ -50,13 +51,19 @@ class Cart extends React.Component {
             {({ client, loading, error, data }) => {
               if (loading) return <Spinner />;
               if (error) return Router.pushRoute("/");
-              const pricesTosum = data.getUsers.bag
-                .map(e => parseInt(e.price))
-                .reduce((a, b) => a + b);
+              const pricesTosum =
+                data.getUsers.bag.length > 0
+                  ? data.getUsers.bag
+                      .map(e => parseInt(e.price))
+                      .reduce((a, b) => a + b)
+                  : 0;
 
-              const pricesDiscount = data.getUsers.bag
-                .map(e => this.getDiscount(e.price, e.discount))
-                .reduce((a, b) => parseInt(a) + parseInt(b));
+              const pricesDiscount =
+                data.getUsers.bag.length > 0
+                  ? data.getUsers.bag
+                      .map(e => this.getDiscount(e.price, e.discount))
+                      .reduce((a, b) => parseInt(a) + parseInt(b))
+                  : 0;
               console.log(pricesDiscount);
               return (
                 <div className="container">
@@ -67,34 +74,12 @@ class Cart extends React.Component {
                       user={data.getUsers}
                     />
                   </div>
-                  <div className="cart-boleta">
-                    <h3>Boleta</h3>
-                    <ul>
-                      {data.getUsers.bag.map(e => {
-                        return (
-                          <li className="cart-boleta__product" key={e._id}>
-                            <span className="product-title">
-                              {e.title.toLowerCase()}
-                            </span>
-                            <span className="product-price">${e.price}</span>
-                          </li>
-                        );
-                      })}
-                      <li className="cart-boleta__product price">
-                        <span className="product-title">price:</span>
-                        <span className="product-price original">
-                          ${pricesTosum}.00
-                        </span>
-                      </li>
-                      <li className="cart-boleta__product">
-                        <span className="product-title">priceDiscount:</span>
-                        <span className="product-price discount">
-                          ${pricesDiscount}.00
-                        </span>
-                      </li>
-                      <div className="btn">PAY NOW</div>
-                    </ul>
-                  </div>
+
+                  <Boleta
+                    data={data.getUsers.bag}
+                    pricesTosum={pricesTosum}
+                    pricesDiscount={pricesDiscount}
+                  ></Boleta>
                 </div>
               );
             }}
@@ -104,12 +89,11 @@ class Cart extends React.Component {
         <style jsx>
           {`
             .main {
-              margin-top: 50px;
+              margin-top: 10px;
             }
             .container {
               margin: 0 auto;
               max-width: 1200px;
-              margin-top: 50px;
               display: flex;
 
               flex-direction: column;
@@ -117,34 +101,7 @@ class Cart extends React.Component {
             .container-products {
               width: 100%;
             }
-            .cart-boleta {
-              height: 100%;
-              width: 100%;
-              max-width: 400px;
-            }
-            ul {
-              margin: 0;
-              padding: 0;
-            }
-            .cart-boleta__product {
-              display: flex;
-              margin: 1.5em auto;
-              justify-content: space-between;
-            }
-            .product-title {
-              text-transform: capitalize;
-            }
-            .product-price {
-              font-weight: bold;
-              color: black;
-            }
-            .price {
-              margin-top: 5em;
-            }
-            .original {
-              text-decoration: line-through;
-              color: red;
-            }
+
             .btn {
               width: 100%;
               box-sizing: border-box;

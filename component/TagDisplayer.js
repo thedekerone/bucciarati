@@ -77,6 +77,9 @@ export default function TagDisplayer() {
             position: relative;
             gap: 1px;
           }
+          .tag-displayer__item:active {
+            opacity: 0.8;
+          }
 
           .tag-displayer__item h1 {
             color: white;

@@ -51,7 +51,7 @@ export default function SideBar({ setShow, show, client }) {
           }
           .sidebar {
             position: fixed;
-            bottom: 0;
+            top: 58.73px;
             right: ${show ? "0%" : "-100%"};
             transition: 0.4s;
             height: calc(100vh - 58.73px);

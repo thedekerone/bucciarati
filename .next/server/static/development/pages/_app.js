@@ -122,7 +122,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const link = Object(apollo_link_http__WEBPACK_IMPORTED_MODULE_4__["createHttpLink"])({
-  uri: "http://localhost:4000/",
+  uri: "https://chupetinps.herokuapp.com",
   useGETForQueries: true
 });
 const authLink = Object(apollo_link_context__WEBPACK_IMPORTED_MODULE_5__["setContext"])((_, {

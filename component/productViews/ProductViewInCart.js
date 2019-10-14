@@ -103,7 +103,7 @@ export default function Product(props) {
 						box-sizing: border-box;
 					}
 					.product__img img {
-						max-width: 150px;
+						max-width: 50px;
 					}
 					.product-title h3 {
 						text-transform: capitalize;

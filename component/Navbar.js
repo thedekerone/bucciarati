@@ -238,7 +238,7 @@ const Navbar = () => {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0.5rem 1rem;
+            padding: 0rem 1rem;
           }
           .left-items {
             max-width: 270px;

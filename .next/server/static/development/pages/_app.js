@@ -122,7 +122,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const link = Object(apollo_link_http__WEBPACK_IMPORTED_MODULE_4__["createHttpLink"])({
-  uri: 'https://chupetinps.herokuapp.com',
+  uri: "https://chupetinps.herokuapp.com",
   useGETForQueries: true
 });
 const authLink = Object(apollo_link_context__WEBPACK_IMPORTED_MODULE_5__["setContext"])((_, {
@@ -153,7 +153,7 @@ const authLink = Object(apollo_link_context__WEBPACK_IMPORTED_MODULE_5__["setCon
   // // https://chupetinps.herokuapp.com
   cache: new apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_3__["InMemoryCache"]().restore(initialState || {})
 }), {
-  getDataFromTree: 'never'
+  getDataFromTree: "never"
 }));
 
 /***/ }),

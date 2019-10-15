@@ -26,12 +26,6 @@ const GET_USER = gql`
   }
 `;
 class Cart extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      price: 0
-    };
-  }
   getDiscount = (price, discount) => {
     const newPrice = Math.round(((100 - discount) * price) / 100);
     return newPrice;
@@ -51,13 +45,13 @@ class Cart extends React.Component {
             {({ client, loading, error, data }) => {
               if (loading) return <Spinner />;
               if (error) return Router.pushRoute("/");
+
               const pricesTosum =
                 data.getUsers.bag.length > 0
                   ? data.getUsers.bag
                       .map(e => parseInt(e.price))
                       .reduce((a, b) => a + b)
                   : 0;
-
               const pricesDiscount =
                 data.getUsers.bag.length > 0
                   ? data.getUsers.bag

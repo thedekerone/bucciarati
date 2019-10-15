@@ -178,7 +178,7 @@ const Navbar = () => {
                               <a className="shopping-bag">
                                 <img
                                   width="30px"
-                                  src="../static/icons/icons8-shopping-cart-64 (1).png"
+                                  src="/static/icons/icons8-shopping-cart-64 (1).png"
                                   alt=""
                                 />
 

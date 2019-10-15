@@ -4,6 +4,7 @@ import { useMutation } from "@apollo/react-hooks";
 
 export default function Product(props) {
   let agregar;
+
   const [cantidad, setCantidad] = useState(1);
 
   const REMOVE_PRODUCT = gql`

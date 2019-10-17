@@ -7,7 +7,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "lint": "standard"
   },
   "keywords": [],
   "author": "",
@@ -40,5 +41,8 @@
     "react-spring": "8.0.27",
     "react-use-gesture": "5.2.4",
     "stripe": "^7.10.0"
+  },
+  "devDependencies": {
+    "standard": "^14.3.1"
   }
 }

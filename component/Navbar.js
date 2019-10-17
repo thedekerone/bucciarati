@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import SideBar from "./SideBar";
-import gql from "graphql-tag";
-import { Query } from "react-apollo";
-import { Link, Router } from "../routes";
+import React, { useState } from 'react'
+import SideBar from './SideBar'
+import gql from 'graphql-tag'
+import { Query } from 'react-apollo'
+import { Link, Router } from '../routes'
 
-import Login from "./views/Login";
-import LoginPortal from "./views/LoginPortal";
-import RegisterPortal from "./views/RegisterPortal";
+import Login from './views/Login'
+import LoginPortal from './views/LoginPortal'
+import RegisterPortal from './views/RegisterPortal'
 const Navbar = () => {
-  const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState(false)
   const handleClick = () => {
-    setSidebar(!sidebar);
-  };
-  let textInput;
+    setSidebar(!sidebar)
+  }
+  let textInput
   const GET_USER = gql`
     {
       getUsers {
@@ -24,118 +24,118 @@ const Navbar = () => {
         }
       }
     }
-  `;
+  `
 
-  const [display, setDisplay] = useState(true);
-  const [show, setShow] = useState(false);
-  const [register, setRegister] = useState(false);
+  const [display, setDisplay] = useState(true)
+  const [show, setShow] = useState(false)
+  const [register, setRegister] = useState(false)
 
   const handleSubmit = e => {
-    e.preventDefault();
-    Router.pushRoute("producto", { tag: textInput.value });
-  };
+    e.preventDefault()
+    Router.pushRoute('producto', { tag: textInput.value })
+  }
   const handleLogout = async client => {
-    await localStorage.removeItem("usuario");
-    await localStorage.removeItem("password");
-    await Router.pushRoute("/");
-  };
+    await localStorage.removeItem('usuario')
+    await localStorage.removeItem('password')
+    await Router.pushRoute('/')
+  }
 
   return (
     <React.Fragment>
-      <div className="navbar-container">
-        <div className="navbar">
-          <div className="main-navbar">
-            <div className="left-items">
-              <div className="menu">
+      <div className='navbar-container'>
+        <div className='navbar'>
+          <div className='main-navbar'>
+            <div className='left-items'>
+              <div className='menu'>
                 <img
                   onClick={e => {
-                    handleClick();
+                    handleClick()
                   }}
-                  className="icon-menu"
-                  width="30px"
-                  src="/static/icons/menu.svg"
-                  alt="menu"
+                  className='icon-menu'
+                  width='30px'
+                  src='/static/icons/menu.svg'
+                  alt='menu'
                 />
               </div>
-              <div className="logo">
-                <Link route="/">
+              <div className='logo'>
+                <Link route='/'>
                   <a>
                     <img
-                      className="main-navbar__title"
-                      src="/static/logo2.webp"
-                      width="100%"
-                      alt=""
+                      className='main-navbar__title'
+                      src='/static/logo2.webp'
+                      width='100%'
+                      alt=''
                     />
                   </a>
                 </Link>
               </div>
             </div>
-            <nav className="main-navbar__items">
+            <nav className='main-navbar__items'>
               <ul>
                 <li>
-                  <Link route="producto" params={{ tag: "hombre" }}>
+                  <Link route='producto' params={{ tag: 'hombre' }}>
                     <a>Hombres</a>
                   </Link>
                 </li>
                 <li>
-                  <Link route="producto" params={{ tag: "mujer" }}>
+                  <Link route='producto' params={{ tag: 'mujer' }}>
                     <a>Mujeres</a>
                   </Link>
                 </li>
                 <li>
-                  <Link route="producto" params={{ tag: "niño" }}>
+                  <Link route='producto' params={{ tag: 'niño' }}>
                     <a>Niños</a>
                   </Link>
                 </li>
                 <li>
-                  <Link route="producto" params={{ tag: "" }}>
+                  <Link route='producto' params={{ tag: '' }}>
                     <a>Accesorios</a>
                   </Link>
                 </li>
                 <li>
-                  <Link route="producto" params={{ tag: "" }}>
+                  <Link route='producto' params={{ tag: '' }}>
                     <a>Regalos</a>
                   </Link>
                 </li>
               </ul>
             </nav>
-            <div className="right-items">
-              <div className="search">
-                <span className="main-navbar__icon">
+            <div className='right-items'>
+              <div className='search'>
+                <span className='main-navbar__icon'>
                   <form
                     onSubmit={e => {
-                      handleSubmit(e);
+                      handleSubmit(e)
                     }}
                   >
                     <input
-                      type="search"
+                      type='search'
                       onFocus={() => {
-                        setDisplay(false);
+                        setDisplay(false)
                       }}
                       ref={input => (textInput = input)}
                       onBlur={() => {
-                        setDisplay(true);
+                        setDisplay(true)
                       }}
-                      name="search"
-                      id="search"
-                      placeholder="Search"
+                      name='search'
+                      id='search'
+                      placeholder='Search'
                     />
                     <img
-                      className="search-icon"
-                      src="/static/icons/icons8-search.svg"
-                      width="30px"
-                      alt="search"
+                      className='search-icon'
+                      src='/static/icons/icons8-search.svg'
+                      width='30px'
+                      alt='search'
                     />
                   </form>
                 </span>
               </div>
-              <div className="login">
+              <div className='login'>
                 <Query query={GET_USER}>
                   {({ client, loading, error, data }) => {
-                    if (loading) return <h3>login</h3>;
-                    if (error) return <h3>login</h3>;
+                    if (loading) return <h3>login</h3>
+                    if (error) return <h3>login</h3>
                     return (
-                      <div className="login">
+                      <div className='login'>
                         <SideBar
                           client={client}
                           setShow={setSidebar}
@@ -154,43 +154,43 @@ const Navbar = () => {
                           users={() => data.getUsers}
                         ></RegisterPortal>
                         {!data.getUsers ? (
-                          <div className="login-container">
+                          <div className='login-container'>
                             <h3
                               onClick={() => {
-                                setShow(true);
+                                setShow(true)
                               }}
-                              className="login-title"
+                              className='login-title'
                             >
                               login
                             </h3>
                             <h3
                               onClick={() => {
-                                setRegister(true);
+                                setRegister(true)
                               }}
-                              className="login-register"
+                              className='login-register'
                             >
                               register
                             </h3>
                           </div>
                         ) : (
-                          <div className="logged">
-                            <Link route="/cart">
-                              <a className="shopping-bag">
+                          <div className='logged'>
+                            <Link route='/cart'>
+                              <a className='shopping-bag'>
                                 <img
-                                  width="30px"
-                                  src="/static/icons/icons8-shopping-cart-64 (1).png"
-                                  alt=""
+                                  width='30px'
+                                  src='/static/icons/icons8-shopping-cart-64 (1).png'
+                                  alt=''
                                 />
 
-                                <div className="shopping-bag__number">
-                                  <p>{data.getUsers.bag.length}</p>
+                                <div className='shopping-bag__number'>
+                                  <p>2</p>
                                 </div>
                               </a>
                             </Link>
                           </div>
                         )}
                       </div>
-                    );
+                    )
                   }}
                 </Query>
               </div>
@@ -251,7 +251,7 @@ const Navbar = () => {
             width: 100%;
           }
           .logo {
-            display: ${display ? "flex" : "none"};
+            display: ${display ? 'flex' : 'none'};
             align-items: flex-end;
             height: auto;
           }
@@ -312,14 +312,14 @@ const Navbar = () => {
             margin-right: 0.3em;
             transition-property: width, opacity;
             transition-duration: 1s, 0s;
-            display: ${display ? "block" : "none"};
+            display: ${display ? 'block' : 'none'};
           }
           .icon-menu:hover {
             cursor: pointer;
           }
           //login
           .login {
-            display: ${display ? "block" : "none"};
+            display: ${display ? 'block' : 'none'};
           }
           .login-container {
             box-sizing: border-box;
@@ -382,7 +382,7 @@ const Navbar = () => {
               width: 120px;
             }
             .search-icon {
-              display: ${display ? "inline-block" : "none"};
+              display: ${display ? 'inline-block' : 'none'};
             }
             .main-navbar__items ul {
               display: flex;
@@ -416,6 +416,6 @@ const Navbar = () => {
         `}
       </style>
     </React.Fragment>
-  );
-};
-export default Navbar;
+  )
+}
+export default Navbar

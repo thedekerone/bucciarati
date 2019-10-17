@@ -1,16 +1,25 @@
 import React from "react";
 
-export default function Boleta({ data, pricesDiscount, pricesTosum }) {
+export default function Boleta({
+  data,
+  pricesDiscount,
+  pricesTosum,
+  quantity
+}) {
   return (
     <div className="cart-boleta">
       <h3>Boleta</h3>
       <div className="boleta-container">
         <ul>
-          {data.map(e => {
+          {data.map((e, index) => {
             return (
               <li className="cart-boleta__product" key={e._id}>
-                <span className="product-title">{e.title.toLowerCase()}</span>
-                <span className="product-price">${e.price}</span>
+                <span className="product-title">
+                  {quantity[index]}x {e.title.toLowerCase()}
+                </span>
+                <span className="product-price">
+                  ${e.price * parseInt(quantity[index])}
+                </span>
               </li>
             );
           })}

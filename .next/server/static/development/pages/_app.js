@@ -120,9 +120,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // // https://chupetinps.herokuapp.com
 
 const link = Object(apollo_link_http__WEBPACK_IMPORTED_MODULE_4__["createHttpLink"])({
-  uri: "https://chupetinps.herokuapp.com",
+  uri: 'http://localhost:4000',
   useGETForQueries: true
 });
 const authLink = Object(apollo_link_context__WEBPACK_IMPORTED_MODULE_5__["setContext"])((_, {
@@ -145,15 +146,9 @@ const authLink = Object(apollo_link_context__WEBPACK_IMPORTED_MODULE_5__["setCon
   initialState
 }) => new apollo_client__WEBPACK_IMPORTED_MODULE_2___default.a({
   link: authLink.concat(link),
-  // link,
-  // fetchOptions : {
-  // 	useGETForQueries : true
-  // },
-  // uri          : 'https://chupetinps.herokuapp.com',
-  // // https://chupetinps.herokuapp.com
   cache: new apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_3__["InMemoryCache"]().restore(initialState || {})
 }), {
-  getDataFromTree: "never"
+  getDataFromTree: 'never'
 }));
 
 /***/ }),

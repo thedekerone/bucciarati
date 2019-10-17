@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import gql from "graphql-tag";
-import { useMutation } from "@apollo/react-hooks";
+import React, { useState } from 'react'
+import gql from 'graphql-tag'
+import { useMutation } from '@apollo/react-hooks'
+import Spinner from '../views/Spinner'
 
 export default function Product(props) {
-  let agregar;
+  let agregar
 
-  const [cantidad, setCantidad] = useState(1);
+  const [loading, setLoading] = useState(false)
 
   const REMOVE_PRODUCT = gql`
     mutation removeProduct($product: ID!, $user: ID!) {
@@ -13,8 +14,23 @@ export default function Product(props) {
         username
       }
     }
-  `;
-  const [removeProduct] = useMutation(REMOVE_PRODUCT);
+  `
+  const UPDATE_QUANTITY = gql`
+    mutation cantidadNueva($quantity: String!, $producto: ID!, $user: ID!) {
+      updateQuantity(
+        newQuantity: $quantity
+        productID: $producto
+        userID: $user
+      ) {
+        quantity
+      }
+    }
+  `
+
+  const [removeProduct] = useMutation(REMOVE_PRODUCT)
+
+  const [cantidadNueva] = useMutation(UPDATE_QUANTITY)
+
   const removeFromCart = async (user, client) => {
     user._id
       ? removeProduct({
@@ -23,31 +39,48 @@ export default function Product(props) {
             user: user._id
           }
         }).then(() => {
-          client.resetStore();
+          client.resetStore()
         })
-      : null;
-  };
+      : null
+  }
 
+  const actualizarCantidad = async (user, client) => {
+    console.log(props.data._id)
+
+    user._id
+      ? cantidadNueva({
+          variables: {
+            quantity: agregar.value,
+            producto: props.data._id,
+            user: user._id
+          }
+        }).then(() => {
+          client.resetStore()
+        })
+      : null
+  }
+
+  if (loading) return <Spinner></Spinner>
   return (
     <div>
-      <div className="product">
-        <div className="product__img">
-          <img src={props.data.image} width="100%" alt="" />
+      <div className='product'>
+        <div className='product__img'>
+          <img src={props.data.image} width='100%' alt='' />
         </div>
-        <div className="product__description">
-          <div className="product-main">
-            <div className="product-title">
+        <div className='product__description'>
+          <div className='product-main'>
+            <div className='product-title'>
               <h3>{props.data.title.toLowerCase()}</h3>
             </div>
-            <div className="product-discount">
-              <span className="product-discount__price">
+            <div className='product-discount'>
+              <span className='product-discount__price'>
                 {props.data.price}
               </span>
-              <span className="product-discount__percentage">
+              <span className='product-discount__percentage'>
                 -{props.data.discount}%
               </span>
             </div>
-            <div className="product-price">
+            <div className='product-price'>
               <span>
                 {Math.round(
                   ((100 - props.data.discount) * props.data.price) / 100
@@ -58,24 +91,25 @@ export default function Product(props) {
           </div>
 
           {/* info */}
-          <div className="product-extra">
-            <div className="product-extra__cantidad">
+          <div className='product-extra'>
+            <div className='product-extra__cantidad'>
               <label>Cantidad: </label>
               <input
-                defaultValue={1}
+                defaultValue={props.quantity}
                 onChange={value => {
-                  setCantidad(agregar.value);
+                  actualizarCantidad(props.user, props.client)
                 }}
                 ref={value => (agregar = value)}
-                type="number"
-                name="cantidad"
-                id="cantidad"
+                type='number'
+                name='cantidad'
+                id='cantidad'
+                //value={props.quantity}
               />
             </div>
             <div
-              className="product-extra__remove"
+              className='product-extra__remove'
               onClick={async () => {
-                removeFromCart(props.user, props.client);
+                removeFromCart(props.user, props.client)
               }}
             >
               Eliminar del carrito
@@ -218,11 +252,11 @@ export default function Product(props) {
 						}
 						
 						.product__description {
-							padding-left: ${props.wrap ? "3em" : "1.2em"};
+							padding-left: ${props.wrap ? '3em' : '1.2em'};
 						}
 					}
 				`}
       </style>
     </div>
-  );
+  )
 }

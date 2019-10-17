@@ -23,9 +23,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // // https://chupetinps.herokuapp.com
 
 var link = Object(apollo_link_http__WEBPACK_IMPORTED_MODULE_4__["createHttpLink"])({
-  uri: "https://chupetinps.herokuapp.com",
+  uri: 'http://localhost:4000',
   useGETForQueries: true
 });
 var authLink = Object(apollo_link_context__WEBPACK_IMPORTED_MODULE_5__["setContext"])(function (_, _ref) {
@@ -47,16 +48,10 @@ var authLink = Object(apollo_link_context__WEBPACK_IMPORTED_MODULE_5__["setConte
       initialState = _ref2.initialState;
   return new apollo_client__WEBPACK_IMPORTED_MODULE_2__["default"]({
     link: authLink.concat(link),
-    // link,
-    // fetchOptions : {
-    // 	useGETForQueries : true
-    // },
-    // uri          : 'https://chupetinps.herokuapp.com',
-    // // https://chupetinps.herokuapp.com
     cache: new apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_3__["InMemoryCache"]().restore(initialState || {})
   });
 }, {
-  getDataFromTree: "never"
+  getDataFromTree: 'never'
 }));
 
 /***/ }),
@@ -800,8 +795,8 @@ var QueryData = (function (_super) {
     QueryData.prototype.getOptions = function () {
         var options = _super.prototype.getOptions.call(this);
         if (this.lazyOptions) {
-            options.variables = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, options.variables, this.lazyOptions.variables);
-            options.context = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, options.context, this.lazyOptions.context);
+            options.variables = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, options.variables), this.lazyOptions.variables);
+            options.context = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, options.context), this.lazyOptions.context);
         }
         if (this.runLazy) {
             delete options.skip;
@@ -838,7 +833,7 @@ var QueryData = (function (_super) {
                 options.fetchPolicy === 'cache-and-network')) {
             options.fetchPolicy = 'cache-first';
         }
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, options, { displayName: displayName, context: options.context, metadata: { reactComponent: { displayName: displayName } } });
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, options), { displayName: displayName, context: options.context, metadata: { reactComponent: { displayName: displayName } } });
     };
     QueryData.prototype.initializeObservableQuery = function () {
         if (this.context && this.context.renderPromises) {
@@ -846,7 +841,7 @@ var QueryData = (function (_super) {
         }
         if (!this.currentObservable.query) {
             var observableQueryOptions = this.prepareObservableQueryOptions();
-            this.previousData.observableQueryOptions = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, observableQueryOptions, { children: null });
+            this.previousData.observableQueryOptions = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, observableQueryOptions), { children: null });
             this.currentObservable.query = this.refreshClient().client.watchQuery(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, observableQueryOptions));
             if (this.context && this.context.renderPromises) {
                 this.context.renderPromises.registerSSRObservable(this.currentObservable.query, observableQueryOptions);
@@ -858,7 +853,7 @@ var QueryData = (function (_super) {
             this.initializeObservableQuery();
             return;
         }
-        var newObservableQueryOptions = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, this.prepareObservableQueryOptions(), { children: null });
+        var newObservableQueryOptions = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, this.prepareObservableQueryOptions()), { children: null });
         if (!Object(_wry_equality__WEBPACK_IMPORTED_MODULE_4__["equal"])(newObservableQueryOptions, this.previousData.observableQueryOptions)) {
             this.previousData.observableQueryOptions = newObservableQueryOptions;
             this.currentObservable
@@ -911,7 +906,7 @@ var QueryData = (function (_super) {
         var result = this.observableQueryFields();
         var options = this.getOptions();
         if (options.skip) {
-            result = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, result, { data: undefined, error: undefined, loading: false, called: true });
+            result = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, result), { data: undefined, error: undefined, loading: false, called: true });
         }
         else {
             var currentResult = this.currentObservable.query.getCurrentResult();
@@ -920,14 +915,14 @@ var QueryData = (function (_super) {
             if (errors && errors.length > 0) {
                 error = new apollo_client__WEBPACK_IMPORTED_MODULE_3__["ApolloError"]({ graphQLErrors: errors });
             }
-            result = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, result, { loading: loading,
+            result = Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, result), { loading: loading,
                 networkStatus: networkStatus,
                 error: error, called: true });
             if (loading) {
                 var previousData = this.previousData.result && this.previousData.result.data;
                 result.data =
                     previousData && data
-                        ? Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, previousData, data) : previousData || data;
+                        ? Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, previousData), data) : previousData || data;
             }
             else if (error) {
                 Object.assign(result, {
@@ -1012,7 +1007,7 @@ function useBaseQuery(query, options, lazy) {
     if (lazy === void 0) { lazy = false; }
     var context = Object(react__WEBPACK_IMPORTED_MODULE_2__["useContext"])(Object(_apollo_react_common__WEBPACK_IMPORTED_MODULE_0__["getApolloContext"])());
     var _a = Object(react__WEBPACK_IMPORTED_MODULE_2__["useReducer"])(function (x) { return x + 1; }, 0), tick = _a[0], forceUpdate = _a[1];
-    var updatedOptions = options ? Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, options, { query: query }) : { query: query };
+    var updatedOptions = options ? Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, options), { query: query }) : { query: query };
     var queryDataRef = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])();
     if (!queryDataRef.current) {
         queryDataRef.current = new QueryData({
@@ -1025,7 +1020,7 @@ function useBaseQuery(query, options, lazy) {
     queryData.setOptions(updatedOptions);
     queryData.context = context;
     var memo = {
-        options: Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, updatedOptions, { onError: undefined, onCompleted: undefined }),
+        options: Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, updatedOptions), { onError: undefined, onCompleted: undefined }),
         context: context,
         tick: tick
     };
@@ -1033,14 +1028,12 @@ function useBaseQuery(query, options, lazy) {
     var queryResult = lazy
         ? result[1]
         : result;
-    Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () { return queryData.afterExecute({ lazy: lazy }); }, lazy
-        ? undefined
-        : [
-            queryResult.loading,
-            queryResult.networkStatus,
-            queryResult.error,
-            queryResult.data
-        ]);
+    Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () { return queryData.afterExecute({ lazy: lazy }); }, [
+        queryResult.loading,
+        queryResult.networkStatus,
+        queryResult.error,
+        queryResult.data
+    ]);
     Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
         return function () { return queryData.cleanup(); };
     }, []);
@@ -1164,7 +1157,7 @@ var MutationData = (function (_super) {
 function useMutation(mutation, options) {
     var context = Object(react__WEBPACK_IMPORTED_MODULE_2__["useContext"])(Object(_apollo_react_common__WEBPACK_IMPORTED_MODULE_0__["getApolloContext"])());
     var _a = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({ called: false, loading: false }), result = _a[0], setResult = _a[1];
-    var updatedOptions = options ? Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, options, { mutation: mutation }) : { mutation: mutation };
+    var updatedOptions = options ? Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, options), { mutation: mutation }) : { mutation: mutation };
     var mutationDataRef = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])();
     function getMutationDataRef() {
         if (!mutationDataRef.current) {
@@ -1224,7 +1217,7 @@ var SubscriptionData = (function (_super) {
         this.initialize(this.getOptions());
         this.startSubscription();
         this.previousOptions = this.getOptions();
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, currentResult, { variables: this.getOptions().variables });
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, currentResult), { variables: this.getOptions().variables });
     };
     SubscriptionData.prototype.afterExecute = function () {
         this.isMounted = true;
@@ -1301,7 +1294,7 @@ var SubscriptionData = (function (_super) {
 function useSubscription(subscription, options) {
     var context = Object(react__WEBPACK_IMPORTED_MODULE_2__["useContext"])(Object(_apollo_react_common__WEBPACK_IMPORTED_MODULE_0__["getApolloContext"])());
     var updatedOptions = options
-        ? Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, options, { subscription: subscription }) : { subscription: subscription };
+        ? Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_1__["__assign"])({}, options), { subscription: subscription }) : { subscription: subscription };
     var _a = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({
         loading: !updatedOptions.skip,
         error: undefined,
@@ -1429,7 +1422,7 @@ function getMarkupFromTree(_a) {
     var renderPromises = new _apollo_react_hooks__WEBPACK_IMPORTED_MODULE_3__["RenderPromises"]();
     function process() {
         var ApolloContext = Object(_apollo_react_common__WEBPACK_IMPORTED_MODULE_2__["getApolloContext"])();
-        var html = renderFunction(react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ApolloContext.Provider, { value: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, context, { renderPromises: renderPromises }) }, tree));
+        var html = renderFunction(react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ApolloContext.Provider, { value: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, context), { renderPromises: renderPromises }) }, tree));
         return renderPromises.hasPromises()
             ? renderPromises.consumeAndAwaitPromises().then(process)
             : html;
@@ -8578,7 +8571,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.6.9' };
+var core = module.exports = { version: '2.6.10' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 

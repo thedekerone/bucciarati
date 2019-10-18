@@ -4,17 +4,16 @@ import ProductView from './ProductView'
 import { Link } from '../../routes'
 // aeaeaeaea
 export default function Productos(props) {
+  //  console.log(props.data)
   return (
     <div className='productos'>
-      {props.data.map((e, index) => {
-        console.log(e.q, ': ', e.p._id)
+      {props.data.map(e => {
         return (
           <ProductViewInCart
             client={props.client}
-            key={e.p._id}
-            quantity={e.q}
+            key={e.product._id}
             user={props.user}
-            data={e.p}
+            data={e}
             wrap={false}
           />
         )

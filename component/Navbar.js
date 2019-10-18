@@ -18,9 +18,8 @@ const Navbar = () => {
       getUsers {
         _id
         username
-        password
-        bag {
-          _id
+        quantities {
+          quantity
         }
       }
     }
@@ -183,7 +182,11 @@ const Navbar = () => {
                                 />
 
                                 <div className='shopping-bag__number'>
-                                  <p>2</p>
+                                  <p>
+                                    {data.getUsers.quantities
+                                      ? data.getUsers.quantities.length
+                                      : 0}
+                                  </p>
                                 </div>
                               </a>
                             </Link>

@@ -1,20 +1,15 @@
-import React from "react";
-import ProductView from "./ProductView";
-import { Link, Router } from "../../routes";
+import React from 'react'
+import ProductView from './ProductView'
+import { Link, Router } from '../../routes'
 // aeaeaeaea
 export default function Productos(props) {
   return (
-    <div className="productos">
+    <div className='productos'>
       {props.data.map(e => {
+        console.log(e)
         return (
-          <ProductView
-            key={e._id}
-            user={props.user}
-            data={e}
-            gaa={"xddd"}
-            wrap={false}
-          />
-        );
+          <ProductView key={e._id} user={props.user} data={e} wrap={false} />
+        )
       })}
 
       <style jsx>
@@ -37,5 +32,5 @@ export default function Productos(props) {
         `}
       </style>
     </div>
-  );
+  )
 }

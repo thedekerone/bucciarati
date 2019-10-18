@@ -1,10 +1,10 @@
-import React from "react";
-import { Link } from "../../routes";
-import gql from "graphql-tag";
-import { useMutation } from "@apollo/react-hooks";
-import { Query, graphql } from "react-apollo";
-import Spinner from "../views/Spinner";
-import Error from "../views/Error";
+import React from 'react'
+import { Link } from '../../routes'
+import gql from 'graphql-tag'
+import { useMutation } from '@apollo/react-hooks'
+import { Query, graphql } from 'react-apollo'
+import Spinner from '../views/Spinner'
+import Error from '../views/Error'
 
 export default function Product(props) {
   const ADD_PRODUCT = gql`
@@ -13,10 +13,10 @@ export default function Product(props) {
         username
       }
     }
-  `;
+  `
 
   //mutation to add product to the sh
-  const [addProduct] = useMutation(ADD_PRODUCT);
+  const [addProduct] = useMutation(ADD_PRODUCT)
   const addToCart = (user, client) => {
     user._id
       ? addProduct({
@@ -25,28 +25,28 @@ export default function Product(props) {
             user: user._id
           }
         }).then(() => {
-          client.resetStore();
+          client.resetStore()
         })
-      : console.log(user);
-  };
+      : console.log(user)
+  }
 
   //web share api
   const compartir = (e, name) => {
-    e.preventDefault();
+    e.preventDefault()
     if (!navigator.share) {
-      alert("Browser doesn't support this feature");
-      return;
+      alert("Browser doesn't support this feature")
+      return
     }
     navigator
       .share({
         title: name,
-        text: "Buciarati Store",
+        text: 'Buciarati Store',
         url: document.location.href,
-        icon: "/static/mainView/polo.jpg"
+        icon: '/static/mainView/polo.jpg'
       })
-      .then(() => alert("contenido compartido"))
-      .catch(err => null);
-  };
+      .then(() => alert('contenido compartido'))
+      .catch(err => null)
+  }
 
   return (
     <div>
@@ -55,50 +55,45 @@ export default function Product(props) {
           query {
             getUsers {
               _id
-              username
-              password
-              bag {
-                title
-              }
             }
           }
         `}
       >
         {({ client, loading, error, data }) => {
-          if (loading) return <Spinner />;
-          if (error) return <Error />;
+          if (loading) return <Spinner />
+          if (error) return <Error />
           return (
-            <div className="product">
-              <div className="product__img">
-                <img src={props.data.image} width="100%" alt="" />
+            <div className='product'>
+              <div className='product__img'>
+                <img src={props.data.image} width='100%' alt='' />
               </div>
-              <div className="product__description">
-                <div className="product-main">
+              <div className='product__description'>
+                <div className='product-main'>
                   {props.data.discount > 30 ? (
-                    <div className="product-banner">
+                    <div className='product-banner'>
                       <span>OFERTA EXCLUSIVA</span>
                     </div>
                   ) : null}
-                  <div className="product-title">
+                  <div className='product-title'>
                     <h3>{props.data.title}</h3>
                     <img
                       onClick={e => {
-                        compartir(e, props.data.title);
+                        compartir(e, props.data.title)
                       }}
-                      width="20px"
-                      src="../../static/icons/icons8-share-24.png"
-                      alt="share"
+                      width='20px'
+                      src='../../static/icons/icons8-share-24.png'
+                      alt='share'
                     />
                   </div>
-                  <div className="product-discount">
-                    <span className="product-discount__price">
+                  <div className='product-discount'>
+                    <span className='product-discount__price'>
                       {props.data.price}
                     </span>
-                    <span className="product-discount__percentage">
+                    <span className='product-discount__percentage'>
                       -{props.data.discount}%
                     </span>
                   </div>
-                  <div className="product-price">
+                  <div className='product-price'>
                     <span>
                       {Math.round(
                         ((100 - props.data.discount) * props.data.price) / 100
@@ -109,9 +104,9 @@ export default function Product(props) {
                 </div>
 
                 {/* info */}
-                <div className="product-information">
+                <div className='product-information'>
                   {props.wrap ? (
-                    <div className="product-information__text">
+                    <div className='product-information__text'>
                       <p>
                         <b>Descripción:</b> ipsum dolor sit amet, consetetur
                         sadipscing elitr, sed diam nonumy eirmod tempor invidunt
@@ -121,65 +116,65 @@ export default function Product(props) {
                     </div>
                   ) : null}
 
-                  <div className="product-information__delivery">
+                  <div className='product-information__delivery'>
                     <img
-                      src="/static/icons/icons8-truck-50.png"
-                      width="20px"
-                      alt=""
+                      src='/static/icons/icons8-truck-50.png'
+                      width='20px'
+                      alt=''
                     />
                     <span>Envío internacional</span>
                   </div>
-                  <div className="product-information__reviews">
+                  <div className='product-information__reviews'>
                     <img
-                      src="/static/icons/icons8-star-filled-48.png"
-                      width="20px"
-                      alt=""
+                      src='/static/icons/icons8-star-filled-48.png'
+                      width='20px'
+                      alt=''
                     />
                     <img
-                      src="/static/icons/icons8-star-filled-48.png"
-                      width="20px"
-                      alt=""
+                      src='/static/icons/icons8-star-filled-48.png'
+                      width='20px'
+                      alt=''
                     />
                     <img
-                      src="/static/icons/icons8-star-filled-48.png"
-                      width="20px"
-                      alt=""
+                      src='/static/icons/icons8-star-filled-48.png'
+                      width='20px'
+                      alt=''
                     />
                     <img
-                      src="/static/icons/icons8-star-filled-48.png"
-                      width="20px"
-                      alt=""
+                      src='/static/icons/icons8-star-filled-48.png'
+                      width='20px'
+                      alt=''
                     />
                     <img
-                      src="/static/icons/icons8-star-filled-48.png"
-                      width="20px"
-                      alt=""
+                      src='/static/icons/icons8-star-filled-48.png'
+                      width='20px'
+                      alt=''
                     />
 
-                    <span className="product-information__reviews--number">
+                    <span className='product-information__reviews--number'>
                       {Math.round(Math.random() * 100)} reviews
                     </span>
                   </div>
-                  <div className="buttons">
+                  <div className='buttons'>
                     <div
                       onClick={() => addToCart(data.getUsers, client)}
-                      className="btn cart"
+                      className='btn cart'
                     >
                       ADD TO CART
                     </div>
 
                     <Link
-                      route="single"
+                      route='single'
                       params={{ slug: props.data._id }}
                       key={props.data._id}
                     >
-                      <div className="btn buy">BUY NOW</div>
+                      <div className='btn buy'>BUY NOW</div>
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
-          );
+          )
         }}
       </Query>
       <style jsx>
@@ -187,7 +182,7 @@ export default function Product(props) {
           .product {
             display: grid;
             background: white;
-            max-width: ${props.wrap ? "1000px" : "600px"};
+            max-width: ${props.wrap ? '1000px' : '600px'};
             width: 100%;
             margin: 0 auto;
             font-size: 11px;
@@ -195,12 +190,12 @@ export default function Product(props) {
             box-sizing: border-box;
             padding: 1em;
             grid-template: ${props.wrap
-              ? "auto auto / 1fr"
-              : "auto / 1fr 1fr 1fr"};
+              ? 'auto auto / 1fr'
+              : 'auto / 1fr 1fr 1fr'};
           }
           .product__img {
             grid-row: 1/2;
-            padding: ${props.wrap ? "0" : ".9em"};
+            padding: ${props.wrap ? '0' : '.9em'};
             box-sizing: border-box;
           }
           .product-title {
@@ -218,9 +213,9 @@ export default function Product(props) {
             width: 100%;
           }
           .product__description {
-            padding-left: ${props.wrap ? ".5em" : "1.2em"};
-            grid-column: ${props.wrap ? "1/2" : "2/4"};
-            grid-row: ${props.wrap ? "2/3" : "1/2"};
+            padding-left: ${props.wrap ? '.5em' : '1.2em'};
+            grid-column: ${props.wrap ? '1/2' : '2/4'};
+            grid-row: ${props.wrap ? '2/3' : '1/2'};
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -289,29 +284,29 @@ export default function Product(props) {
 
           @media (min-width: 660px) {
             .product {
-              border: ${props.wrap ? " 0px" : "1px solid #d5d5d5"};
+              border: ${props.wrap ? ' 0px' : '1px solid #d5d5d5'};
               grid-template: ${props.wrap
-                ? "  auto /1fr 1fr 1fr"
-                : "auto/1fr 1fr"};
+                ? '  auto /1fr 1fr 1fr'
+                : 'auto/1fr 1fr'};
               font-size: 15px;
               max-width: 900px;
             }
             .buttons {
-              flex-direction: ${props.wrap ? " row" : "column"};
+              flex-direction: ${props.wrap ? ' row' : 'column'};
               box-sizing: border-box;
             }
             .btn {
-              margin: ${props.wrap ? "none" : ".8rem 0 .2rem"};
+              margin: ${props.wrap ? 'none' : '.8rem 0 .2rem'};
               box-sizing: border-box;
             }
             .product__description {
               grid-column: 2/4;
               grid-row: 1/2;
-              padding-left: ${props.wrap ? "3em" : "1.2em"};
+              padding-left: ${props.wrap ? '3em' : '1.2em'};
             }
           }
         `}
       </style>
     </div>
-  );
+  )
 }

@@ -15,22 +15,29 @@ const GET_USER = gql`
     getUsers {
       _id
       username
-      quantity
-      bag {
-        _id
-        title
-        image
-        price
-        tags
-        discount
+      quantities {
+        product {
+          title
+          image
+          _id
+          discount
+          price
+        }
+        quantity
       }
     }
   }
 `
+
+let pricesDiscount = 10
+
 class Cart extends React.Component {
   getDiscount(price, discount) {
-    const newPrice = Math.round(((100 - discount) * price) / 100)
+    const newPrice = ((100 - discount) * price) / 100
     return newPrice
+  }
+  pricesTosum(array) {
+    return array.reduce((a, b) => a + b).toFixed(2)
   }
 
   render() {
@@ -43,46 +50,32 @@ class Cart extends React.Component {
             {({ client, loading, error, data }) => {
               if (loading) return <Spinner />
               if (error) return Router.pushRoute('/')
+              console.log(data)
 
-              const pricesTosum =
-                data.getUsers.bag.length > 0
-                  ? data.getUsers.bag
-                      .map((e, index) =>
-                        parseInt(e.price * data.getUsers.quantity[index])
-                      )
-                      .reduce((a, b) => a + b)
-                  : 0
-              const pricesDiscount =
-                data.getUsers.bag.length > 0
-                  ? data.getUsers.bag
-                      .map((e, index) =>
-                        this.getDiscount(
-                          e.price * data.getUsers.quantity[index],
-                          e.discount
-                        )
-                      )
-                      .reduce((a, b) => parseInt(a) + parseInt(b))
-                  : 0
               return (
                 <div className='container'>
                   <div className='container-products'>
                     <ProductosInCart
-                      data={data.getUsers.bag.map((e, index) => {
-                        return {
-                          p: data.getUsers.bag[index],
-                          q: data.getUsers.quantity[index]
-                        }
-                      })}
+                      data={data.getUsers.quantities}
                       client={client}
                       user={data.getUsers}
                     />
                   </div>
-
                   <Boleta
-                    data={data.getUsers.bag}
-                    quantity={data.getUsers.quantity}
-                    pricesTosum={pricesTosum}
-                    pricesDiscount={pricesDiscount}
+                    data={data.getUsers.quantities}
+                    pricesTosum={this.pricesTosum(
+                      data.getUsers.quantities.map(
+                        e => parseFloat(e.product.price) * e.quantity
+                      )
+                    )}
+                    pricesDiscount={this.pricesTosum(
+                      data.getUsers.quantities.map(e =>
+                        this.getDiscount(
+                          parseFloat(e.product.price) * e.quantity,
+                          e.product.discount
+                        )
+                      )
+                    )}
                   ></Boleta>
                 </div>
               )
@@ -94,10 +87,10 @@ class Cart extends React.Component {
           {`
             .main {
               margin-top: 10px;
-            }
-            .container {
               margin: 0 auto;
               max-width: 1200px;
+            }
+            .container {
               display: flex;
 
               flex-direction: column;
@@ -118,6 +111,9 @@ class Cart extends React.Component {
             }
             .btn:hover {
               cursor: pointer;
+            }
+            h2 {
+              color: black;
             }
             @media (min-width: 660px) {
               .cart-boleta {

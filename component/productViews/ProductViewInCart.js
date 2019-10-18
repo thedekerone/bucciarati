@@ -4,8 +4,7 @@ import { useMutation } from '@apollo/react-hooks'
 import Spinner from '../views/Spinner'
 
 export default function Product(props) {
-  let agregar
-
+  const [agregar, setAgregar] = useState(props.data.quantity)
   const [loading, setLoading] = useState(false)
 
   const REMOVE_PRODUCT = gql`
@@ -16,26 +15,27 @@ export default function Product(props) {
     }
   `
   const UPDATE_QUANTITY = gql`
-    mutation cantidadNueva($quantity: String!, $producto: ID!, $user: ID!) {
+    mutation($quantity: Int!, $product: ID!, $user: ID!) {
       updateQuantity(
         newQuantity: $quantity
-        productID: $producto
+        productID: $product
         userID: $user
       ) {
-        quantity
+        quantities {
+          quantity
+        }
       }
     }
   `
+  const [cantidadNueva] = useMutation(UPDATE_QUANTITY)
 
   const [removeProduct] = useMutation(REMOVE_PRODUCT)
-
-  const [cantidadNueva] = useMutation(UPDATE_QUANTITY)
 
   const removeFromCart = async (user, client) => {
     user._id
       ? removeProduct({
           variables: {
-            product: props.data._id,
+            product: props.data.product._id,
             user: user._id
           }
         }).then(() => {
@@ -44,20 +44,33 @@ export default function Product(props) {
       : null
   }
 
-  const actualizarCantidad = async (user, client) => {
-    console.log(props.data._id)
+  const actualizarCantidad = async (user, client, cantidad) => {
+    if (parseInt(cantidad)) {
+      setLoading(true)
 
-    user._id
-      ? cantidadNueva({
-          variables: {
-            quantity: agregar.value,
-            producto: props.data._id,
-            user: user._id
-          }
-        }).then(() => {
-          client.resetStore()
-        })
-      : null
+      user._id
+        ? cantidadNueva({
+            variables: {
+              quantity: parseInt(cantidad),
+              product: props.data.product._id,
+              user: user._id
+            }
+          }).then(() => {
+            client.resetStore()
+            setLoading(false)
+          })
+        : console.log('no hay usuario')
+    }
+  }
+
+  const handleFocus = event => {
+    console.log(event.target.value)
+    actualizarCantidad(props.user, props.client, event.target.value)
+  }
+
+  const handleChange = event => {
+    console.log(event.target.value)
+    setAgregar(event.target.value)
   }
 
   if (loading) return <Spinner></Spinner>
@@ -65,27 +78,29 @@ export default function Product(props) {
     <div>
       <div className='product'>
         <div className='product__img'>
-          <img src={props.data.image} width='100%' alt='' />
+          <img src={props.data.product.image} width='100%' alt='' />
         </div>
         <div className='product__description'>
           <div className='product-main'>
             <div className='product-title'>
-              <h3>{props.data.title.toLowerCase()}</h3>
+              <h3>{props.data.product.title.toLowerCase()}</h3>
             </div>
             <div className='product-discount'>
               <span className='product-discount__price'>
-                {props.data.price}
+                {props.data.product.price}
               </span>
               <span className='product-discount__percentage'>
-                -{props.data.discount}%
+                -{props.data.product.discount}%
               </span>
             </div>
             <div className='product-price'>
               <span>
-                {Math.round(
-                  ((100 - props.data.discount) * props.data.price) / 100
-                )}
-                .00$
+                {(
+                  ((100 - props.data.product.discount) *
+                    props.data.product.price) /
+                  100
+                ).toFixed(2)}
+                $
               </span>
             </div>
           </div>
@@ -95,11 +110,13 @@ export default function Product(props) {
             <div className='product-extra__cantidad'>
               <label>Cantidad: </label>
               <input
-                defaultValue={props.quantity}
-                onChange={value => {
-                  actualizarCantidad(props.user, props.client)
+                onChange={async event => {
+                  handleChange(event)
                 }}
-                ref={value => (agregar = value)}
+                onBlur={event => {
+                  handleFocus(event)
+                }}
+                value={agregar}
                 type='number'
                 name='cantidad'
                 id='cantidad'

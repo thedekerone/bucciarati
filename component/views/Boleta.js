@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 export default function Boleta({
   data,
@@ -7,31 +7,31 @@ export default function Boleta({
   quantity
 }) {
   return (
-    <div className="cart-boleta">
+    <div className='cart-boleta'>
       <h3>Boleta</h3>
-      <div className="boleta-container">
+      <div className='boleta-container'>
         <ul>
           {data.map((e, index) => {
             return (
-              <li className="cart-boleta__product" key={e._id}>
-                <span className="product-title">
-                  {quantity[index]}x {e.title.toLowerCase()}
+              <li className='cart-boleta__product' key={e.product._id}>
+                <span className='product-title'>
+                  {e.quantity}x {e.product.title.toLowerCase()}
                 </span>
-                <span className="product-price">
-                  ${e.price * parseInt(quantity[index])}
+                <span className='product-price'>
+                  ${(e.product.price * e.quantity).toFixed(2)}
                 </span>
               </li>
-            );
+            )
           })}
-          <li className="cart-boleta__product price">
-            <span className="product-title">price:</span>
-            <span className="product-price original">${pricesTosum}.00</span>
+          <li className='cart-boleta__product price'>
+            <span className='product-title'>price:</span>
+            <span className='product-price original'>${pricesTosum}</span>
           </li>
-          <li className="cart-boleta__product">
-            <span className="product-title">priceDiscount:</span>
-            <span className="product-price discount">${pricesDiscount}.00</span>
+          <li className='cart-boleta__product'>
+            <span className='product-title'>priceDiscount:</span>
+            <span className='product-price discount'>${pricesDiscount}</span>
           </li>
-          <div className="btn">PAY NOW</div>
+          <div className='btn'>PAY NOW</div>
         </ul>
       </div>
 
@@ -47,6 +47,10 @@ export default function Boleta({
           ul {
             margin: 0;
             padding: 0;
+          }
+          .btn {
+            max-width: 600px;
+            margin-bottom: 2rem;
           }
           .original {
             text-decoration: line-through;
@@ -71,5 +75,5 @@ export default function Boleta({
         `}
       </style>
     </div>
-  );
+  )
 }

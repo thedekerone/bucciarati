@@ -32125,7 +32125,7 @@ var logException = function logException() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 2:
 /*!********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcart&absolutePagePath=%2Fhome%2Fdekker%2FDocuments%2Fproyectos%2Fbucciarati%2Fpages%2Fcart.js ***!
   \********************************************************************************************************************************************/
@@ -32148,5 +32148,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=cart.js.map

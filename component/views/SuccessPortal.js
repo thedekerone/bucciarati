@@ -7,7 +7,11 @@ export default function SuccessPortal() {
     <Layout>
       <div className='success-container'>
         <div className='success'>
-          <img src='../../static/icons/icons8-ok.svg' width='215px' alt='' />
+          <img
+            src={require('../../static/icons/icons8-ok.svg')}
+            width='215px'
+            alt=''
+          />
         </div>
         <h3>Tu compra se ha realizado exitosamente!!!</h3>
         <div className='btn'>

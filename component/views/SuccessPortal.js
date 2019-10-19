@@ -14,11 +14,11 @@ export default function SuccessPortal() {
           />
         </div>
         <h3>Tu compra se ha realizado exitosamente!!!</h3>
-        <div className='btn'>
-          <Link route='/'>
-            <a>VOLVER</a>
-          </Link>
-        </div>
+        <Link route='/'>
+          <a className='btn'>
+            <span>VOLVER</span>
+          </a>
+        </Link>
 
         <style jsx>{`
           .success-container {
@@ -30,7 +30,7 @@ export default function SuccessPortal() {
             justify-content: center;
             align-items: center;
           }
-          a {
+          span {
             color: white;
           }
         `}</style>

@@ -1,43 +1,43 @@
-import React from "react";
-import { Router } from "../routes";
-import { Link } from "../routes";
-import Login from "./views/Login";
+import React from 'react'
+import { Router } from '../routes'
+import { Link } from '../routes'
+import Login from './views/Login'
 
 export default function SideBar({ setShow, show, client }) {
   const handleLogout = async () => {
-    await localStorage.removeItem("usuario");
-    await localStorage.removeItem("password");
-    await Router.pushRoute("/");
-    client.resetStore();
-  };
+    await localStorage.removeItem('usuario')
+    await localStorage.removeItem('password')
+    await Router.pushRoute('/')
+    client.resetStore()
+  }
   return (
-    <div className="sidebar">
-      <ul className="sidebar-list">
-        {localStorage.getItem("usuario") ? <Login /> : null}
-        <Link route="producto" params={{ tag: "" }}>
-          <a className="sidebar-list__item">
+    <div className='sidebar'>
+      <ul className='sidebar-list'>
+        {localStorage.getItem('usuario') ? <Login /> : null}
+        <Link route='producto' params={{ tag: '' }}>
+          <a className='sidebar-list__item'>
             <p>Accesorios</p>
           </a>
         </Link>
-        <Link route="producto" params={{ tag: "" }}>
-          <a className="sidebar-list__item">
+        <Link route='producto' params={{ tag: '' }}>
+          <a className='sidebar-list__item'>
             <p>Atencion</p>
           </a>
         </Link>
-        {!localStorage.getItem("usuario") ? (
-          <Link route="producto" params={{ tag: "" }}>
-            <a className="sidebar-list__item">
+        {!localStorage.getItem('usuario') ? (
+          <Link route='producto' params={{ tag: '' }}>
+            <a className='sidebar-list__item'>
               <p>Login</p>
             </a>
           </Link>
         ) : (
-          <Link route="/">
+          <Link route='/'>
             <a
               onClick={() => {
-                setShow(!show);
-                handleLogout();
+                setShow(!show)
+                handleLogout()
               }}
-              className="sidebar-list__item logout"
+              className='sidebar-list__item logout'
             >
               <p>Logout</p>
             </a>
@@ -52,7 +52,7 @@ export default function SideBar({ setShow, show, client }) {
           .sidebar {
             position: fixed;
             top: 58.73px;
-            right: ${show ? "0%" : "-100%"};
+            right: ${show ? '0%' : '-100%'};
             transition: 0.4s;
             height: calc(100vh - 58.73px);
             width: 100%;
@@ -71,5 +71,5 @@ export default function SideBar({ setShow, show, client }) {
         `}
       </style>
     </div>
-  );
+  )
 }

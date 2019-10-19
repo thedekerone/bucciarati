@@ -1,5 +1,10 @@
-import React from "react";
+import React from 'react'
+import SuccessPortal from '../component/views/SuccessPortal'
 
 export default function success() {
-  return <div>succesado xd</div>;
+  return (
+    <div>
+      <SuccessPortal></SuccessPortal>
+    </div>
+  )
 }

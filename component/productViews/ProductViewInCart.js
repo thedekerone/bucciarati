@@ -4,8 +4,7 @@ import { useMutation } from '@apollo/react-hooks'
 import Spinner from '../views/Spinner'
 
 export default function Product(props) {
-  const [agregar, setAgregar] = useState(props.data.quantity)
-  const [loading, setLoading] = useState(false)
+  // MUTATIONS
 
   const REMOVE_PRODUCT = gql`
     mutation removeProduct($product: ID!, $user: ID!) {
@@ -27,9 +26,6 @@ export default function Product(props) {
       }
     }
   `
-  const [cantidadNueva] = useMutation(UPDATE_QUANTITY)
-
-  const [removeProduct] = useMutation(REMOVE_PRODUCT)
 
   const removeFromCart = async (user, client) => {
     user._id
@@ -44,9 +40,17 @@ export default function Product(props) {
       : null
   }
 
+  // HOOKS
+
+  const [agregar, setAgregar] = useState(props.data.quantity)
+
+  const [cantidadNueva] = useMutation(UPDATE_QUANTITY)
+
+  const [removeProduct] = useMutation(REMOVE_PRODUCT)
+
   const actualizarCantidad = async (user, client, cantidad) => {
     if (parseInt(cantidad)) {
-      setLoading(true)
+      props.setLoading(true)
 
       user._id
         ? cantidadNueva({
@@ -57,23 +61,22 @@ export default function Product(props) {
             }
           }).then(() => {
             client.resetStore()
-            setLoading(false)
+            props.setLoading(false)
           })
         : console.log('no hay usuario')
     }
   }
 
   const handleFocus = event => {
-    console.log(event.target.value)
     actualizarCantidad(props.user, props.client, event.target.value)
   }
 
   const handleChange = event => {
-    console.log(event.target.value)
     setAgregar(event.target.value)
   }
 
-  if (loading) return <Spinner></Spinner>
+  if (props.loading) return <Spinner></Spinner>
+
   return (
     <div>
       <div className='product'>

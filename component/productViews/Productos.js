@@ -6,7 +6,6 @@ export default function Productos(props) {
   return (
     <div className='productos'>
       {props.data.map(e => {
-        console.log(e)
         return (
           <ProductView key={e._id} user={props.user} data={e} wrap={false} />
         )

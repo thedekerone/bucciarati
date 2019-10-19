@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from '../../routes'
 
 export default function Boleta({
   data,
@@ -31,7 +32,9 @@ export default function Boleta({
             <span className='product-title'>priceDiscount:</span>
             <span className='product-price discount'>${pricesDiscount}</span>
           </li>
-          <div className='btn'>PAY NOW</div>
+          <Link route='/success'>
+            <a className='btn'>PAY NOW</a>
+          </Link>
         </ul>
       </div>
 
@@ -50,6 +53,7 @@ export default function Boleta({
           }
           .btn {
             max-width: 600px;
+            display: block;
             margin-bottom: 2rem;
           }
           .original {

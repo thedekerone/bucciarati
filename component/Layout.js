@@ -134,6 +134,8 @@ class Layout extends React.Component {
         {this.props.children}
         <style jsx global>
           {`
+            @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
+
             body {
               background: #f3f3f3;
               margin: 0;

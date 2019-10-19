@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ProductViewInCart from './ProductViewInCart'
 import ProductView from './ProductView'
 import { Link } from '../../routes'
-// aeaeaeaea
+import Spinner from '../views/Spinner'
+
 export default function Productos(props) {
-  //  console.log(props.data)
+  const [loading, setLoading] = useState(false)
+
   return (
     <div className='productos'>
       {props.data.map(e => {
@@ -13,6 +15,8 @@ export default function Productos(props) {
             client={props.client}
             key={e.product._id}
             user={props.user}
+            loading={loading}
+            setLoading={setLoading}
             data={e}
             wrap={false}
           />

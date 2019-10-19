@@ -1,24 +1,24 @@
-import React from "react";
-import { Link, Router } from "../routes";
-import hero from "../static/mainView/main2.webp";
-import heroMini from "../static/mainView/main2.jpg?lqip";
+import React from 'react'
+import { Link, Router } from '../routes'
+import hero from '../static/mainView/main2.webp'
+import heroMini from '../static/mainView/main2.jpg?lqip'
 
 export default function MainDisplayer() {
   return (
-    <div className="main-displayer">
-      <div className="main-displayer__item">
-        <picture id="item1">
-          <source src={heroMini} width="100%" className="item-image" alt="" />
+    <div className='main-displayer'>
+      <div className='main-displayer__item'>
+        <picture id='item1'>
+          <source src={heroMini} width='100%' className='item-image' alt='' />
 
-          <img src={hero} width="100%" className="item-image" alt="" />
+          <img src={hero} width='100%' className='item-image' alt='' />
         </picture>
-        <div className="main-hero">
-          <div className="main-hero__text">
+        <div className='main-hero'>
+          <div className='main-hero__text'>
             <h1>AIR JORDAN XXIV</h1>
             <span>The Future of Flight.</span>
           </div>
-          <div className="main-hero__button">
-            <Link route="producto" params={{ tag: "zapatillas" }}>
+          <div className='main-hero__button'>
+            <Link route='producto' params={{ tag: 'zapatillas' }}>
               <a>BUY NOW</a>
             </Link>
           </div>
@@ -65,6 +65,7 @@ export default function MainDisplayer() {
             font-weight: bold;
             border: 1px solid #fd486b;
             font-size: 1.2rem;
+            background: #fd486b;
 
             color: white;
           }
@@ -110,5 +111,5 @@ export default function MainDisplayer() {
         `}
       </style>
     </div>
-  );
+  )
 }

@@ -51,7 +51,8 @@ class Cart extends React.Component {
               if (loading) return <Spinner />
               if (error) return Router.pushRoute('/')
               console.log(data)
-
+              if (!data.getUsers.quantities.length)
+                return <h3>Aun no has agregado algun producto</h3>
               return (
                 <div className='container'>
                   <div className='container-products'>

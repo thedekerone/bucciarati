@@ -250,6 +250,7 @@ const Navbar = () => {
           .right-items {
             display: flex;
             align-items: center;
+            justify-content: flex-end;
             flex-shrink: 1;
             width: 100%;
           }
@@ -372,7 +373,7 @@ const Navbar = () => {
             }
             .right-items {
               flex-shrink: initial;
-              width: 100%;
+              width: auto;
               max-width: 270px;
             }
             .main-navbar__icon {
@@ -385,7 +386,7 @@ const Navbar = () => {
               width: 120px;
             }
             .search-icon {
-              display: ${display ? 'inline-block' : 'none'};
+              display: none;
             }
             .main-navbar__items ul {
               display: flex;

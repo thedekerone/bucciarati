@@ -1,3 +1,3 @@
 # Bucciarati Store
 
-Online store build in nextjs
+Online store built in nextjs

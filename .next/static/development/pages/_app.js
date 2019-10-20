@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/_app.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\_app.js"],{
 
 /***/ "./lib/withApollo.js":
 /*!***************************!*\
@@ -24171,7 +24171,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/home/dekker/Documents/proyectos/bucciarati/pages/_app.js";
+var _jsxFileName = "E:\\Documentos\\Proyectos\\new bucciarati\\bucciarati\\pages\\_app.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 

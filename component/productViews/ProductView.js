@@ -75,7 +75,7 @@ export default function Product(props) {
                     </div>
                   ) : null}
                   <div className='product-title'>
-                    <h3>{props.data.title}</h3>
+                    <h3>{props.data.title.toLowerCase()}</h3>
                     <img
                       onClick={e => {
                         compartir(e, props.data.title)
@@ -224,7 +224,7 @@ export default function Product(props) {
 
           .product-banner span {
             color: white;
-            font-size: 0.9em;
+            font-size: 0.7em;
             background: rgb(181, 0, 191);
             background: linear-gradient(
               90deg,
@@ -236,7 +236,7 @@ export default function Product(props) {
           }
           .buttons {
             display: flex;
-            margin-top: 0.6rem;
+            margin-top: 0.6em;
             align-items: center;
             position: relative;
             width: 100%;
@@ -247,7 +247,7 @@ export default function Product(props) {
           }
           .btn {
             margin: 0 0.5em;
-            font-size: 0.45rem;
+            font-size: 0.45em;
             font-weight: bold;
           }
           .product-discount {
@@ -264,7 +264,7 @@ export default function Product(props) {
             font-size: 1em;
           }
           .product-price {
-            font-size: 1.2rem;
+            font-size: 1.2em;
             font-weight: bold;
             color: black;
           }
@@ -288,6 +288,12 @@ export default function Product(props) {
           }
 
           @media (min-width: 660px) {
+            .product-title {
+              text-transform: capitalize;
+            }
+            .product-title h3 {
+              font-weight: 0.9em;
+            }
             .product {
               border: ${props.wrap ? ' 0px' : '1px solid #d5d5d5'};
               grid-template: ${props.wrap
@@ -303,7 +309,7 @@ export default function Product(props) {
             .btn {
               margin: ${props.wrap ? 'none' : '.8rem 0 .2rem'};
               box-sizing: border-box;
-              font-size: 0.7rem;
+              font-size: 0.7em;
             }
             .product__description {
               grid-column: 2/4;

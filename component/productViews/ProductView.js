@@ -193,7 +193,7 @@ export default function Product(props) {
 					}
 					.btn {
 						margin: 0 0.5em;
-						font-size: .6rem;
+						font-size: .45rem;
 						font-weight: bold;
 					}
 					.product-discount {

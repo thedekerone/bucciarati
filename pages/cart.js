@@ -52,7 +52,7 @@ class Cart extends React.Component {
 							if (error) return Router.pushRoute('/');
 							console.log(data.getUsers.quantities.length === 0);
 							if (data.getUsers.quantities.length === 0)
-								return <h3>Aun no has agregado algun producto</h3>;
+								return <h3>Aun no has agregado algún producto</h3>;
 							return (
 								<div className='container'>
 									<div className='container-products'>

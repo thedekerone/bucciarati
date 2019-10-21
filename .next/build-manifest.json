@@ -27,10 +27,6 @@
     "/producto": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
-    ],
-    "/single": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
     ]
   }
 }

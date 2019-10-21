@@ -127,7 +127,7 @@ export default function Product(props) {
 									</div>
 									<div className='buttons'>
 										<div onClick={() => addToCart(data.getUsers, client)} className='btn cart'>
-											AÑADIR AL CARRITO
+											AÑADIR AL CARRO
 										</div>
 
 										<Link route='single' params={{ slug: props.data._id }} key={props.data._id}>
@@ -230,8 +230,8 @@ export default function Product(props) {
 					}
 					.buttons {
 						display: flex;
-						margin-top: .7rem;
-
+						margin-top: .6rem;
+						align-items: center;
 						position: relative;
 						width: 100%;
 					}

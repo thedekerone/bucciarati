@@ -51,7 +51,7 @@ const Navbar = () => {
                     handleClick()
                   }}
                   className='icon-menu'
-                  width='30px'
+                  width='25px'
                   src='/static/icons/menu.svg'
                   alt='menu'
                 />
@@ -131,7 +131,20 @@ const Navbar = () => {
               <div className='login'>
                 <Query query={GET_USER}>
                   {({ client, loading, error, data }) => {
-                    if (loading) return <h3>login</h3>
+                    if (loading) return <div className='login-container' >
+                      <h3
+                             
+                              className='login-title'
+                            >
+                              login
+                            </h3>
+                            <h3
+                             
+                              className='login-register'
+                            >
+                              register
+                            </h3>
+                    </div>
                     if (error) return <h3>login</h3>
                     return (
                       <div className='login'>
@@ -303,7 +316,7 @@ const Navbar = () => {
           .main-navbar__title {
             color: #e84855;
             font-size: 1.2rem;
-            width: 50px;
+            width: 40px;
           }
           .categorias {
             display: flex;
@@ -408,7 +421,7 @@ const Navbar = () => {
             }
             .main-navbar__title {
               font-size: 1.7rem;
-              width: 65px;
+              width: 50px;
             }
             .login {
               display: block;

@@ -1,5 +1,4 @@
 # Bucciarati Store
 
-Online PWA of a store built in Nextjs.
-
+PWA e-commerce built in Nextjs.
 

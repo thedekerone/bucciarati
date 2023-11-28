@@ -43,6 +43,7 @@ class index extends Component {
             {({ client, loading, error, data }) => {
               if (loading) return <Spinner />
               if (error) return <Error code='502' />
+                    console.log(data)
               return (
                 <React.Fragment>
                   <div className='container'>
@@ -53,14 +54,14 @@ class index extends Component {
                     <div className='ofertas'>
                       <h2>HASTA 50% DE DESCUENTO</h2>
                       <ProductosMini
-                        data={data.getProducts.filter(e => e.discount > 50)}
+                        data={data.getProducts.filter(e => e.discount >= 50)}
                       />
                     </div>
                     <div className='ofertas'>
                       <h2>ZAPATILLAS</h2>
                       <ProductosMini
                         data={data.getProducts.filter(e =>
-                          e.tags.includes('zapatillas')
+                          e.tags.includes('zapatillas') || e.tags.includes('tenis')
                         )}
                       />
                     </div>
@@ -68,7 +69,8 @@ class index extends Component {
                       <h2>CASACAS</h2>
                       <ProductosMini
                         data={data.getProducts.filter(e =>
-                          e.tags.includes('casaca')
+                          e.tags.includes('casaca') || e.tags.includes('jacket')
+
                         )}
                       />
                     </div>
@@ -76,7 +78,7 @@ class index extends Component {
                       <h2>POLOS</h2>
                       <ProductosMini
                         data={data.getProducts.filter(e =>
-                          e.tags.includes('polo')
+                          e.tags.includes('polo') || e.tags.includes("shirt")
                         )}
                       />
                     </div>

@@ -14,7 +14,7 @@ const nextConfig = {
     // navigateFallback : '/',
     runtimeCaching: [
       {
-        urlPattern: /^https?\/\/chupetinps.herokuapp.com\/(.*)/,
+        urlPattern: /^https?\/\/bucciaratiserver-production.up.railway.app\/(.*)/,
         handler: "StaleWhileRevalidate",
         options: {
           cacheableResponse: {
